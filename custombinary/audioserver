@@ -1,0 +1,19 @@
+#!/bin/bash
+#https://github.com/termux/termux-packages/issues/821
+#Grimler91
+exit
+echo Starting Audio Server
+useradd pulse
+dbus-launch alsamixer &
+#sleep 10
+dbus-launch pulseaudio --system --disallow-exit &
+sleep 27
+#pactl load-module module-simple-protocol-tcp rate=48000 format=s16le channels=2 source=auto_null.monitor record=true port=8000 listen=127.0.0.1
+echo Binding Audio Focus
+bindaudiofocus=$(while true ; do play -q /module/noise.wav repeat 9999 gain -100 ; done) & >/dev/null 2>/dev/null
+if [ $1 == "play" ]; then
+    DISPLAY=:0 start-pulseaudio-x11 &
+    echo 'am startservice --user 0 -a com.kaytat.simpleprotocolplayer.action.PLAY -e ip_addr 127.0.0.1 --ei audio_port 3141 --ei sample_rate 44100 --ez stereo true --ei buffer_ms 500 com.kaytat.simpleprotocolplayer/.MusicService' > /subridge
+elif [ $1 == "stop" ]; then
+    'am startservice --user 0 -a com.kaytat.simpleprotocolplayer.action.STOP com.kaytat.simpleprotocolplayer/.MusicService' > /subridge
+fi

@@ -1,0 +1,80 @@
+os	neural_style.py	/^import os$/;"	i
+np	neural_style.py	/^import numpy as np$/;"	i
+scipy	neural_style.py	/^import scipy.misc$/;"	i
+misc	neural_style.py	/^import scipy.misc$/;"	i
+stylize	neural_style.py	/^from stylize import stylize$/;"	i
+math	neural_style.py	/^import math$/;"	i
+ArgumentParser	neural_style.py	/^from argparse import ArgumentParser$/;"	i
+Image	neural_style.py	/^from PIL import Image$/;"	i
+CONTENT_WEIGHT	neural_style.py	/^CONTENT_WEIGHT = 5e0$/;"	v
+CONTENT_WEIGHT_BLEND	neural_style.py	/^CONTENT_WEIGHT_BLEND = 1$/;"	v
+STYLE_WEIGHT	neural_style.py	/^STYLE_WEIGHT = 5e2$/;"	v
+TV_WEIGHT	neural_style.py	/^TV_WEIGHT = 1e2$/;"	v
+STYLE_LAYER_WEIGHT_EXP	neural_style.py	/^STYLE_LAYER_WEIGHT_EXP = 1$/;"	v
+LEARNING_RATE	neural_style.py	/^LEARNING_RATE = 1e1$/;"	v
+BETA1	neural_style.py	/^BETA1 = 0.9$/;"	v
+BETA2	neural_style.py	/^BETA2 = 0.999$/;"	v
+EPSILON	neural_style.py	/^EPSILON = 1e-08$/;"	v
+STYLE_SCALE	neural_style.py	/^STYLE_SCALE = 1.0$/;"	v
+ITERATIONS	neural_style.py	/^ITERATIONS = 1000$/;"	v
+VGG_PATH	neural_style.py	/^VGG_PATH = 'imagenet-vgg-verydeep-19.mat'$/;"	v
+POOLING	neural_style.py	/^POOLING = 'max'$/;"	v
+build_parser	neural_style.py	/^def build_parser():$/;"	f
+main	neural_style.py	/^def main():$/;"	f
+imread	neural_style.py	/^def imread(path):$/;"	f
+imsave	neural_style.py	/^def imsave(path, img):$/;"	f
+tf	vgg.py	/^import tensorflow as tf$/;"	i
+np	vgg.py	/^import numpy as np$/;"	i
+scipy	vgg.py	/^import scipy.io$/;"	i
+io	vgg.py	/^import scipy.io$/;"	i
+VGG19_LAYERS	vgg.py	/^VGG19_LAYERS = ($/;"	v
+load_net	vgg.py	/^def load_net(data_path):$/;"	f
+net_preloaded	vgg.py	/^def net_preloaded(weights, input_image, pooling):$/;"	f
+_conv_layer	vgg.py	/^def _conv_layer(input, weights, bias):$/;"	f
+_pool_layer	vgg.py	/^def _pool_layer(input, pooling):$/;"	f
+preprocess	vgg.py	/^def preprocess(image, mean_pixel):$/;"	f
+unprocess	vgg.py	/^def unprocess(image, mean_pixel):$/;"	f
+vgg	stylize.py	/^import vgg$/;"	i
+tf	stylize.py	/^import tensorflow as tf$/;"	i
+np	stylize.py	/^import numpy as np$/;"	i
+stderr	stylize.py	/^from sys import stderr$/;"	i
+time	stylize.py	/^import time$/;"	i
+Image	stylize.py	/^from PIL import Image$/;"	i
+CONTENT_LAYERS	stylize.py	/^CONTENT_LAYERS = ('relu4_2', 'relu5_2')$/;"	v
+STYLE_LAYERS	stylize.py	/^STYLE_LAYERS = ('relu1_1', 'relu2_1', 'relu3_1', 'relu4_1', 'relu5_1')$/;"	v
+reduce	stylize.py	/^    from functools import reduce$/;"	i
+stylize	stylize.py	/^def stylize(network, initial, initial_noiseblend, content, styles, preserve_colors, iterations,$/;"	f
+print_progress	stylize.py	/^        def print_progress():$/;"	f	function:stylize
+_tensor_size	stylize.py	/^def _tensor_size(tensor):$/;"	f
+mul	stylize.py	/^    from operator import mul$/;"	i
+rgb2gray	stylize.py	/^def rgb2gray(rgb):$/;"	f
+gray2rgb	stylize.py	/^def gray2rgb(gray):$/;"	f
+hms	stylize.py	/^def hms(seconds):$/;"	f
+os	generate.py	/^import os$/;"	i
+np	generate.py	/^import numpy as np$/;"	i
+scipy	generate.py	/^import scipy.misc$/;"	i
+misc	generate.py	/^import scipy.misc$/;"	i
+randint	generate.py	/^from random import randint$/;"	i
+stylize	generate.py	/^from stylize import stylize$/;"	i
+math	generate.py	/^import math$/;"	i
+ArgumentParser	generate.py	/^from argparse import ArgumentParser$/;"	i
+Image	generate.py	/^from PIL import Image$/;"	i
+H	generate.py	/^H = '[OrionArtisticEngine_TechDemo]'$/;"	v
+CONTENT_WEIGHT	generate.py	/^CONTENT_WEIGHT = randint(1, 5)$/;"	v
+CONTENT_WEIGHT_BLEND	generate.py	/^CONTENT_WEIGHT_BLEND = 1$/;"	v
+STYLE_WEIGHT	generate.py	/^STYLE_WEIGHT = randint(100, 500)$/;"	v
+TV_WEIGHT	generate.py	/^TV_WEIGHT = 1e2$/;"	v
+STYLE_LAYER_WEIGHT_EXP	generate.py	/^STYLE_LAYER_WEIGHT_EXP = 1$/;"	v
+LEARNING_RATE	generate.py	/^LEARNING_RATE = 1.213278620111204$/;"	v
+BETA1	generate.py	/^BETA1 = 0.9$/;"	v
+BETA2	generate.py	/^BETA2 = 0.999$/;"	v
+EPSILON	generate.py	/^EPSILON = 1e-08$/;"	v
+STYLE_SCALE	generate.py	/^STYLE_SCALE = randint(1, 2)$/;"	v
+ITERATIONS	generate.py	/^ITERATIONS = randint(512, 2048)$/;"	v
+VGG_PATH	generate.py	/^VGG_PATH = 'skills.bin'$/;"	v
+POOLING	generate.py	/^POOLING = 'max'$/;"	v
+OUTPUT	generate.py	/^OUTPUT = 'results\/output' + str(randint(5, 202248)) + '.jpg'$/;"	v
+build_parser	generate.py	/^def build_parser():$/;"	f
+main	generate.py	/^def main():$/;"	f
+imread	generate.py	/^def imread(path):$/;"	f
+imsave	generate.py	/^def imsave(path, img):$/;"	f

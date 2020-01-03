@@ -1,0 +1,5 @@
+#!/bin/bash
+#header file for loading all the systemcalls available in here
+# this is deprecated and superseeded by monolithicload0
+# the reason why we preserve this in this OS build is just to make sure that legacy knowledge of this q7OS programming does not need relearn or change to the new format
+. ${runtimetoolbox}/monolithicload0

@@ -1,0 +1,23 @@
+#!/bin/bash
+cd /
+echo 'patching system...'
+echo Patching $(uname -m) system
+#Remember This already at system ROOT (q7OS root)
+#Transfering Vendor Custom
+cd ${origindir}/system/${arch}
+cp -r ${origindir}/distrocustomization/masterconf/* .
+cp -r ${origindir}/distrocustomization/${arch}/* .
+#Revision Version
+cp -r ${origindir}/dist/ver .
+#transferring CustomBinary
+for i in ${origindir}/custombinary/* ;do
+  chmod +x $i
+  cp -r $i bin/
+done
+#Linking Custom Services to the SystemFile
+cp -r ${origindir}/bootsystemd .
+cp -r ${origindir}/module .
+cp -r ${origindir}/init .
+cp -r ${origindir}/swapforhackedandroid .
+cp -r ${origindir}/bootlib/libdisableselinux.so .
+cp -r ${origindir}/bootlib/libandroid-shmem.so .

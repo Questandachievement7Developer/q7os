@@ -1,0 +1,8 @@
+
+#!/bin/sh
+#
+# Copyright (C) Sebastian Philipp btrfs-swap code
+# Modified By questandachievement7
+bash /bin/swapfiled
+bash /bin/massiveramcmprsd
+echo Done

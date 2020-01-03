@@ -1,0 +1,113 @@
+#!/bin/bash
+echo q7OS Boot
+HEIGHT=15
+WIDTH=80
+CHOICE_HEIGHT=18
+BACKTITLE="Q7OS Booting Menu"
+TITLE="Welcome ${Username}"
+tgdir=${NVRAMCONF}
+trap 'echo q7OSboot are not allowed to quit' SIGINT &
+trap 'echo q7OSboot are not allowed to stop' SIGSTOP &
+A=$1
+
+if [ $A == 'menu' ]; then
+
+OPTIONS=("BootDesktop" "Boot to desktop"
+"Terminal" "Use the GNU linux power of the terminal"
+"Pentesting" "For infiltrating Security using q7OS and other UTILITY"
+"entertaiment" "for entertaiment mode with kodi"
+"sshwdev" "Transform your android into development board Froze Android and Connect through ssh"
+"sshacc" "just turn on ssh without turning off android"
+"q7osconfig" "configure q7os you will find some wierd and unexpected stuff there"
+"PowerMenu" "Show device powermenu"
+"installpkg" "Install package using installpkg command"
+"removepkg" "remove package using removepkg command"
+"searchpkg" "search Package using searchpkg command"
+"autonomous" "Enable AI and handover full device control to the AI"
+"logout" "Saves all files")
+
+A=$(dialog --clear \
+                --backtitle "$BACKTITLE" \
+                --title "$TITLE" \
+                --menu "$MENU" \
+                $HEIGHT $WIDTH $CHOICE_HEIGHT \
+                "${OPTIONS[@]}" \
+                2>&1 >/dev/tty)
+
+fi
+
+if [ $A == 'sshwdev' ]; then
+  clear
+  reset
+  /usr/bin/sshd
+  ifconfig
+  echo This will Froze Android and just let q7OS run
+  echo The display will be turned off in 40 seconds
+  /system/bin/stop
+  sleep 40
+  echo 1 > /sys/class/graphics/fb0/blank
+fi
+
+if [ $A == 'sshacc' ]; then
+  clear
+  reset
+  ifconfig
+  /usr/bin/sshd
+  sleep 40
+  echo
+fi
+
+
+if [ $A == 'q7osconfig' ]; then
+  $A
+fi
+
+if [ $A == 'logout' ]; then
+  sh /module/usermanager/loginmanager logout
+  exit
+fi
+
+if [ $A == 'entertaiment' ]; then
+  if [ $XSDLSTARTUP == '1' ]; then
+  am start x.org.server/.RunFromOtherApp
+  sleep 11
+fi
+pacman -Sy kodi --noconfirm --needed
+kodi
+echo If error pressist means your Device have very outdated software
+sleep 16
+fi
+
+if [ $A == 'mainterminal' ]; then
+conky
+echo To access q7os terminal services use other Terminal tabs that is linked to startq7os
+sleep 1294987
+fi
+
+if [ $A == 'BootDesktop' ]; then
+sh /module/q7displaymanager
+fi
+
+if [ $A == 'Terminal' ]; then
+  pacman -S tmux fish --noconfirm
+sh /module/consolesessionPrompt
+fi
+
+if [ $A == 'Pentesting' ]; then
+  echo Function is not implemented
+fi
+
+if [ $A == 'PowerMenu' ]; then
+  OPTIONS=("poweroff" "poweroff"
+  "reboot" "Poweroff then start again")
+
+  C=$(dialog --clear \
+                  --backtitle "$BACKTITLE" \
+                  --title "$TITLE" \
+                  --menu "$MENU" \
+                  $HEIGHT $WIDTH $CHOICE_HEIGHT \
+                  "${OPTIONS[@]}" \
+                  2>&1 >/dev/tty)
+  $C
+  fi
+  sh /bin/q7osbootmenu $1

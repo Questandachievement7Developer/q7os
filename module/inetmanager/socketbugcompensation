@@ -1,0 +1,11 @@
+#!/bin/bash
+#Socket permission Denied can be fixed by addin gsomething in /etc/group
+# inet:x:3003:${Username}
+# net_raw:x:3004:${Username}
+cd /home
+for a in hashps_* ; do
+  username=$( echo $a | awk '{gsub("hashps_", "");print}'  )
+  echo "inet:x:3003:${username}" >> /etc/group
+  echo "net_raw:x:3004:${username}" >> /etc/group
+  echo Internet patch for $username has been applied 
+done

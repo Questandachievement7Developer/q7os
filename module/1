@@ -1,0 +1,1 @@
+modprobe: FATAL: Module nsh* not found in directory /lib/modules/5.1.0-1-MANJARO

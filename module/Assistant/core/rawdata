@@ -1,0 +1,1986 @@
+[    0.000000] microcode: microcode updated early to revision 0x24, date = 2018-04-02
+[    0.000000] Linux version 4.20.1-1-MANJARO (builduser@development) (gcc version 8.2.1 20181127 (GCC)) #1 SMP PREEMPT Wed Jan 9 17:43:49 UTC 2019
+[    0.000000] Command line: BOOT_IMAGE=/@/boot/vmlinuz-4.20-x86_64 root=UUID=456092c9-5706-4c65-8cc4-7db48f7fc170 rw rootflags=subvol=@ elevator=deadline quiet splash rodata=on acpi_pm_good acpi_sci=edge audit=1 bootmem_debug dma_debug=on highres=on i8k.power_status intel_pstate=force memtest=3 mem_encrypt=on nmi_watchdog=1 nohibernate no_console_suspend memory_corruption_check=1 powersave=on mem_sleep_default=deep int_pln_enable idle=nomwait workqueue.power_efficient noht libata.force=noncq rd.systemd.show_status=auto rd.udev.log_priority=0 i915.fastboot=1 vga=current vt.global_cursor_default=0 panic=1 elevator=bfq-sq
+[    0.000000] KERNEL supported cpus:
+[    0.000000]   Intel GenuineIntel
+[    0.000000]   AMD AuthenticAMD
+[    0.000000]   Hygon HygonGenuine
+[    0.000000]   Centaur CentaurHauls
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x004: 'AVX registers'
+[    0.000000] x86/fpu: xstate_offset[2]:  576, xstate_sizes[2]:  256
+[    0.000000] x86/fpu: Enabled xstate features 0x7, context size is 832 bytes, using 'standard' format.
+[    0.000000] BIOS-provided physical RAM map:
+[    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000004efff] usable
+[    0.000000] BIOS-e820: [mem 0x000000000004f000-0x000000000004ffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000000050000-0x000000000009cfff] usable
+[    0.000000] BIOS-e820: [mem 0x000000000009d000-0x000000000009efff] reserved
+[    0.000000] BIOS-e820: [mem 0x000000000009f000-0x000000000009ffff] usable
+[    0.000000] BIOS-e820: [mem 0x0000000000100000-0x00000000cefc3fff] usable
+[    0.000000] BIOS-e820: [mem 0x00000000cefc4000-0x00000000cefcafff] ACPI NVS
+[    0.000000] BIOS-e820: [mem 0x00000000cefcb000-0x00000000cfc17fff] usable
+[    0.000000] BIOS-e820: [mem 0x00000000cfc18000-0x00000000d0102fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000d0103000-0x00000000d7db3fff] usable
+[    0.000000] BIOS-e820: [mem 0x00000000d7db4000-0x00000000d7ffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000d8000000-0x00000000d8758fff] usable
+[    0.000000] BIOS-e820: [mem 0x00000000d8759000-0x00000000d87fffff] type 20
+[    0.000000] BIOS-e820: [mem 0x00000000d8800000-0x00000000d8f95fff] usable
+[    0.000000] BIOS-e820: [mem 0x00000000d8f96000-0x00000000d8ffffff] ACPI data
+[    0.000000] BIOS-e820: [mem 0x00000000d9000000-0x00000000da71bfff] usable
+[    0.000000] BIOS-e820: [mem 0x00000000da71c000-0x00000000da7fffff] ACPI NVS
+[    0.000000] BIOS-e820: [mem 0x00000000da800000-0x00000000dbcf9fff] usable
+[    0.000000] BIOS-e820: [mem 0x00000000dbcfa000-0x00000000dbffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000dd000000-0x00000000df1fffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000f8000000-0x00000000fbffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fec00000-0x00000000fec00fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fed00000-0x00000000fed03fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fed1c000-0x00000000fed1ffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fee00000-0x00000000fee00fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000ff000000-0x00000000ffffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000100000000-0x000000031edfffff] usable
+[    0.000000] NX (Execute Disable) protection: active
+[    0.000000] efi: EFI v2.31 by American Megatrends
+[    0.000000] efi:  ACPI 2.0=0xd8fd4000  ACPI=0xd8fd4000  SMBIOS=0xf0000 
+[    0.000000] SMBIOS 2.7 present.
+[    0.000000] DMI: Dell Inc. Latitude E7440/07F3F4, BIOS A25 02/01/2018
+[    0.000000] tsc: Fast TSC calibration using PIT
+[    0.000000] tsc: Detected 2693.708 MHz processor
+[    0.000061] e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+[    0.000062] e820: remove [mem 0x000a0000-0x000fffff] usable
+[    0.000070] last_pfn = 0x31ee00 max_arch_pfn = 0x400000000
+[    0.000074] MTRR default type: uncachable
+[    0.000074] MTRR fixed ranges enabled:
+[    0.000075]   00000-9FFFF write-back
+[    0.000076]   A0000-DFFFF uncachable
+[    0.000077]   E0000-FFFFF write-protect
+[    0.000077] MTRR variable ranges enabled:
+[    0.000079]   0 base 0000000000 mask 7E00000000 write-back
+[    0.000080]   1 base 0200000000 mask 7F00000000 write-back
+[    0.000080]   2 base 0300000000 mask 7FE0000000 write-back
+[    0.000081]   3 base 00E0000000 mask 7FE0000000 uncachable
+[    0.000082]   4 base 00DE000000 mask 7FFE000000 uncachable
+[    0.000082]   5 base 00DD000000 mask 7FFF000000 uncachable
+[    0.000083]   6 base 031F000000 mask 7FFF000000 uncachable
+[    0.000084]   7 base 031EE00000 mask 7FFFE00000 uncachable
+[    0.000084]   8 disabled
+[    0.000085]   9 disabled
+[    0.000945] x86/PAT: Configuration [0-7]: WB  WC  UC- UC  WB  WP  UC- WT  
+[    0.001116] total RAM covered: 12222M
+[    0.001315] Found optimal setting for mtrr clean up
+[    0.001315]  gran_size: 64K 	chunk_size: 64M 	num_reg: 10  	lose cover RAM: 0G
+[    0.002166] e820: update [mem 0xdd000000-0xffffffff] usable ==> reserved
+[    0.002170] last_pfn = 0xdbcfa max_arch_pfn = 0x400000000
+[    0.009814] check: Scanning 1 areas for low memory corruption
+[    0.009817] Base memory trampoline at [(____ptrval____)] 97000 size 24576
+[    0.009822] Using GB pages for direct mapping
+[    0.009823] BRK [0x2f0e01000, 0x2f0e01fff] PGTABLE
+[    0.009825] BRK [0x2f0e02000, 0x2f0e02fff] PGTABLE
+[    0.009826] BRK [0x2f0e03000, 0x2f0e03fff] PGTABLE
+[    0.009850] BRK [0x2f0e04000, 0x2f0e04fff] PGTABLE
+[    0.009852] BRK [0x2f0e05000, 0x2f0e05fff] PGTABLE
+[    0.009961] BRK [0x2f0e06000, 0x2f0e06fff] PGTABLE
+[    0.009995] BRK [0x2f0e07000, 0x2f0e07fff] PGTABLE
+[    0.010094] BRK [0x2f0e08000, 0x2f0e08fff] PGTABLE
+[    0.010163] BRK [0x2f0e09000, 0x2f0e09fff] PGTABLE
+[    0.010226] BRK [0x2f0e0a000, 0x2f0e0afff] PGTABLE
+[    0.010293] BRK [0x2f0e0b000, 0x2f0e0bfff] PGTABLE
+[    0.010367] BRK [0x2f0e0c000, 0x2f0e0cfff] PGTABLE
+[    0.010573] Secure boot could not be determined
+[    0.010574] RAMDISK: [mem 0x36b51000-0x3759ffff]
+[    0.010581] ACPI: Early table checksum verification disabled
+[    0.010583] ACPI: RSDP 0x00000000D8FD4000 000024 (v02 DELL  )
+[    0.010586] ACPI: XSDT 0x00000000D8FD40A0 0000C4 (v01 DELL   CBX3     01072009 AMI  00010013)
+[    0.010591] ACPI: FACP 0x00000000D8FE5AE8 00010C (v05 DELL   CBX3     01072009 AMI  00010013)
+[    0.010595] ACPI: DSDT 0x00000000D8FD41F8 0118EC (v02 DELL   CBX3     00000014 INTL 20120711)
+[    0.010598] ACPI: FACS 0x00000000DA7ED080 000040
+[    0.010600] ACPI: UEFI 0x00000000D8FE6000 00063A (v01 INTEL  RstSataE 00000000 ??   00000000)
+[    0.010602] ACPI: APIC 0x00000000D8FE6640 000072 (v03 DELL   CBX3     01072009 AMI  00010013)
+[    0.010604] ACPI: FPDT 0x00000000D8FE66B8 000044 (v01 DELL   CBX3     01072009 AMI  00010013)
+[    0.010607] ACPI: SLIC 0x00000000D8FE6700 000176 (v03 DELL   CBX3     01072009 MSFT 00010013)
+[    0.010609] ACPI: LPIT 0x00000000D8FE6878 00005C (v01 DELL   CBX3     00000000 AMI. 00000005)
+[    0.010611] ACPI: SSDT 0x00000000D8FE68D8 000228 (v01 INTEL  sensrhub 00000000 INTL 20120711)
+[    0.010613] ACPI: SSDT 0x00000000D8FE6B00 00051F (v01 PmRef  Cpu0Ist  00003000 INTL 20120711)
+[    0.010615] ACPI: SSDT 0x00000000D8FE7020 000AD8 (v01 PmRef  CpuPm    00003000 INTL 20120711)
+[    0.010618] ACPI: HPET 0x00000000D8FE7AF8 000038 (v01 DELL   CBX3     01072009 AMI. 00000005)
+[    0.010620] ACPI: SSDT 0x00000000D8FE7B30 000455 (v01 SataRe SataTabl 00001000 INTL 20120711)
+[    0.010622] ACPI: MCFG 0x00000000D8FE7F88 00003C (v01 DELL   CBX3     01072009 MSFT 00000097)
+[    0.010624] ACPI: ASF! 0x00000000D8FE7FC8 0000A5 (v32 INTEL   HCG     00000001 TFSM 000F4240)
+[    0.010627] ACPI: SSDT 0x00000000D8FE8070 000589 (v01 AMITCG PROC     00000001 INTL 20120711)
+[    0.010629] ACPI: MSDM 0x00000000D8FE8600 000055 (v03 DELL   CBX3     06222004 AMI  00010013)
+[    0.010631] ACPI: BGRT 0x00000000D8FE8658 000038 (v00                 01072009 AMI  00010013)
+[    0.010634] ACPI: TCPA 0x00000000D8FE8690 000032 (v02 APTIO4 NAPAASF  00000001 MSFT 01000013)
+[    0.010636] ACPI: UEFI 0x00000000D8FE86C8 00005C (v01 INTEL  RstSataV 00000000 ??   00000000)
+[    0.010638] ACPI: DMAR 0x00000000D8FE8728 0000B0 (v01 INTEL  HSW      00000001 INTL 00000001)
+[    0.010640] ACPI: SSDT 0x00000000D8FE87D8 0006C8 (v01 Intel_ IsctTabl 00001000 INTL 20091112)
+[    0.010648] ACPI: Local APIC address 0xfee00000
+[    0.010723] No NUMA configuration found
+[    0.010724] Faking a node at [mem 0x0000000000000000-0x000000031edfffff]
+[    0.010727] NODE_DATA(0) allocated [mem 0x31edfa000-0x31edfdfff]
+[    0.010755] Zone ranges:
+[    0.010756]   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+[    0.010757]   DMA32    [mem 0x0000000001000000-0x00000000ffffffff]
+[    0.010758]   Normal   [mem 0x0000000100000000-0x000000031edfffff]
+[    0.010759]   Device   empty
+[    0.010760] Movable zone start for each node
+[    0.010760] Early memory node ranges
+[    0.010761]   node   0: [mem 0x0000000000001000-0x000000000004efff]
+[    0.010761]   node   0: [mem 0x0000000000050000-0x000000000009cfff]
+[    0.010762]   node   0: [mem 0x000000000009f000-0x000000000009ffff]
+[    0.010763]   node   0: [mem 0x0000000000100000-0x00000000cefc3fff]
+[    0.010763]   node   0: [mem 0x00000000cefcb000-0x00000000cfc17fff]
+[    0.010764]   node   0: [mem 0x00000000d0103000-0x00000000d7db3fff]
+[    0.010764]   node   0: [mem 0x00000000d8000000-0x00000000d8758fff]
+[    0.010765]   node   0: [mem 0x00000000d8800000-0x00000000d8f95fff]
+[    0.010765]   node   0: [mem 0x00000000d9000000-0x00000000da71bfff]
+[    0.010766]   node   0: [mem 0x00000000da800000-0x00000000dbcf9fff]
+[    0.010766]   node   0: [mem 0x0000000100000000-0x000000031edfffff]
+[    0.011011] Zeroed struct page in unavailable ranges: 19613 pages
+[    0.011012] Initmem setup node 0 [mem 0x0000000000001000-0x000000031edfffff]
+[    0.011014] On node 0 totalpages: 3121507
+[    0.011015]   DMA zone: 64 pages used for memmap
+[    0.011015]   DMA zone: 23 pages reserved
+[    0.011016]   DMA zone: 3996 pages, LIFO batch:0
+[    0.011458]   DMA32 zone: 13968 pages used for memmap
+[    0.011459]   DMA32 zone: 893895 pages, LIFO batch:63
+[    0.029370]   Normal zone: 34744 pages used for memmap
+[    0.029371]   Normal zone: 2223616 pages, LIFO batch:63
+[    0.071952] Reserving Intel graphics memory at [mem 0xdd200000-0xdf1fffff]
+[    0.072027] ACPI: PM-Timer IO Port: 0x1808
+[    0.072029] ACPI: Local APIC address 0xfee00000
+[    0.072035] ACPI: LAPIC_NMI (acpi_id[0xff] high edge lint[0x1])
+[    0.072046] IOAPIC[0]: apic_id 8, version 32, address 0xfec00000, GSI 0-39
+[    0.072048] ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+[    0.072049] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 high level)
+[    0.072050] ACPI: IRQ0 used by override.
+[    0.072051] ACPI: IRQ9 used by override.
+[    0.072053] Using ACPI (MADT) for SMP configuration information
+[    0.072054] ACPI: HPET id: 0x8086a701 base: 0xfed00000
+[    0.072064] smpboot: Allowing 4 CPUs, 0 hotplug CPUs
+[    0.072089] PM: Registered nosave memory: [mem 0x00000000-0x00000fff]
+[    0.072090] PM: Registered nosave memory: [mem 0x0004f000-0x0004ffff]
+[    0.072092] PM: Registered nosave memory: [mem 0x0009d000-0x0009efff]
+[    0.072093] PM: Registered nosave memory: [mem 0x000a0000-0x000fffff]
+[    0.072095] PM: Registered nosave memory: [mem 0xcefc4000-0xcefcafff]
+[    0.072096] PM: Registered nosave memory: [mem 0xcfc18000-0xd0102fff]
+[    0.072097] PM: Registered nosave memory: [mem 0xd7db4000-0xd7ffffff]
+[    0.072099] PM: Registered nosave memory: [mem 0xd8759000-0xd87fffff]
+[    0.072100] PM: Registered nosave memory: [mem 0xd8f96000-0xd8ffffff]
+[    0.072102] PM: Registered nosave memory: [mem 0xda71c000-0xda7fffff]
+[    0.072104] PM: Registered nosave memory: [mem 0xdbcfa000-0xdbffffff]
+[    0.072104] PM: Registered nosave memory: [mem 0xdc000000-0xdcffffff]
+[    0.072105] PM: Registered nosave memory: [mem 0xdd000000-0xdf1fffff]
+[    0.072105] PM: Registered nosave memory: [mem 0xdf200000-0xf7ffffff]
+[    0.072106] PM: Registered nosave memory: [mem 0xf8000000-0xfbffffff]
+[    0.072106] PM: Registered nosave memory: [mem 0xfc000000-0xfebfffff]
+[    0.072107] PM: Registered nosave memory: [mem 0xfec00000-0xfec00fff]
+[    0.072107] PM: Registered nosave memory: [mem 0xfec01000-0xfecfffff]
+[    0.072108] PM: Registered nosave memory: [mem 0xfed00000-0xfed03fff]
+[    0.072108] PM: Registered nosave memory: [mem 0xfed04000-0xfed1bfff]
+[    0.072109] PM: Registered nosave memory: [mem 0xfed1c000-0xfed1ffff]
+[    0.072109] PM: Registered nosave memory: [mem 0xfed20000-0xfedfffff]
+[    0.072110] PM: Registered nosave memory: [mem 0xfee00000-0xfee00fff]
+[    0.072110] PM: Registered nosave memory: [mem 0xfee01000-0xfeffffff]
+[    0.072111] PM: Registered nosave memory: [mem 0xff000000-0xffffffff]
+[    0.072112] [mem 0xdf200000-0xf7ffffff] available for PCI devices
+[    0.072113] Booting paravirtualized kernel on bare hardware
+[    0.072115] clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 6370452778343963 ns
+[    0.178622] random: get_random_bytes called from start_kernel+0x95/0x54e with crng_init=0
+[    0.178630] setup_percpu: NR_CPUS:320 nr_cpumask_bits:320 nr_cpu_ids:4 nr_node_ids:1
+[    0.178836] percpu: Embedded 45 pages/cpu @(____ptrval____) s147456 r8192 d28672 u524288
+[    0.178844] pcpu-alloc: s147456 r8192 d28672 u524288 alloc=1*2097152
+[    0.178845] pcpu-alloc: [0] 0 1 2 3 
+[    0.178863] Built 1 zonelists, mobility grouping on.  Total pages: 3072708
+[    0.178864] Policy zone: Normal
+[    0.178866] Kernel command line: BOOT_IMAGE=/@/boot/vmlinuz-4.20-x86_64 root=UUID=456092c9-5706-4c65-8cc4-7db48f7fc170 rw rootflags=subvol=@ elevator=deadline quiet splash rodata=on acpi_pm_good acpi_sci=edge audit=1 bootmem_debug dma_debug=on highres=on i8k.power_status intel_pstate=force memtest=3 mem_encrypt=on nmi_watchdog=1 nohibernate no_console_suspend memory_corruption_check=1 powersave=on mem_sleep_default=deep int_pln_enable idle=nomwait workqueue.power_efficient noht libata.force=noncq rd.systemd.show_status=auto rd.udev.log_priority=0 i915.fastboot=1 vga=current vt.global_cursor_default=0 panic=1 elevator=bfq-sq
+[    0.178976] audit: enabled (after initialization)
+[    0.182496] Calgary: detecting Calgary via BIOS EBDA area
+[    0.182498] Calgary: Unable to locate Rio Grande table in EBDA - bailing!
+[    0.211623] Memory: 12100112K/12486028K available (12293K kernel code, 1277K rwdata, 3768K rodata, 1540K init, 3876K bss, 385916K reserved, 0K cma-reserved)
+[    0.211756] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.211761] Kernel/User page tables isolation: enabled
+[    0.211774] ftrace: allocating 36346 entries in 142 pages
+[    0.225086] rcu: Preemptible hierarchical RCU implementation.
+[    0.225087] rcu: 	CONFIG_RCU_FANOUT set to non-default value of 32.
+[    0.225088] rcu: 	RCU dyntick-idle grace-period acceleration is enabled.
+[    0.225088] rcu: 	RCU restricting CPUs from NR_CPUS=320 to nr_cpu_ids=4.
+[    0.225089] rcu: 	RCU priority boosting: priority 1 delay 500 ms.
+[    0.225090] 	Tasks RCU enabled.
+[    0.225090] rcu: RCU calculated value of scheduler-enlistment delay is 30 jiffies.
+[    0.225091] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+[    0.226568] NR_IRQS: 20736, nr_irqs: 728, preallocated irqs: 16
+[    0.226722] rcu: 	Offload RCU callbacks from CPUs: (none).
+[    0.226767] Console: colour dummy device 80x25
+[    0.226773] printk: console [tty0] enabled
+[    0.226788] ACPI: Core revision 20181003
+[    0.226982] clocksource: hpet: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 133484882848 ns
+[    0.226989] hpet clockevent registered
+[    0.226993] APIC: Switch to symmetric I/O mode setup
+[    0.226995] DMAR: Host address width 39
+[    0.226996] DMAR: DRHD base: 0x000000fed90000 flags: 0x0
+[    0.227000] DMAR: dmar0: reg_base_addr fed90000 ver 1:0 cap c0000020660462 ecap f0101a
+[    0.227000] DMAR: DRHD base: 0x000000fed91000 flags: 0x1
+[    0.227003] DMAR: dmar1: reg_base_addr fed91000 ver 1:0 cap d2008020660462 ecap f010da
+[    0.227004] DMAR: RMRR base: 0x000000d7f19000 end: 0x000000d7f27fff
+[    0.227005] DMAR: RMRR base: 0x000000dd000000 end: 0x000000df1fffff
+[    0.227006] DMAR-IR: IOAPIC id 8 under DRHD base  0xfed91000 IOMMU 1
+[    0.227007] DMAR-IR: HPET id 0 under DRHD base 0xfed91000
+[    0.227008] DMAR-IR: Queued invalidation will be enabled to support x2apic and Intr-remapping.
+[    0.227446] DMAR-IR: Enabled IRQ remapping in x2apic mode
+[    0.227447] x2apic enabled
+[    0.227452] Switched APIC routing to cluster x2apic.
+[    0.228051] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+[    0.243663] clocksource: tsc-early: mask: 0xffffffffffffffff max_cycles: 0x26d406b6fbb, max_idle_ns: 440795313884 ns
+[    0.243674] Calibrating delay loop (skipped), value calculated using timer frequency.. 5389.89 BogoMIPS (lpj=8979026)
+[    0.243676] pid_max: default: 32768 minimum: 301
+[    0.244233] LSM: Security Framework initializing
+[    0.244234] Yama: becoming mindful.
+[    0.244239] AppArmor: AppArmor disabled by boot time parameter
+[    0.246327] Dentry cache hash table entries: 2097152 (order: 12, 16777216 bytes)
+[    0.247393] Inode-cache hash table entries: 1048576 (order: 11, 8388608 bytes)
+[    0.247439] Mount-cache hash table entries: 32768 (order: 6, 262144 bytes)
+[    0.247471] Mountpoint-cache hash table entries: 32768 (order: 6, 262144 bytes)
+[    0.247656] ENERGY_PERF_BIAS: Set to 'normal', was 'performance'
+[    0.247657] ENERGY_PERF_BIAS: View and update with x86_energy_perf_policy(8)
+[    0.247661] mce: CPU supports 7 MCE banks
+[    0.247668] CPU0: Thermal monitoring enabled (TM1)
+[    0.247677] process: using mwait in idle threads
+[    0.247680] Last level iTLB entries: 4KB 1024, 2MB 1024, 4MB 1024
+[    0.247681] Last level dTLB entries: 4KB 1024, 2MB 1024, 4MB 1024, 1GB 4
+[    0.247684] Spectre V2 : Mitigation: Full generic retpoline
+[    0.247684] Spectre V2 : Spectre v2 / SpectreRSB mitigation: Filling RSB on context switch
+[    0.247685] Spectre V2 : Enabling Restricted Speculation for firmware calls
+[    0.247692] Spectre V2 : mitigation: Enabling conditional Indirect Branch Prediction Barrier
+[    0.247693] Spectre V2 : User space: Mitigation: STIBP via seccomp and prctl
+[    0.247695] Speculative Store Bypass: Mitigation: Speculative Store Bypass disabled via prctl and seccomp
+[    0.247845] Freeing SMP alternatives memory: 28K
+[    0.252297] TSC deadline timer enabled
+[    0.252299] smpboot: CPU0: Intel(R) Core(TM) i7-4600U CPU @ 2.10GHz (family: 0x6, model: 0x45, stepping: 0x1)
+[    0.270336] Performance Events: PEBS fmt2+, Haswell events, 16-deep LBR, full-width counters, Intel PMU driver.
+[    0.270376] ... version:                3
+[    0.270376] ... bit width:              48
+[    0.270377] ... generic registers:      4
+[    0.270378] ... value mask:             0000ffffffffffff
+[    0.270378] ... max period:             00007fffffffffff
+[    0.270379] ... fixed-purpose events:   3
+[    0.270379] ... event mask:             000000070000000f
+[    0.277000] rcu: Hierarchical SRCU implementation.
+[    0.300417] NMI watchdog: Enabled. Permanently consumes one hw-PMU counter.
+[    0.307005] smp: Bringing up secondary CPUs ...
+[    0.347008] x86: Booting SMP configuration:
+[    0.347009] .... node  #0, CPUs:      #1 #2 #3
+[    0.427378] smp: Brought up 1 node, 4 CPUs
+[    0.427378] smpboot: Max logical packages: 1
+[    0.427378] smpboot: Total of 4 processors activated (21558.56 BogoMIPS)
+[    0.430611] devtmpfs: initialized
+[    0.430611] x86/mm: Memory block size: 128MB
+[    0.431213] PM: Registering ACPI NVS region [mem 0xcefc4000-0xcefcafff] (28672 bytes)
+[    0.431213] PM: Registering ACPI NVS region [mem 0xda71c000-0xda7fffff] (933888 bytes)
+[    0.431213] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 6370867519511994 ns
+[    0.431213] futex hash table entries: 1024 (order: 4, 65536 bytes)
+[    0.431213] pinctrl core: initialized pinctrl subsystem
+[    0.431213] RTC time:  9:57:53, date: 02/09/19
+[    0.431213] NET: Registered protocol family 16
+[    0.431213] audit: initializing netlink subsys (enabled)
+[    0.431213] audit: type=2000 audit(1549706273.203:1): state=initialized audit_enabled=1 res=1
+[    0.431213] cpuidle: using governor ladder
+[    0.431213] cpuidle: using governor menu
+[    0.431213] ACPI FADT declares the system doesn't support PCIe ASPM, so disable it
+[    0.431213] ACPI: bus type PCI registered
+[    0.431213] acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+[    0.431213] PCI: MMCONFIG for domain 0000 [bus 00-3f] at [mem 0xf8000000-0xfbffffff] (base 0xf8000000)
+[    0.431213] PCI: MMCONFIG at [mem 0xf8000000-0xfbffffff] reserved in E820
+[    0.431213] PCI: Using configuration type 1 for base access
+[    0.431213] core: PMU erratum BJ122, BV98, HSD29 worked around, HT is on
+[    0.431469] HugeTLB registered 1.00 GiB page size, pre-allocated 0 pages
+[    0.431469] HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+[    0.433751] ACPI: Added _OSI(Module Device)
+[    0.433752] ACPI: Added _OSI(Processor Device)
+[    0.433753] ACPI: Added _OSI(3.0 _SCP Extensions)
+[    0.433753] ACPI: Added _OSI(Processor Aggregator Device)
+[    0.433754] ACPI: Added _OSI(Linux-Dell-Video)
+[    0.433755] ACPI: Added _OSI(Linux-Lenovo-NV-HDMI-Audio)
+[    0.447482] ACPI: 7 ACPI AML tables successfully acquired and loaded
+[    0.449929] ACPI: [Firmware Bug]: BIOS _OSI(Linux) query ignored
+[    0.464556] ACPI: Dynamic OEM Table Load:
+[    0.464556] ACPI: SSDT 0xFFFF966AD0134800 0003D3 (v01 PmRef  Cpu0Cst  00003001 INTL 20120711)
+[    0.464560] ACPI: Dynamic OEM Table Load:
+[    0.464560] ACPI: SSDT 0xFFFF966AD0682800 0005AA (v01 PmRef  ApIst    00003000 INTL 20120711)
+[    0.464560] ACPI: Dynamic OEM Table Load:
+[    0.464560] ACPI: SSDT 0xFFFF966AD012FE00 000119 (v01 PmRef  ApCst    00003000 INTL 20120711)
+[    0.464560] ACPI: EC: EC started
+[    0.464560] ACPI: EC: interrupt blocked
+[    0.467150] ACPI: \_SB_.PCI0.LPCB.ECDV: Used as first EC
+[    0.467150] ACPI: \_SB_.PCI0.LPCB.ECDV: GPE=0x27, EC_CMD/EC_SC=0x934, EC_DATA=0x930
+[    0.467150] ACPI: \_SB_.PCI0.LPCB.ECDV: Used as boot DSDT EC to handle transactions
+[    0.467150] ACPI: Interpreter enabled
+[    0.467150] ACPI: (supports S0 S3 S4 S5)
+[    0.467150] ACPI: Using IOAPIC for interrupt routing
+[    0.467150] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+[    0.467492] ACPI: Enabled 4 GPEs in block 00 to 7F
+[    0.487281] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-3e])
+[    0.487287] acpi PNP0A08:00: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI]
+[    0.487574] acpi PNP0A08:00: _OSC: platform does not support [PCIeHotplug SHPCHotplug PME]
+[    0.487752] acpi PNP0A08:00: _OSC: OS now controls [AER PCIeCapability LTR]
+[    0.487753] acpi PNP0A08:00: FADT indicates ASPM is unsupported, using BIOS configuration
+[    0.488279] PCI host bridge to bus 0000:00
+[    0.488282] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+[    0.488283] pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
+[    0.488284] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+[    0.488285] pci_bus 0000:00: root bus resource [mem 0x000c0000-0x000c3fff window]
+[    0.488286] pci_bus 0000:00: root bus resource [mem 0x000c4000-0x000c7fff window]
+[    0.488288] pci_bus 0000:00: root bus resource [mem 0x000c8000-0x000cbfff window]
+[    0.488289] pci_bus 0000:00: root bus resource [mem 0x000cc000-0x000cffff window]
+[    0.488290] pci_bus 0000:00: root bus resource [mem 0x000d0000-0x000d3fff window]
+[    0.488291] pci_bus 0000:00: root bus resource [mem 0x000d4000-0x000d7fff window]
+[    0.488292] pci_bus 0000:00: root bus resource [mem 0x000d8000-0x000dbfff window]
+[    0.488293] pci_bus 0000:00: root bus resource [mem 0x000dc000-0x000dffff window]
+[    0.488294] pci_bus 0000:00: root bus resource [mem 0xdf200000-0xfeafffff window]
+[    0.488296] pci_bus 0000:00: root bus resource [bus 00-3e]
+[    0.488303] pci 0000:00:00.0: [8086:0a04] type 00 class 0x060000
+[    0.488413] pci 0000:00:02.0: [8086:0a16] type 00 class 0x030000
+[    0.488423] pci 0000:00:02.0: reg 0x10: [mem 0xf7800000-0xf7bfffff 64bit]
+[    0.488429] pci 0000:00:02.0: reg 0x18: [mem 0xe0000000-0xefffffff 64bit pref]
+[    0.488433] pci 0000:00:02.0: reg 0x20: [io  0xf000-0xf03f]
+[    0.488444] pci 0000:00:02.0: BAR 2: assigned to efifb
+[    0.488531] pci 0000:00:03.0: [8086:0a0c] type 00 class 0x040300
+[    0.488539] pci 0000:00:03.0: reg 0x10: [mem 0xf7e34000-0xf7e37fff 64bit]
+[    0.488651] pci 0000:00:14.0: [8086:9c31] type 00 class 0x0c0330
+[    0.488668] pci 0000:00:14.0: reg 0x10: [mem 0xf7e20000-0xf7e2ffff 64bit]
+[    0.488718] pci 0000:00:14.0: PME# supported from D3hot D3cold
+[    0.488806] pci 0000:00:16.0: [8086:9c3a] type 00 class 0x078000
+[    0.488826] pci 0000:00:16.0: reg 0x10: [mem 0xf7e3f000-0xf7e3f01f 64bit]
+[    0.488886] pci 0000:00:16.0: PME# supported from D0 D3hot D3cold
+[    0.488976] pci 0000:00:19.0: [8086:155a] type 00 class 0x020000
+[    0.488991] pci 0000:00:19.0: reg 0x10: [mem 0xf7e00000-0xf7e1ffff]
+[    0.488997] pci 0000:00:19.0: reg 0x14: [mem 0xf7e3c000-0xf7e3cfff]
+[    0.489003] pci 0000:00:19.0: reg 0x18: [io  0xf080-0xf09f]
+[    0.489051] pci 0000:00:19.0: PME# supported from D0 D3hot D3cold
+[    0.489139] pci 0000:00:1b.0: [8086:9c20] type 00 class 0x040300
+[    0.489156] pci 0000:00:1b.0: reg 0x10: [mem 0xf7e30000-0xf7e33fff 64bit]
+[    0.489213] pci 0000:00:1b.0: PME# supported from D0 D3hot D3cold
+[    0.489306] pci 0000:00:1c.0: [8086:9c10] type 01 class 0x060400
+[    0.489379] pci 0000:00:1c.0: PME# supported from D0 D3hot D3cold
+[    0.489533] pci 0000:00:1c.3: [8086:9c16] type 01 class 0x060400
+[    0.489613] pci 0000:00:1c.3: PME# supported from D0 D3hot D3cold
+[    0.489762] pci 0000:00:1c.4: [8086:9c18] type 01 class 0x060400
+[    0.489839] pci 0000:00:1c.4: PME# supported from D0 D3hot D3cold
+[    0.489985] pci 0000:00:1d.0: [8086:9c26] type 00 class 0x0c0320
+[    0.490004] pci 0000:00:1d.0: reg 0x10: [mem 0xf7e3b000-0xf7e3b3ff]
+[    0.490079] pci 0000:00:1d.0: PME# supported from D0 D3hot D3cold
+[    0.490174] pci 0000:00:1f.0: [8086:9c43] type 00 class 0x060100
+[    0.490364] pci 0000:00:1f.2: [8086:282a] type 00 class 0x010400
+[    0.490377] pci 0000:00:1f.2: reg 0x10: [io  0xf0d0-0xf0d7]
+[    0.490383] pci 0000:00:1f.2: reg 0x14: [io  0xf0c0-0xf0c3]
+[    0.490389] pci 0000:00:1f.2: reg 0x18: [io  0xf0b0-0xf0b7]
+[    0.490395] pci 0000:00:1f.2: reg 0x1c: [io  0xf0a0-0xf0a3]
+[    0.490400] pci 0000:00:1f.2: reg 0x20: [io  0xf060-0xf07f]
+[    0.490406] pci 0000:00:1f.2: reg 0x24: [mem 0xf7e3a000-0xf7e3a7ff]
+[    0.490435] pci 0000:00:1f.2: PME# supported from D3hot
+[    0.490520] pci 0000:00:1f.3: [8086:9c22] type 00 class 0x0c0500
+[    0.490534] pci 0000:00:1f.3: reg 0x10: [mem 0xf7e39000-0xf7e390ff 64bit]
+[    0.490550] pci 0000:00:1f.3: reg 0x20: [io  0xf040-0xf05f]
+[    0.490695] pci 0000:00:1c.0: PCI bridge to [bus 01]
+[    0.490821] pci 0000:02:00.0: [8086:08b1] type 00 class 0x028000
+[    0.490922] pci 0000:02:00.0: reg 0x10: [mem 0xf7d00000-0xf7d01fff 64bit]
+[    0.491187] pci 0000:02:00.0: PME# supported from D0 D3hot D3cold
+[    0.491476] pci 0000:00:1c.3: PCI bridge to [bus 02]
+[    0.491480] pci 0000:00:1c.3:   bridge window [mem 0xf7d00000-0xf7dfffff]
+[    0.493348] pci 0000:03:00.0: [1217:8520] type 00 class 0x080501
+[    0.493380] pci 0000:03:00.0: reg 0x10: [mem 0xf7c01000-0xf7c01fff]
+[    0.493392] pci 0000:03:00.0: reg 0x14: [mem 0xf7c00000-0xf7c007ff]
+[    0.493531] pci 0000:03:00.0: PME# supported from D3hot D3cold
+[    0.502168] pci 0000:00:1c.4: PCI bridge to [bus 03]
+[    0.502172] pci 0000:00:1c.4:   bridge window [mem 0xf7c00000-0xf7cfffff]
+[    0.503939] ACPI: PCI Interrupt Link [LNKA] (IRQs 3 4 5 6 10 11 12 14 15) *0, disabled.
+[    0.504001] ACPI: PCI Interrupt Link [LNKB] (IRQs 3 4 5 6 10 11 12 14 15) *0, disabled.
+[    0.504061] ACPI: PCI Interrupt Link [LNKC] (IRQs 3 4 5 6 10 11 12 14 15) *0, disabled.
+[    0.504121] ACPI: PCI Interrupt Link [LNKD] (IRQs 3 4 5 6 10 11 12 14 15) *0, disabled.
+[    0.504180] ACPI: PCI Interrupt Link [LNKE] (IRQs 3 4 5 6 10 11 12 14 15) *0, disabled.
+[    0.504239] ACPI: PCI Interrupt Link [LNKF] (IRQs 3 4 5 6 10 11 12 14 15) *0, disabled.
+[    0.504299] ACPI: PCI Interrupt Link [LNKG] (IRQs 3 4 5 6 10 11 12 14 15) *0, disabled.
+[    0.504358] ACPI: PCI Interrupt Link [LNKH] (IRQs 3 4 5 6 10 11 12 14 15) *0, disabled.
+[    0.506137] ACPI: EC: interrupt unblocked
+[    0.506190] ACPI: EC: event unblocked
+[    0.506208] ACPI: \_SB_.PCI0.LPCB.ECDV: GPE=0x27, EC_CMD/EC_SC=0x934, EC_DATA=0x930
+[    0.506209] ACPI: \_SB_.PCI0.LPCB.ECDV: Used as boot DSDT EC to handle transactions and events
+[    0.506287] pci 0000:00:02.0: vgaarb: setting as boot VGA device
+[    0.506287] pci 0000:00:02.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
+[    0.506287] pci 0000:00:02.0: vgaarb: bridge control possible
+[    0.506287] vgaarb: loaded
+[    0.506287] ACPI: bus type USB registered
+[    0.506287] usbcore: registered new interface driver usbfs
+[    0.506287] usbcore: registered new interface driver hub
+[    0.506287] usbcore: registered new device driver usb
+[    0.507005] pps_core: LinuxPPS API ver. 1 registered
+[    0.507006] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.507009] PTP clock support registered
+[    0.507014] EDAC MC: Ver: 3.0.0
+[    0.510408] Registered efivars operations
+[    0.517105] PCI: Using ACPI for IRQ routing
+[    0.518182] PCI: pci_cache_line_size set to 64 bytes
+[    0.520408] e820: reserve RAM buffer [mem 0x0004f000-0x0004ffff]
+[    0.520409] e820: reserve RAM buffer [mem 0x0009d000-0x0009ffff]
+[    0.520410] e820: reserve RAM buffer [mem 0xcefc4000-0xcfffffff]
+[    0.520411] e820: reserve RAM buffer [mem 0xcfc18000-0xcfffffff]
+[    0.520412] e820: reserve RAM buffer [mem 0xd7db4000-0xd7ffffff]
+[    0.520412] e820: reserve RAM buffer [mem 0xd8759000-0xdbffffff]
+[    0.520414] e820: reserve RAM buffer [mem 0xd8f96000-0xdbffffff]
+[    0.520415] e820: reserve RAM buffer [mem 0xda71c000-0xdbffffff]
+[    0.520416] e820: reserve RAM buffer [mem 0xdbcfa000-0xdbffffff]
+[    0.520417] e820: reserve RAM buffer [mem 0x31ee00000-0x31fffffff]
+[    0.520499] NetLabel: Initializing
+[    0.520499] NetLabel:  domain hash size = 128
+[    0.520500] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+[    0.520518] NetLabel:  unlabeled traffic allowed by default
+[    0.520516] audit: type=1409 audit(1549706273.293:2): netlabel: auid=0 ses=0 nlbl_domain=(default) nlbl_protocol=unlbl res=1
+[    0.520516] audit: type=1406 audit(1549706273.293:3): netlabel: auid=0 ses=0 unlbl_accept=1 old=0
+[    0.520703] hpet0: at MMIO 0xfed00000, IRQs 2, 8, 0, 0, 0, 0, 0, 0
+[    0.520708] hpet0: 8 comparators, 64-bit 14.318180 MHz counter
+[    0.524684] clocksource: Switched to clocksource tsc-early
+[    0.532894] VFS: Disk quotas dquot_6.6.0
+[    0.532910] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    0.532981] pnp: PnP ACPI init
+[    0.533416] system 00:00: [io  0x0680-0x069f] has been reserved
+[    0.533418] system 00:00: [io  0xffff] has been reserved
+[    0.533419] system 00:00: [io  0xffff] has been reserved
+[    0.533421] system 00:00: [io  0xffff] has been reserved
+[    0.533422] system 00:00: [io  0x1c00-0x1cfe] has been reserved
+Input driver version is 1.0.1
+[    0.533423] system 00:00: [io  0x1d00-0x1dfe] has been reserved
+Input device ID: bus 0x19 vendor 0x0 product 0x5 version 0x0
+Input device name: "Lid Switch"
+[    0.533425] system 00:00: [io  0x1e00-0x1efe] has been reserved
+Supported events:
+  Event type 0 (EV_SYN)
+[    0.533426] system 00:00: [io  0x1f00-0x1ffe] has been reserved
+  Event type 5 (EV_SW)
+    Event code 0 (SW_LID) state 0
+[    0.533427] system 00:00: [io  0x1800-0x18fe] has been reserved
+Properties:
+Testing ... (interrupt to exit)[    0.533428] system 00:00: [io  0x164e-0x164f] has been reserved
+
+[    0.533433] system 00:00: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    0.533454] pnp 00:01: Plug and Play ACPI device, IDs PNP0b00 (active)
+[    0.533505] system 00:02: [io  0x1854-0x1857] has been reserved
+[    0.533509] system 00:02: Plug and Play ACPI device, IDs INT3f0d PNP0c02 (active)
+[    0.533558] system 00:03: [io  0x04d0-0x04d1] has been reserved
+[    0.533561] system 00:03: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    0.533592] pnp 00:04: Plug and Play ACPI device, IDs PNP0303 (active)
+[    0.533608] pnp 00:05: Plug and Play ACPI device, IDs DLL05cb PNP0f13 (active)
+[    0.534484] pnp 00:06: Plug and Play ACPI device, IDs PNP0401 (disabled)
+[    0.534820] system 00:07: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    0.535119] system 00:08: [mem 0xfed1c000-0xfed1ffff] has been reserved
+[    0.535120] system 00:08: [mem 0xfed10000-0xfed17fff] has been reserved
+[    0.535122] system 00:08: [mem 0xfed18000-0xfed18fff] has been reserved
+[    0.535123] system 00:08: [mem 0xfed19000-0xfed19fff] has been reserved
+[    0.535125] system 00:08: [mem 0xf8000000-0xfbffffff] has been reserved
+[    0.535126] system 00:08: [mem 0xfed20000-0xfed3ffff] has been reserved
+[    0.535128] system 00:08: [mem 0xfed90000-0xfed93fff] could not be reserved
+[    0.535129] system 00:08: [mem 0xfed45000-0xfed8ffff] has been reserved
+[    0.535131] system 00:08: [mem 0xff000000-0xffffffff] has been reserved
+[    0.535132] system 00:08: [mem 0xfee00000-0xfeefffff] could not be reserved
+[    0.535134] system 00:08: [mem 0xf7fdf000-0xf7fdffff] has been reserved
+[    0.535135] system 00:08: [mem 0xf7fe0000-0xf7feffff] has been reserved
+[    0.535138] system 00:08: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    0.536841] pnp 00:09: Plug and Play ACPI device, IDs PNP0c31 (active)
+[    0.536939] pnp: PnP ACPI: found 10 devices
+[    0.542543] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+[    0.542576] pci 0000:00:1c.0: PCI bridge to [bus 01]
+[    0.542588] pci 0000:00:1c.3: PCI bridge to [bus 02]
+[    0.542592] pci 0000:00:1c.3:   bridge window [mem 0xf7d00000-0xf7dfffff]
+[    0.542599] pci 0000:00:1c.4: PCI bridge to [bus 03]
+[    0.542603] pci 0000:00:1c.4:   bridge window [mem 0xf7c00000-0xf7cfffff]
+[    0.542611] pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7 window]
+[    0.542612] pci_bus 0000:00: resource 5 [io  0x0d00-0xffff window]
+[    0.542613] pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff window]
+[    0.542615] pci_bus 0000:00: resource 7 [mem 0x000c0000-0x000c3fff window]
+[    0.542616] pci_bus 0000:00: resource 8 [mem 0x000c4000-0x000c7fff window]
+[    0.542617] pci_bus 0000:00: resource 9 [mem 0x000c8000-0x000cbfff window]
+[    0.542618] pci_bus 0000:00: resource 10 [mem 0x000cc000-0x000cffff window]
+[    0.542620] pci_bus 0000:00: resource 11 [mem 0x000d0000-0x000d3fff window]
+[    0.542621] pci_bus 0000:00: resource 12 [mem 0x000d4000-0x000d7fff window]
+[    0.542622] pci_bus 0000:00: resource 13 [mem 0x000d8000-0x000dbfff window]
+[    0.542623] pci_bus 0000:00: resource 14 [mem 0x000dc000-0x000dffff window]
+[    0.542624] pci_bus 0000:00: resource 15 [mem 0xdf200000-0xfeafffff window]
+[    0.542626] pci_bus 0000:02: resource 1 [mem 0xf7d00000-0xf7dfffff]
+[    0.542627] pci_bus 0000:03: resource 1 [mem 0xf7c00000-0xf7cfffff]
+[    0.542762] NET: Registered protocol family 2
+[    0.542884] tcp_listen_portaddr_hash hash table entries: 8192 (order: 5, 131072 bytes)
+[    0.542929] TCP established hash table entries: 131072 (order: 8, 1048576 bytes)
+[    0.543067] TCP bind hash table entries: 65536 (order: 8, 1048576 bytes)
+[    0.543172] TCP: Hash tables configured (established 131072 bind 65536)
+[    0.543201] UDP hash table entries: 8192 (order: 6, 262144 bytes)
+[    0.543238] UDP-Lite hash table entries: 8192 (order: 6, 262144 bytes)
+[    0.543297] NET: Registered protocol family 1
+[    0.543301] NET: Registered protocol family 44
+[    0.543308] pci 0000:00:02.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+[    0.545555] PCI: CLS 64 bytes, default 64
+[    0.545585] Unpacking initramfs...
+[    0.659039] Freeing initrd memory: 10556K
+[    0.690343] PCI-DMA: Using software bounce buffering for IO (SWIOTLB)
+[    0.690345] software IO TLB: mapped [mem 0xc8125000-0xcc125000] (64MB)
+[    0.690516] check: Scanning for low memory corruption every 60 seconds
+[    0.690968] Initialise system trusted keyrings
+[    0.690975] Key type blacklist registered
+[    0.691006] workingset: timestamp_bits=41 max_order=22 bucket_order=0
+[    0.692092] zbud: loaded
+[    0.717170] Key type asymmetric registered
+[    0.717172] Asymmetric key parser 'x509' registered
+[    0.717181] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 244)
+[    0.717212] io scheduler noop registered
+[    0.717213] io scheduler deadline registered
+[    0.717243] io scheduler cfq registered
+[    0.717244] io scheduler mq-deadline registered
+[    0.717245] io scheduler kyber registered
+[    0.717276] io scheduler bfq registered
+[    0.717294] io scheduler bfq-sq registered (default)
+[    0.717295] BFQ I/O-scheduler: v9 (with cgroups support)
+[    0.717295] blkcg_policy_register: BLKCG_MAX_POLS too small
+[    0.717876] shpchp: Standard Hot Plug PCI Controller Driver version: 0.4
+[    0.717935] efifb: probing for efifb
+[    0.717948] efifb: showing boot graphics
+[    0.718482] efifb: framebuffer at 0xe0000000, using 4160k, total 4160k
+[    0.718483] efifb: mode is 1366x768x32, linelength=5504, pages=1
+[    0.718484] efifb: scrolling: redraw
+[    0.718485] efifb: Truecolor: size=8:8:8:8, shift=24:16:8:0
+[    0.718521] fbcon: Deferring console take-over
+[    0.718522] fb0: EFI VGA frame buffer device
+[    0.718591] input: Lid Switch as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0D:00/input/input0
+[    0.718601] ACPI: Lid Switch [LID0]
+[    0.718626] input: Power Button as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0C:00/input/input1
+[    0.718632] ACPI: Power Button [PBTN]
+[    0.718655] input: Sleep Button as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0E:00/input/input2
+[    0.718662] ACPI: Sleep Button [SBTN]
+[    0.718688] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input3
+[    0.718693] ACPI: Power Button [PWRF]
+[    0.720491] thermal LNXTHERM:00: registered as thermal_zone0
+[    0.720492] ACPI: Thermal Zone [THM] (25 C)
+[    0.720715] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    0.722030] usbcore: registered new interface driver usbserial_generic
+[    0.722035] usbserial: USB Serial support registered for generic
+[    0.722050] rtc_cmos 00:01: RTC can wake from S4
+[    0.722194] rtc_cmos 00:01: registered as rtc0
+Input driver version is 1.0.1
+[    0.722206] rtc_cmos 00:01: alarms up to one month, y3k, 242 bytes nvram, hpet irqs
+Input device ID: bus 0x19 vendor 0x0 product 0x1 version 0x0
+Input device name: "Power Button"
+[    0.722251] intel_pstate: Intel P-state driver initializing
+Supported events:
+  Event type 0 (EV_SYN)
+[    0.722442] ledtrig-cpu: registered to indicate activity on CPUs
+  Event type 1 (EV_KEY)
+    Event code 116 (KEY_POWER)
+[    0.723069] NET: Registered protocol family 10
+Properties:
+[    0.735083] Segment Routing with IPv6
+Testing ... (interrupt to exit)
+[    0.735104] NET: Registered protocol family 17
+[    0.735445] RAS: Correctable Errors collector initialized.
+[    0.735483] microcode: sig=0x40651, pf=0x40, revision=0x24
+[    0.735534] microcode: Microcode Update Driver: v2.2.
+[    0.735544] sched_clock: Marking stable (735277961, 251010)->(751803366, -16274395)
+[    0.735725] registered taskstats version 1
+[    0.735731] Loading compiled-in X.509 certificates
+[    0.738558] Loaded X.509 cert 'Build time autogenerated kernel key: ab661ea641a95c0f5645ba64ad792364a3f411ab'
+[    0.738575] zswap: loaded using pool lzo/zbud
+[    0.742877] Key type big_key registered
+[    0.743372]   Magic number: 7:47:980
+[    0.743425] memory memory27: hash matches
+[    0.743464] rtc_cmos 00:01: setting system clock to 2019-02-09 09:57:53 UTC (1549706273)
+[    0.744360] Freeing unused decrypted memory: 2040K
+[    0.744617] Freeing unused kernel image memory: 1540K
+[    0.757070] Write protecting the kernel read-only data: 18432k
+[    0.757663] Freeing unused kernel image memory: 2016K
+[    0.757782] Freeing unused kernel image memory: 328K
+[    0.772692] x86/mm: Checked W+X mappings: passed, no W+X pages found.
+[    0.772693] x86/mm: Checking user space page tables
+[    0.781424] x86/mm: Checked W+X mappings: passed, no W+X pages found.
+[    0.781425] Run /init as init process
+[    0.818071] fbcon: Taking over console
+[    0.818218] Console: switching to colour frame buffer device 170x48
+[    0.875677] i8042: PNP: PS/2 Controller [PNP0303:PS2K,PNP0f13:PS2M] at 0x60,0x64 irq 1,12
+[    0.876269] i8042: Warning: Keylock active
+[    0.878629] serio: i8042 KBD port at 0x60,0x64 irq 1
+[    0.878677] serio: i8042 AUX port at 0x60,0x64 irq 12
+[    0.884960] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    0.886380] ehci-pci: EHCI PCI platform driver
+[    0.890534] ehci-pci 0000:00:1d.0: EHCI Host Controller
+[    0.890543] ehci-pci 0000:00:1d.0: new USB bus registered, assigned bus number 1
+[    0.890556] ehci-pci 0000:00:1d.0: debug port 2
+[    0.893460] sdhci: Secure Digital Host Controller Interface driver
+[    0.893461] sdhci: Copyright(c) Pierre Ossman
+[    0.893530] SCSI subsystem initialized
+[    0.894486] ehci-pci 0000:00:1d.0: cache line size of 64 is not supported
+[    0.894506] ehci-pci 0000:00:1d.0: irq 21, io mem 0xf7e3b000
+[    0.897696] sdhci-pci 0000:03:00.0: SDHCI controller found [1217:8520] (rev 1)
+[    0.899887] mmc0: SDHCI controller on PCI [0000:03:00.0] using ADMA
+[    0.905488] libata version 3.00 loaded.
+[    0.907019] ehci-pci 0000:00:1d.0: USB 2.0 started, EHCI 1.00
+[    0.907073] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 4.20
+[    0.907075] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    0.907078] usb usb1: Product: EHCI Host Controller
+[    0.907081] usb usb1: Manufacturer: Linux 4.20.1-1-MANJARO ehci_hcd
+[    0.907084] usb usb1: SerialNumber: 0000:00:1d.0
+[    0.908243] hub 1-0:1.0: USB hub found
+[    0.908251] hub 1-0:1.0: 2 ports detected
+[    0.909167] xhci_hcd 0000:00:14.0: xHCI Host Controller
+[    0.909173] xhci_hcd 0000:00:14.0: new USB bus registered, assigned bus number 2
+[    0.910090] ahci 0000:00:1f.2: version 3.0
+[    0.910235] xhci_hcd 0000:00:14.0: hcc params 0x200077c1 hci version 0x100 quirks 0x000000000004b810
+[    0.910239] xhci_hcd 0000:00:14.0: cache line size of 64 is not supported
+[    0.910275] ahci 0000:00:1f.2: SSS flag set, parallel bus scan disabled
+[    0.910436] usb usb2: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 4.20
+[    0.910438] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    0.910440] usb usb2: Product: xHCI Host Controller
+[    0.910442] usb usb2: Manufacturer: Linux 4.20.1-1-MANJARO xhci-hcd
+[    0.910444] usb usb2: SerialNumber: 0000:00:14.0
+[    0.910557] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input4
+[    0.912127] hub 2-0:1.0: USB hub found
+[    0.912145] hub 2-0:1.0: 9 ports detected
+[    0.913684] xhci_hcd 0000:00:14.0: xHCI Host Controller
+[    0.913689] xhci_hcd 0000:00:14.0: new USB bus registered, assigned bus number 3
+[    0.913693] xhci_hcd 0000:00:14.0: Host supports USB 3.0  SuperSpeed
+[    0.913734] usb usb3: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 4.20
+[    0.913735] usb usb3: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    0.913737] usb usb3: Product: xHCI Host Controller
+[    0.913738] usb usb3: Manufacturer: Linux 4.20.1-1-MANJARO xhci-hcd
+[    0.913739] usb usb3: SerialNumber: 0000:00:14.0
+[    0.913829] hub 3-0:1.0: USB hub found
+[    0.913837] hub 3-0:1.0: 4 ports detected
+[    0.920375] ahci 0000:00:1f.2: AHCI 0001.0300 32 slots 3 ports 6 Gbps 0x3 impl RAID mode
+[    0.920377] ahci 0000:00:1f.2: flags: 64bit ncq stag led clo only pio slum part sxs deso sadm sds apst 
+[    0.920747] scsi host0: ahci
+[    0.920892] scsi host1: ahci
+[    0.920986] scsi host2: ahci
+[    0.921032] ata1: SATA max UDMA/133 abar m2048@0xf7e3a000 port 0xf7e3a100 irq 43
+[    0.921034] ata2: SATA max UDMA/133 abar m2048@0xf7e3a000 port 0xf7e3a180 irq 43
+[    0.921035] ata3: DUMMY
+[    1.237038] ata1: SATA link down (SStatus 0 SControl 300)
+[    1.237079] usb 1-1: new high-speed USB device number 2 using ehci-pci
+[    1.243708] usb 2-4: new high-speed USB device number 2 using xhci_hcd
+[    1.384072] usb 1-1: New USB device found, idVendor=8087, idProduct=8000, bcdDevice= 0.04
+[    1.384079] usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[    1.384578] hub 1-1:1.0: USB hub found
+[    1.384711] hub 1-1:1.0: 8 ports detected
+[    1.457570] usb 2-4: New USB device found, idVendor=0c45, idProduct=64d2, bcdDevice=35.06
+[    1.457576] usb 2-4: New USB device strings: Mfr=2, Product=1, SerialNumber=0
+[    1.457580] usb 2-4: Product: Laptop_Integrated_Webcam_HD
+[    1.457583] usb 2-4: Manufacturer: CN07YYTT724873C4A5P9A00
+[    1.553534] ata2: SATA link up 6.0 Gbps (SStatus 133 SControl 300)
+[    1.555244] ata2.00: FORCE: horkage modified (noncq)
+[    1.555568] ata2.00: supports DRM functions and may not be fully accessible
+[    1.555574] ata2.00: ATA-11: Samsung SSD 860 EVO 500GB, RVT01B6Q, max UDMA/133
+[    1.555578] ata2.00: 976773168 sectors, multi 1: LBA48 NCQ (not used)
+[    1.558485] ata2.00: supports DRM functions and may not be fully accessible
+[    1.560550] ata2.00: configured for UDMA/133
+[    1.561031] scsi 1:0:0:0: Direct-Access     ATA      Samsung SSD 860  1B6Q PQ: 0 ANSI: 5
+[    1.570499] ata2.00: Enabling discard_zeroes_data
+[    1.570761] sd 1:0:0:0: [sda] 976773168 512-byte logical blocks: (500 GB/466 GiB)
+Input driver version is 1.0.1
+[    1.570775] sd 1:0:0:0: [sda] Write Protect is off
+Input device ID: bus 0x19 vendor 0x0 product 0x6 version 0x0
+Input device name: "Video Bus"
+[    1.570779] sd 1:0:0:0: [sda] Mode Sense: 00 3a 00 00
+Supported events:
+  Event type 0 (EV_SYN)
+  Event type 1 (EV_KEY)
+[    1.570799] sd 1:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+    Event code 224 (KEY_BRIGHTNESSDOWN)
+    Event code 225 (KEY_BRIGHTNESSUP)
+[    1.571053] ata2.00: Enabling discard_zeroes_data
+    Event code 227 (KEY_SWITCHVIDEOMODE)
+    Event code 241 (KEY_VIDEO_NEXT)
+    Event code 242 (KEY_VIDEO_PREV)
+[    1.573181]  sda: sda1 sda2 sda3 sda4 sda5 sda6 sda7 sda8 sda9 sda10
+    Event code 243 (KEY_BRIGHTNESS_CYCLE)
+    Event code 244 (KEY_BRIGHTNESS_ZERO)
+    Event code 245 (KEY_DISPLAY_OFF)
+[    1.573871] ata2.00: Enabling discard_zeroes_data
+Properties:
+[    1.574956] sd 1:0:0:0: [sda] supports TCG Opal
+Testing ... (interrupt to exit)
+[    1.574957] sd 1:0:0:0: [sda] Attached SCSI disk
+[    1.601518] random: fast init done
+[    1.667034] usb 1-1.3: new full-speed USB device number 3 using ehci-pci
+[    1.670337] raid6: sse2x1   gen()  8784 MB/s
+[    1.727014] tsc: Refined TSC clocksource calibration: 2693.765 MHz
+[    1.727019] raid6: sse2x1   xor()  6692 MB/s
+[    1.727020] clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x26d43c7468a, max_idle_ns: 440795239379 ns
+[    1.783672] clocksource: Switched to clocksource tsc
+[    1.783675] raid6: sse2x2   gen()  8080 MB/s
+[    1.808966] usb 1-1.3: New USB device found, idVendor=8087, idProduct=07dc, bcdDevice= 0.01
+[    1.808968] usb 1-1.3: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[    1.840342] raid6: sse2x2   xor()  7381 MB/s
+[    1.880360] usb 1-1.5: new full-speed USB device number 4 using ehci-pci
+[    1.897028] raid6: sse2x4   gen() 13383 MB/s
+[    1.953670] raid6: sse2x4   xor()  8286 MB/s
+[    1.999711] usb 1-1.5: New USB device found, idVendor=0a5c, idProduct=5800, bcdDevice= 1.01
+[    1.999713] usb 1-1.5: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[    1.999714] usb 1-1.5: Product: 5880
+[    1.999715] usb 1-1.5: Manufacturer: Broadcom Corp
+[    1.999716] usb 1-1.5: SerialNumber: 0123456789ABCD
+[    1.999783] usb 1-1.5: config 0 descriptor??
+[    2.010337] raid6: avx2x1   gen() 18500 MB/s
+[    2.067001] raid6: avx2x1   xor() 12595 MB/s
+[    2.123666] raid6: avx2x2   gen() 20933 MB/s
+[    2.180334] raid6: avx2x2   xor() 13176 MB/s
+[    2.237002] raid6: avx2x4   gen() 24316 MB/s
+[    2.293666] raid6: avx2x4   xor() 15841 MB/s
+[    2.293668] raid6: using algorithm avx2x4 gen() 24316 MB/s
+[    2.293669] raid6: .... xor() 15841 MB/s, rmw enabled
+[    2.293670] raid6: using avx2x2 recovery algorithm
+[    2.295272] xor: automatically using best checksumming function   avx       
+[    2.345143] Btrfs loaded, crc32c=crc32c-intel
+[    2.347144] BTRFS: device label 0799 devid 1 transid 11 /dev/sda10
+[    2.347350] BTRFS: device fsid 456092c9-5706-4c65-8cc4-7db48f7fc170 devid 1 transid 543180 /dev/sda2
+[    2.347532] BTRFS: device label 0799 devid 1 transid 5 /dev/sda9
+[    2.348498] BTRFS: device label 0799 devid 1 transid 5 /dev/sda8
+[    2.378524] BTRFS info (device sda2): disk space caching is enabled
+[    2.378526] BTRFS info (device sda2): has skinny extents
+[    2.400892] BTRFS info (device sda2): enabling ssd optimizations
+[    2.576138] systemd[1]: systemd 239 running in system mode. (+PAM +AUDIT -SELINUX -IMA -APPARMOR +SMACK -SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD +IDN2 -IDN +PCRE2 default-hierarchy=hybrid)
+[    2.590723] systemd[1]: Detected architecture x86-64.
+[    2.596170] systemd[1]: Set hostname to <theharmony7-singularityproject>.
+[    2.639232] systemd-fstab-generator[290]: Failed to create unit file /run/systemd/generator/home-guest.mount, as it already exists. Duplicate entry in /etc/fstab?
+[    2.650441] systemd-fstab-generator[290]: Failed to create unit file /run/systemd/generator/witchspellreppelent.mount, as it already exists. Duplicate entry in /etc/fstab?
+[    2.650456] systemd-fstab-generator[290]: Failed to create unit file /run/systemd/generator/witchspellreppelent.mount, as it already exists. Duplicate entry in /etc/fstab?
+[    2.745297] systemd[284]: /usr/lib/systemd/system-generators/systemd-fstab-generator failed with exit status 1.
+[    2.824968] random: systemd: uninitialized urandom read (16 bytes read)
+[    2.825347] systemd[1]: Listening on LVM2 metadata daemon socket.
+[    2.825408] random: systemd: uninitialized urandom read (16 bytes read)
+[    2.826508] systemd[1]: Created slice system-systemd\x2dcryptsetup.slice.
+[    2.826525] random: systemd: uninitialized urandom read (16 bytes read)
+[    2.826887] systemd[1]: Listening on LVM2 poll daemon socket.
+[    2.826970] systemd[1]: Listening on Journal Socket (/dev/log).
+[    2.827024] systemd[1]: Listening on Device-mapper event daemon FIFOs.
+[    2.827170] systemd[1]: Set up automount Arbitrary Executable File Formats File System Automount Point.
+[    2.854701] audit: type=1130 audit(1549706275.606:4): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=kmod-static-nodes comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    2.855264] audit: type=1130 audit(1549706275.606:5): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-remount-fs comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    2.856844] audit: type=1130 audit(1549706275.606:6): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=lvm2-lvmetad comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    2.860909] audit: type=1305 audit(1549706275.613:7): audit_enabled=1 old=1 auid=4294967295 ses=4294967295 res=1
+[    2.863688] ashmem_linux: loading out-of-tree module taints kernel.
+[    2.863713] ashmem_linux: module verification failed: signature and/or required key missing - tainting kernel
+[    2.877193] audit: type=1130 audit(1549706275.630:8): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-binfmt comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    2.883234] audit: type=1130 audit(1549706275.633:9): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-random-seed comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    2.892702] audit: type=1130 audit(1549706275.643:10): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-vconsole-setup comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    2.894787] sd 1:0:0:0: Attached scsi generic sg0 type 0
+[    2.919333] i2c /dev entries driver
+[    2.932189] vboxdrv: Found 4 processor cores
+[    2.932314] systemd-journald[305]: Received request to flush runtime journal from PID 1
+[    2.954052] vboxdrv: TSC mode is Invariant, tentative frequency 2693762400 Hz
+[    2.954054] vboxdrv: Successfully loaded version 6.0.0 (interface 0x00290007)
+[    2.970027] VBoxNetAdp: Successfully started.
+[    2.971108] VBoxNetFlt: Successfully started.
+[    2.972674] VBoxPciLinuxInit
+[    2.972677] vboxpci: IOMMU not found (not registered)
+[    3.105241] systemd-journald[305]: File /var/log/journal/b4dd4bc1d1744778b07e87580ab6b71e/system.journal corrupted or uncleanly shut down, renaming and replacing.
+[    3.239754] ACPI: AC Adapter [AC] (on-line)
+[    3.290271] Linux agpgart interface v0.103
+[    3.291895] mei_me 0000:00:16.0: NFC MEI VERSION: IVN 0x1 Vendor ID 0x1 Type 0x1
+[    3.302342] e1000e: Intel(R) PRO/1000 Network Driver - 3.2.6-k
+[    3.302343] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+[    3.304104] e1000e 0000:00:19.0: Interrupt Throttling Rate (ints/sec) set to dynamic conservative mode
+[    3.310414] battery: ACPI: Battery Slot [BAT0] (battery present)
+[    3.312570] battery: ACPI: Battery Slot [BAT1] (battery absent)
+[    3.329860] parport_pc 00:06: [io  0x0378-0x037b]
+[    3.332077] parport_pc 00:06: [irq 5]
+[    3.336389] parport_pc 00:06: activated
+[    3.336393] parport_pc 00:06: reported by Plug and Play ACPI
+Input driver version is 1.0.1
+[    3.349521] wmi_bus wmi_bus-PNP0C14:00: WQBC data block query control method not found
+Input device ID: bus 0x0 vendor 0x0 product 0x0 version 0x0
+Input device name: "HDA Intel HDMI HDMI/DP,pcm=3"
+[    3.386640] i801_smbus 0000:00:1f.3: SPD Write Disable is set
+Supported events:
+  Event type 0 (EV_SYN)
+[    3.386674] i801_smbus 0000:00:1f.3: SMBus using PCI interrupt
+  Event type 5 (EV_SW)
+    Event code 6 (SW_LINEOUT_INSERT) state 0
+    Event code 8 (SW_VIDEOOUT_INSERT) state 0
+[    3.388837] input: PC Speaker as /devices/platform/pcspkr/input/input6
+Properties:
+Testing ... (interrupt to exit)[    3.395777] snd_hda_intel 0000:00:03.0: enabling device (0000 -> 0002)
+
+[    3.443749] tpm_tis 00:09: 1.2 TPM (device-id 0x3204, rev-id 64)
+[    3.450661] snd_hda_codec_realtek hdaudioC1D0: autoconfig for ALC3226: line_outs=1 (0x16/0x0/0x0/0x0/0x0) type:line
+[    3.450665] snd_hda_codec_realtek hdaudioC1D0:    speaker_outs=1 (0x14/0x0/0x0/0x0/0x0)
+[    3.450667] snd_hda_codec_realtek hdaudioC1D0:    hp_outs=1 (0x15/0x0/0x0/0x0/0x0)
+[    3.450669] snd_hda_codec_realtek hdaudioC1D0:    mono: mono_out=0x0
+[    3.450670] snd_hda_codec_realtek hdaudioC1D0:    inputs:
+[    3.450672] snd_hda_codec_realtek hdaudioC1D0:      Dock Mic=0x19
+[    3.450674] snd_hda_codec_realtek hdaudioC1D0:      Headset Mic=0x1a
+[    3.450676] snd_hda_codec_realtek hdaudioC1D0:      Internal Mic=0x12
+[    3.495013] input: HDA Digital PCBeep as /devices/pci0000:00/0000:00:1b.0/sound/card1/input8
+[    3.495233] input: HDA Intel PCH Dock Mic as /devices/pci0000:00/0000:00:1b.0/sound/card1/input9
+[    3.495302] input: HDA Intel PCH Dock Line Out as /devices/pci0000:00/0000:00:1b.0/sound/card1/input10
+[    3.495372] input: HDA Intel PCH Front Headphone as /devices/pci0000:00/0000:00:1b.0/sound/card1/input11
+[    3.506662] device-mapper: uevent: version 1.0.3
+[    3.507192] device-mapper: ioctl: 4.39.0-ioctl (2018-04-03) initialised: dm-devel@redhat.com
+[    3.537493] RAPL PMU: API unit is 2^-32 Joules, 4 fixed counters, 655360 ms ovfl timer
+[    3.537495] RAPL PMU: hw unit of domain pp0-core 2^-14 Joules
+[    3.537496] RAPL PMU: hw unit of domain package 2^-14 Joules
+[    3.537497] RAPL PMU: hw unit of domain dram 2^-14 Joules
+[    3.537498] RAPL PMU: hw unit of domain pp1-gpu 2^-14 Joules
+[    3.563694] VFIO - User Level meta-driver version: 0.3
+[    3.589827] Adding 2097148k swap on /dev/sda4.  Priority:-2 extents:1 across:2097148k SSFS
+[    3.712884] loop: module loaded
+[    3.772519] e1000e 0000:00:19.0 0000:00:19.0 (uninitialized): registered PHC clock
+[    3.904876] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    3.913784] cryptd: max_cpu_qlen set to 1000
+[    3.991456] checking generic (e0000000 410000) vs hw (e0000000 10000000)
+[    3.991459] fb0: switching to inteldrmfb from EFI VGA
+[    3.991480] Console: switching to colour dummy device 80x25
+[    3.991489] e1000e 0000:00:19.0 eth0: (PCI Express:2.5GT/s:Width x1) ec:f4:bb:05:f3:88
+[    3.991497] e1000e 0000:00:19.0 eth0: Intel(R) PRO/1000 Network Connection
+[    3.991525] e1000e 0000:00:19.0 eth0: MAC: 11, PHY: 12, PBA No: FFFFFF-0FF
+[    3.993796] [drm] Replacing VGA console driver
+[    3.994266] dcdbas dcdbas: Dell Systems Management Base Driver (version 5.6.0-3.3)
+[    4.013600] [drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[    4.013602] [drm] Driver supports precise vblank timestamp query.
+[    4.014087] i915 0000:00:02.0: vgaarb: changed VGA decodes: olddecodes=io+mem,decodes=io+mem:owns=io+mem
+[    4.065595] AVX2 version of gcm_enc/dec engaged.
+[    4.065597] AES CTR mode by8 optimization enabled
+[    4.160579] media: Linux media interface: v0.10
+[    4.160629] [drm] Initialized i915 1.6.0 20180921 for 0000:00:02.0 on minor 0
+[    4.188748] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[    4.207011] BTRFS info (device sda10): disk space caching is enabled
+[    4.207013] BTRFS info (device sda10): has skinny extents
+[    4.232654] ACPI: Video Device [GFX0] (multi-head: yes  rom: no  post: no)
+[    4.233547] input: Video Bus as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/LNXVIDEO:00/input/input12
+[    4.233697] snd_hda_intel 0000:00:03.0: bound 0000:00:02.0 (ops i915_audio_component_bind_ops [i915])
+[    4.238146] fbcon: inteldrmfb (fb0) is primary device
+[    4.239673] Console: switching to colour frame buffer device 170x48
+[    4.243030] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[    4.250323] i915 0000:00:02.0: fb0: inteldrmfb frame buffer device
+[    4.312609] iTCO_vendor_support: vendor-support=0
+[    4.315027] iTCO_wdt: Intel TCO WatchDog Timer Driver v1.11
+[    4.315077] iTCO_wdt: Found a Lynx Point_LP TCO device (Version=2, TCOBASE=0x1860)
+[    4.315812] iTCO_wdt: initialized. heartbeat=30 sec (nowayout=0)
+[    4.318026] input: HDA Intel HDMI HDMI/DP,pcm=3 as /devices/pci0000:00/0000:00:03.0/sound/card0/input13
+[    4.318093] input: HDA Intel HDMI HDMI/DP,pcm=7 as /devices/pci0000:00/0000:00:03.0/sound/card0/input14
+[    4.318168] input: HDA Intel HDMI HDMI/DP,pcm=8 as /devices/pci0000:00/0000:00:03.0/sound/card0/input15
+[    4.318232] input: HDA Intel HDMI HDMI/DP,pcm=9 as /devices/pci0000:00/0000:00:03.0/sound/card0/input16
+[    4.318292] input: HDA Intel HDMI HDMI/DP,pcm=10 as /devices/pci0000:00/0000:00:03.0/sound/card0/input17
+[    4.373688] BTRFS info (device sda10): enabling ssd optimizations
+[    4.423765] Intel(R) Wireless WiFi driver for Linux
+[    4.423767] Copyright(c) 2003- 2015 Intel Corporation
+[    4.423937] iwlwifi 0000:02:00.0: enabling device (0000 -> 0002)
+[    4.465747] iwlwifi 0000:02:00.0: loaded firmware version 17.3216344376.0 op_mode iwlmvm
+[    4.611458] dell_laptop: Using dell-rbtn acpi driver for receiving events
+[    4.640727] intel-spi intel-spi: s25fl064k (8192 Kbytes)
+[    4.727105] Creating 1 MTD partitions on "intel-spi":
+[    4.727108] 0x000000000000-0x000000c00000 : "BIOS"
+[    4.727110] mtd: partition "BIOS" extends beyond the end of device "intel-spi" -- size truncated to 0x800000
+[    4.728310] videodev: Linux video capture interface: v2.00
+[    4.734718] iwlwifi 0000:02:00.0: Detected Intel(R) Dual Band Wireless AC 7260, REV=0x144
+[    4.754045] iwlwifi 0000:02:00.0: base HW address: fc:f8:ae:8e:15:70
+[    4.776920] input: AlpsPS/2 ALPS DualPoint Stick as /devices/platform/i8042/serio1/input/input18
+[    4.788956] input: AlpsPS/2 ALPS DualPoint TouchPad as /devices/platform/i8042/serio1/input/input7
+[    4.799787] nfc: nfc_init: NFC Core ver 0.1
+[    4.799808] NET: Registered protocol family 39
+[    4.803096] ppdev: user-space parallel port driver
+[    4.842278] intel_rapl: Found RAPL domain package
+[    4.842280] intel_rapl: Found RAPL domain core
+[    4.842281] intel_rapl: Found RAPL domain uncore
+[    4.842283] intel_rapl: Found RAPL domain dram
+[    4.842287] intel_rapl: RAPL package 0 domain package locked by BIOS
+[    4.842293] intel_rapl: RAPL package 0 domain dram locked by BIOS
+[    4.891863] input: Dell WMI hotkeys as /devices/platform/PNP0C14:00/wmi_bus/wmi_bus-PNP0C14:00/9DBB5994-A997-11DA-B012-B622A1EF5492/input/input19
+[    4.895704] uvcvideo: Found UVC 1.00 device Laptop_Integrated_Webcam_HD (0c45:64d2)
+[    4.935089] NET: Registered protocol family 38
+[    4.969528] Probing NFC pn544
+[    4.973041] Bluetooth: Core ver 2.22
+[    4.973057] NET: Registered protocol family 31
+[    4.973059] Bluetooth: HCI device and connection manager initialized
+[    4.973063] Bluetooth: HCI socket layer initialized
+[    4.973066] Bluetooth: L2CAP socket layer initialized
+[    4.973069] Bluetooth: SCO socket layer initialized
+[    4.980462] uvcvideo 2-4:1.0: Entity type for entity Extension 4 was not initialized!
+Input driver version is 1.0.1
+Input device ID: bus 0x0 vendor 0x0 product 0x0 version 0x0
+[    4.980465] uvcvideo 2-4:1.0: Entity type for entity Extension 3 was not initialized!
+Input device name: "HDA Intel HDMI HDMI/DP,pcm=7"
+Supported events:
+  Event type 0 (EV_SYN)
+[    4.980467] uvcvideo 2-4:1.0: Entity type for entity Processing 2 was not initialized!
+  Event type 5 (EV_SW)
+    Event code 6 (SW_LINEOUT_INSERT) state 0
+    Event code 8 (SW_VIDEOOUT_INSERT) state 0
+[    4.980469] uvcvideo 2-4:1.0: Entity type for entity Camera 1 was not initialized!
+Properties:
+Testing ... (interrupt to exit)
+[    4.980546] input: Laptop_Integrated_Webcam_HD: In as /devices/pci0000:00/0000:00:14.0/usb2/2-4/2-4:1.0/input/input20
+[    4.980614] usbcore: registered new interface driver uvcvideo
+[    4.980615] USB Video Class driver (1.1.1)
+[    5.043086] ieee80211 phy0: Selected rate control algorithm 'iwl-mvm-rs'
+[    5.096182] e1000e 0000:00:19.0 eno1: renamed from eth0
+[    5.137310] usbcore: registered new interface driver btusb
+[    5.157831] Bluetooth: hci0: read Intel version: 370710018002030d00
+[    5.181858] Bluetooth: hci0: Intel Bluetooth firmware file: intel/ibt-hw-37.7.10-fw-1.80.2.3.d.bseq
+[    5.378839] mousedev: PS/2 mouse device common for all mice
+[    5.389732] ahci 0000:00:1f.2: port does not support device sleep
+[    5.400841] Bluetooth: hci0: Intel firmware patch completed and activated
+[    5.463880] kauditd_printk_skb: 11 callbacks suppressed
+[    5.463881] audit: type=1130 audit(1549706278.216:22): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-rfkill comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    5.469070] iwlwifi 0000:02:00.0 wlp2s0: renamed from wlan0
+[    5.507487] audit: type=1130 audit(1549706278.260:23): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-cryptsetup@luks\x2d770e2d44\x2d276d\x2d4e12\x2db142\x2d11936e00f293 comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    5.553106] audit: type=1130 audit(1549706278.303:24): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-backlight@backlight:intel_backlight comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    5.688891] SGI XFS with ACLs, security attributes, realtime, scrub, no debug enabled
+[    5.724274] XFS (dm-0): Mounting V5 Filesystem
+[    5.746970] XFS (dm-0): Ending clean mount
+[    6.812555] BTRFS: device label blackbox devid 1 transid 12975853 /dev/dm-1
+[    6.830240] audit: type=1130 audit(1549706279.580:25): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-cryptsetup@luks\x2d841f29df\x2da945\x2d4817\x2d9263\x2d0a652644522f comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    6.844840] BTRFS info (device dm-1): disk space caching is enabled
+[    6.844842] BTRFS info (device dm-1): has skinny extents
+[    6.849561] BTRFS info (device dm-1): enabling ssd optimizations
+[    6.933525] BTRFS: device label Data devid 1 transid 167167 /dev/dm-2
+[    6.954024] audit: type=1130 audit(1549706279.706:26): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-cryptsetup@luks\x2dfe77add6\x2da6a5\x2d49d2\x2d9aae\x2d0a44860e1369 comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    6.968430] BTRFS info (device dm-2): turning on discard
+[    6.968432] BTRFS info (device dm-2): enabling auto defrag
+[    6.968436] BTRFS info (device dm-2): force zlib compression, level 9
+[    6.968437] BTRFS info (device dm-2): disk space caching is enabled
+[    6.968438] BTRFS info (device dm-2): has skinny extents
+[    7.137772] BTRFS info (device dm-2): enabling ssd optimizations
+[    7.203328] audit: type=1130 audit(1549706279.953:27): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=plymouth-read-write comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    7.203340] audit: type=1131 audit(1549706279.953:28): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=plymouth-read-write comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    7.204525] audit: type=1130 audit(1549706279.956:29): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-tmpfiles-setup comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    7.209894] audit: type=1127 audit(1549706279.960:30): pid=936 uid=0 auid=4294967295 ses=4294967295 msg=' comm="systemd-update-utmp" exe="/usr/lib/systemd/systemd-update-utmp" hostname=? addr=? terminal=? res=success'
+[    7.212625] audit: type=1130 audit(1549706279.963:31): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-update-utmp comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    7.840601] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[    7.840603] Bluetooth: BNEP filters: protocol multicast
+[    7.840608] Bluetooth: BNEP socket layer initialized
+[    7.861494] random: crng init done
+[    7.861496] random: 7 urandom warning(s) missed due to ratelimiting
+[    8.495450] IPv6: ADDRCONF(NETDEV_UP): eno1: link is not ready
+[    8.703842] IPv6: ADDRCONF(NETDEV_UP): eno1: link is not ready
+[    8.710575] IPv6: ADDRCONF(NETDEV_UP): wlp2s0: link is not ready
+[    8.936911] systemd-journald[305]: File /var/log/journal/b4dd4bc1d1744778b07e87580ab6b71e/user-1003.journal corrupted or uncleanly shut down, renaming and replacing.
+[    8.965431] IPv6: ADDRCONF(NETDEV_UP): wlp2s0: link is not ready
+[    9.236580] IPv6: ADDRCONF(NETDEV_UP): wlp2s0: link is not ready
+[    9.442584] IPv6: ADDRCONF(NETDEV_UP): wlp2s0: link is not ready
+[   12.952523] IPv6: ADDRCONF(NETDEV_UP): wlp2s0: link is not ready
+[   16.403754] wlp2s0: authenticate with b4:43:26:83:5d:50
+[   16.409630] wlp2s0: send auth to b4:43:26:83:5d:50 (try 1/3)
+[   16.413155] wlp2s0: authenticated
+[   16.413694] wlp2s0: associate with b4:43:26:83:5d:50 (try 1/3)
+[   16.417204] wlp2s0: RX AssocResp from b4:43:26:83:5d:50 (capab=0x1411 status=0 aid=2)
+[   16.429426] wlp2s0: associated
+[   16.488005] wlp2s0: Limiting TX power to 30 (30 - 0) dBm as advertised by b4:43:26:83:5d:50
+[   16.489479] IPv6: ADDRCONF(NETDEV_CHANGE): wlp2s0: link becomes ready
+[   18.010843] kauditd_printk_skb: 144 callbacks suppressed
+[   18.010845] audit: type=1131 audit(1549706290.760:102): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=NetworkManager-dispatcher comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   18.010847] audit: audit_lost=38 audit_rate_limit=0 audit_backlog_limit=64
+[   18.010848] audit: kauditd hold queue overflow
+[   19.468994] audit: type=1130 audit(1549706292.220:103): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=rtkit-daemon comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   19.468998] audit: audit_lost=39 audit_rate_limit=0 audit_backlog_limit=64
+[   19.468999] audit: kauditd hold queue overflow
+[   19.532532] ata2.00: supports DRM functions and may not be fully accessible
+[   19.534859] ata2.00: supports DRM functions and may not be fully accessible
+[   19.537803] ata2.00: Enabling discard_zeroes_data
+[   19.720951] audit: type=1130 audit(1549706292.473:104): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=udisks2 comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   19.720954] audit: audit_lost=40 audit_rate_limit=0 audit_backlog_limit=64
+[   19.720955] audit: kauditd hold queue overflow
+[   22.181486] fuse init (API version 7.28)
+[   23.528739] Bluetooth: RFCOMM TTY layer initialized
+[   23.528748] Bluetooth: RFCOMM socket layer initialized
+[   23.528754] Bluetooth: RFCOMM ver 1.11
+[   37.718806] audit: type=1130 audit(1549706310.470:105): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=NetworkManager-wait-online comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   37.718814] audit: audit_lost=41 audit_rate_limit=0 audit_backlog_limit=64
+[   37.718817] audit: kauditd hold queue overflow
+[   37.910571] audit: type=1130 audit(1549706310.660:106): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=geoclue comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Input driver version is 1.0.1
+[   37.910578] audit: audit_lost=42 audit_rate_limit=0 audit_backlog_limit=64
+Input device ID: bus 0x0 vendor 0x0 product 0x0 version 0x0
+Input device name: "HDA Intel HDMI HDMI/DP,pcm=8"
+[   37.910582] audit: kauditd hold queue overflow
+Supported events:
+  Event type 0 (EV_SYN)
+  Event type 5 (EV_SW)
+    Event code 6 (SW_LINEOUT_INSERT) state 0
+    Event code 8 (SW_VIDEOOUT_INSERT) state 0
+[   38.133526] audit: type=1130 audit(1549706310.883:107): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=NetworkManager-dispatcher comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Properties:
+Testing ... (interrupt to exit)
+[   38.133534] audit: audit_lost=43 audit_rate_limit=0 audit_backlog_limit=64
+[   38.133537] audit: kauditd hold queue overflow
+[   38.192975] audit: type=1131 audit(1549706310.943:108): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-hostnamed comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   39.003749] zram: Added device: zram0
+[   39.007734] zram: Added device: zram1
+[   39.009411] zram: Added device: zram2
+[   39.009575] zram: Added device: zram3
+[   39.125600] zram0: detected capacity change from 0 to 45748170752
+[   39.248612] Adding 44675944k swap on /dev/zram0.  Priority:100 extents:1 across:44675944k SSFS
+[   39.367594] zram1: detected capacity change from 0 to 45748170752
+[   39.447226] Adding 44675944k swap on /dev/zram1.  Priority:100 extents:1 across:44675944k SSFS
+[   39.518415] zram2: detected capacity change from 0 to 45748170752
+[   39.573332] Adding 44675944k swap on /dev/zram2.  Priority:100 extents:1 across:44675944k SSFS
+[   39.640430] zram3: detected capacity change from 0 to 45748170752
+[   39.698566] Adding 44675944k swap on /dev/zram3.  Priority:100 extents:1 across:44675944k SSFS
+[   47.899920] kauditd_printk_skb: 23 callbacks suppressed
+[   47.899922] audit: type=1131 audit(1549706320.762:116): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=NetworkManager-dispatcher comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   47.899924] audit: audit_lost=52 audit_rate_limit=0 audit_backlog_limit=64
+[   47.899925] audit: kauditd hold queue overflow
+[   48.781388] perf: Dynamic interrupt throttling disabled, can hang your system!
+[   73.417983] device wlp2s0 entered promiscuous mode
+[   73.418261] audit: type=1700 audit(1549706346.329:117): dev=wlp2s0 prom=256 old_prom=0 auid=4294967295 uid=0 gid=0 ses=4294967295
+[   73.418263] audit: audit_lost=53 audit_rate_limit=0 audit_backlog_limit=64
+[   73.418264] audit: kauditd hold queue overflow
+[   73.418267] audit: type=1300 audit(1549706346.329:117): arch=c000003e syscall=54 success=yes exit=0 a0=3 a1=107 a2=1 a3=7ffda1b197e0 items=0 ppid=3596 pid=27029 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="tcpdump" exe="/usr/bin/tcpdump" key=(null)
+[   73.418269] audit: audit_lost=54 audit_rate_limit=0 audit_backlog_limit=64
+[   73.418269] audit: kauditd hold queue overflow
+[   73.418272] audit: type=1327 audit(1549706346.329:117): proctitle=74637064756D70002D5858
+[   73.418273] audit: audit_lost=55 audit_rate_limit=0 audit_backlog_limit=64
+[   73.418274] audit: kauditd hold queue overflow
+[   73.418276] audit: audit_lost=56 audit_rate_limit=0 audit_backlog_limit=64
+[  115.294720] perf: Dynamic interrupt throttling disabled, can hang your system!
+[  183.639597] kauditd_printk_skb: 1 callbacks suppressed
+[  183.639599] audit: type=1130 audit(1549706456.552:118): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-hostnamed comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[  183.639602] audit: audit_lost=57 audit_rate_limit=0 audit_backlog_limit=64
+[  183.639603] audit: kauditd hold queue overflow
+[  183.792121] perf: Dynamic interrupt throttling disabled, can hang your system!
+[  213.692167] audit: type=1131 audit(1549706486.609:119): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-hostnamed comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[  213.692169] audit: audit_lost=58 audit_rate_limit=0 audit_backlog_limit=64
+[  213.692170] audit: kauditd hold queue overflow
+[  216.948962] EXT4-fs (loop29): mounting ext2 file system using the ext4 subsystem
+[  216.950815] EXT4-fs (loop29): warning: mounting unchecked fs, running e2fsck is recommended
+[  216.952639] EXT4-fs (loop29): mounted filesystem without journal. Opts: (null)
+[  217.121893] EXT4-fs error (device loop29): ext4_mb_generate_buddy:747: group 4, block bitmap and bg descriptor inconsistent: 2109 vs 2117 free clusters
+[  217.202985] EXT4-fs error (device loop29): ext4_mb_generate_buddy:747: group 34, block bitmap and bg descriptor inconsistent: 2172 vs 2184 free clusters
+[  217.319454] EXT4-fs (loop30): mounting ext2 file system using the ext4 subsystem
+[  217.330437] EXT4-fs (loop30): warning: mounting unchecked fs, running e2fsck is recommended
+[  217.356253] EXT4-fs (loop30): mounted filesystem without journal. Opts: (null)
+[  218.887471] audit: type=1130 audit(1549706491.802:120): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-timedated comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[  218.887474] audit: audit_lost=59 audit_rate_limit=0 audit_backlog_limit=64
+[  218.887475] audit: kauditd hold queue overflow
+[  248.915162] audit: type=1131 audit(1549706521.832:121): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-timedated comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[  248.915165] audit: audit_lost=60 audit_rate_limit=0 audit_backlog_limit=64
+[  248.915165] audit: kauditd hold queue overflow
+[  250.532809] perf: Dynamic interrupt throttling disabled, can hang your system!
+[  307.907013] audit: type=1130 audit(1549706580.823:122): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=autoupdate comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[  307.907016] audit: audit_lost=61 audit_rate_limit=0 audit_backlog_limit=64
+[  307.907017] audit: kauditd hold queue overflow
+[  311.448062] audit: type=1131 audit(1549706584.363:123): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=autoupdate comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[  311.448064] audit: audit_lost=62 audit_rate_limit=0 audit_backlog_limit=64
+[  311.448066] audit: kauditd hold queue overflow
+[  317.591097] perf: Dynamic interrupt throttling disabled, can hang your system!
+[  324.592283] audit: type=1131 audit(1549706597.507:124): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=failed'
+[  324.592285] audit: audit_lost=63 audit_rate_limit=0 audit_backlog_limit=64
+[  324.592286] audit: kauditd hold queue overflow
+[  339.593987] audit: type=1130 audit(1549706612.511:125): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[  339.593990] audit: audit_lost=64 audit_rate_limit=0 audit_backlog_limit=64
+[  339.593992] audit: kauditd hold queue overflow
+[  339.593996] audit: type=1131 audit(1549706612.511:126): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[  339.593998] audit: audit_lost=65 audit_rate_limit=0 audit_backlog_limit=64
+[  339.594000] audit: kauditd hold queue overflow
+[  339.596132] audit: type=1130 audit(1549706612.511:127): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[  339.596136] audit: audit_lost=66 audit_rate_limit=0 audit_backlog_limit=64
+[  339.596137] audit: kauditd hold queue overflow
+[  384.933667] perf: Dynamic interrupt throttling disabled, can hang your system!
+[  396.109528] EXT4-fs (loop30): mounting ext2 file system using the ext4 subsystem
+[  396.115710] EXT4-fs (loop30): warning: mounting unchecked fs, running e2fsck is recommended
+[  396.123163] EXT4-fs (loop30): mounted filesystem without journal. Opts: (null)
+Input driver version is 1.0.1
+[  396.820211] audit: type=1130 audit(1549706669.739:128): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-timedated comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Input device ID: bus 0x0 vendor 0x0 product 0x0 version 0x0
+Input device name: "HDA Intel HDMI HDMI/DP,pcm=9"
+Supported events:[  396.820214] audit: audit_lost=67 audit_rate_limit=0 audit_backlog_limit=64
+
+  Event type 0 (EV_SYN)
+[  396.820215] audit: kauditd hold queue overflow
+  Event type 5 (EV_SW)
+    Event code 6 (SW_LINEOUT_INSERT) state 0
+    Event code 8 (SW_VIDEOOUT_INSERT) state 0
+[  414.699807] zram: Cannot change disksize for initialized device
+Properties:
+Testing ... (interrupt to exit)[  414.800082] zram: Cannot change disksize for initialized device
+
+[  414.805030] zram: Cannot change disksize for initialized device
+[  414.809544] zram: Cannot change disksize for initialized device
+[  449.083633] audit: type=1131 audit(1549706722.001:129): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-timedated comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[  449.083635] audit: audit_lost=68 audit_rate_limit=0 audit_backlog_limit=64
+[  449.083636] audit: kauditd hold queue overflow
+[  453.369903] perf: Dynamic interrupt throttling disabled, can hang your system!
+[  518.510838] EXT4-fs (loop29): error count since last fsck: 24
+[  518.510841] EXT4-fs (loop29): initial error at time 1549694688: mb_free_blocks:1457: inode 17535: block 1119680
+[  518.510844] EXT4-fs (loop29): last error at time 1549706490: ext4_mb_generate_buddy:747
+[  521.835187] perf: Dynamic interrupt throttling disabled, can hang your system!
+[  590.182386] perf: Dynamic interrupt throttling disabled, can hang your system!
+[  655.481905] audit: type=1131 audit(1549706928.406:130): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=failed'
+[  655.481908] audit: audit_lost=69 audit_rate_limit=0 audit_backlog_limit=64
+[  655.481909] audit: kauditd hold queue overflow
+[  658.739426] perf: Dynamic interrupt throttling disabled, can hang your system!
+[  670.585870] audit: type=1130 audit(1549706943.513:131): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[  670.585873] audit: audit_lost=70 audit_rate_limit=0 audit_backlog_limit=64
+[  670.585874] audit: kauditd hold queue overflow
+[  670.585878] audit: type=1131 audit(1549706943.513:132): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[  670.585879] audit: audit_lost=71 audit_rate_limit=0 audit_backlog_limit=64
+[  670.585880] audit: kauditd hold queue overflow
+[  670.587406] audit: type=1130 audit(1549706943.513:133): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[  670.587408] audit: audit_lost=72 audit_rate_limit=0 audit_backlog_limit=64
+[  670.587409] audit: kauditd hold queue overflow
+[  727.265336] perf: Dynamic interrupt throttling disabled, can hang your system!
+[  795.555333] perf: Dynamic interrupt throttling disabled, can hang your system!
+[  863.862613] perf: Dynamic interrupt throttling disabled, can hang your system!
+[  902.852409] audit: type=1130 audit(1549707175.785:134): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-tmpfiles-clean comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[  902.852412] audit: audit_lost=73 audit_rate_limit=0 audit_backlog_limit=64
+[  902.852413] audit: kauditd hold queue overflow
+[  902.852416] audit: type=1131 audit(1549707175.785:135): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-tmpfiles-clean comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[  902.852417] audit: audit_lost=74 audit_rate_limit=0 audit_backlog_limit=64
+[  902.852418] audit: kauditd hold queue overflow
+[  932.191851] perf: Dynamic interrupt throttling disabled, can hang your system!
+[  987.759886] audit: type=1131 audit(1549707260.690:136): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=failed'
+[  987.759888] audit: audit_lost=75 audit_rate_limit=0 audit_backlog_limit=64
+[  987.759889] audit: kauditd hold queue overflow
+[ 1000.420716] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 1002.828375] audit: type=1130 audit(1549707275.760:137): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 1002.828379] audit: audit_lost=76 audit_rate_limit=0 audit_backlog_limit=64
+[ 1002.828380] audit: kauditd hold queue overflow
+[ 1002.828386] audit: type=1131 audit(1549707275.760:138): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 1002.828388] audit: audit_lost=77 audit_rate_limit=0 audit_backlog_limit=64
+[ 1002.828390] audit: kauditd hold queue overflow
+[ 1002.830900] audit: type=1130 audit(1549707275.764:139): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 1002.830904] audit: audit_lost=78 audit_rate_limit=0 audit_backlog_limit=64
+[ 1002.830905] audit: kauditd hold queue overflow
+[ 1068.614386] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 1136.858721] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 1205.158742] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 1207.886295] audit: type=1130 audit(1549707480.825:140): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=autoupdate comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 1207.886297] audit: audit_lost=79 audit_rate_limit=0 audit_backlog_limit=64
+[ 1207.886298] audit: kauditd hold queue overflow
+[ 1215.074745] audit: type=1131 audit(1549707488.011:141): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=autoupdate comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 1215.074748] audit: audit_lost=80 audit_rate_limit=0 audit_backlog_limit=64
+[ 1215.074749] audit: kauditd hold queue overflow
+[ 1273.534320] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 1318.530269] audit: type=1131 audit(1549707591.470:142): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=failed'
+[ 1318.530272] audit: audit_lost=81 audit_rate_limit=0 audit_backlog_limit=64
+[ 1318.530273] audit: kauditd hold queue overflow
+[ 1333.571037] audit: type=1130 audit(1549707606.511:143): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 1333.571040] audit: audit_lost=82 audit_rate_limit=0 audit_backlog_limit=64
+[ 1333.571041] audit: kauditd hold queue overflow
+[ 1333.571044] audit: type=1131 audit(1549707606.511:144): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 1333.571045] audit: audit_lost=83 audit_rate_limit=0 audit_backlog_limit=64
+[ 1333.571046] audit: kauditd hold queue overflow
+[ 1333.571979] audit: type=1130 audit(1549707606.511:145): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 1333.571980] audit: audit_lost=84 audit_rate_limit=0 audit_backlog_limit=64
+[ 1333.571981] audit: kauditd hold queue overflow
+[ 1341.860160] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 1410.153334] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 1478.347563] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 1546.626011] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 1614.935932] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 1649.428749] audit: type=1131 audit(1549707922.374:146): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=failed'
+[ 1649.428753] audit: audit_lost=85 audit_rate_limit=0 audit_backlog_limit=64
+[ 1649.428755] audit: kauditd hold queue overflow
+Input driver version is 1.0.1
+Input device ID: bus 0x0 vendor 0x0 product 0x0 version 0x0
+Input device name: "HDA Intel HDMI HDMI/DP,pcm=10"
+Supported events:[ 1664.563924] audit: type=1130 audit(1549707937.511:147): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+
+  Event type 0 (EV_SYN)
+  Event type 5 (EV_SW)
+[ 1664.563927] audit: audit_lost=86 audit_rate_limit=0 audit_backlog_limit=64
+    Event code 6 (SW_LINEOUT_INSERT) state 0
+    Event code 8 (SW_VIDEOOUT_INSERT) state 0
+[ 1664.563928] audit: kauditd hold queue overflow
+Properties:
+Testing ... (interrupt to exit)
+[ 1664.563931] audit: type=1131 audit(1549707937.511:148): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 1664.563932] audit: audit_lost=87 audit_rate_limit=0 audit_backlog_limit=64
+[ 1664.563933] audit: kauditd hold queue overflow
+[ 1664.565918] audit: type=1130 audit(1549707937.511:149): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 1664.565920] audit: audit_lost=88 audit_rate_limit=0 audit_backlog_limit=64
+[ 1664.565921] audit: kauditd hold queue overflow
+[ 1683.232107] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 1751.481563] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 1819.791880] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 1888.135843] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 1956.459470] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 1980.650359] audit: type=1131 audit(1549708253.604:150): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=failed'
+[ 1980.650361] audit: audit_lost=89 audit_rate_limit=0 audit_backlog_limit=64
+[ 1980.650362] audit: kauditd hold queue overflow
+[ 1995.808280] audit: type=1130 audit(1549708268.761:151): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 1995.808284] audit: audit_lost=90 audit_rate_limit=0 audit_backlog_limit=64
+[ 1995.808285] audit: kauditd hold queue overflow
+[ 1995.808290] audit: type=1131 audit(1549708268.761:152): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 1995.808291] audit: audit_lost=91 audit_rate_limit=0 audit_backlog_limit=64
+[ 1995.808292] audit: kauditd hold queue overflow
+[ 1995.809360] audit: type=1130 audit(1549708268.765:153): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 1995.809362] audit: audit_lost=92 audit_rate_limit=0 audit_backlog_limit=64
+[ 1995.809363] audit: kauditd hold queue overflow
+[ 2024.804368] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 2093.114801] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 2161.458836] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 2229.776360] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 2255.086063] zram: Cannot change disksize for initialized device
+[ 2255.091664] zram: Cannot change disksize for initialized device
+[ 2255.097231] zram: Cannot change disksize for initialized device
+[ 2255.103848] zram: Cannot change disksize for initialized device
+[ 2301.159023] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 2312.027786] audit: type=1131 audit(1549708584.988:154): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=failed'
+[ 2312.027789] audit: audit_lost=93 audit_rate_limit=0 audit_backlog_limit=64
+[ 2312.027790] audit: kauditd hold queue overflow
+[ 2327.049569] audit: type=1130 audit(1549708600.012:155): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 2327.049571] audit: audit_lost=94 audit_rate_limit=0 audit_backlog_limit=64
+[ 2327.049572] audit: kauditd hold queue overflow
+[ 2327.049576] audit: type=1131 audit(1549708600.012:156): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 2327.049577] audit: audit_lost=95 audit_rate_limit=0 audit_backlog_limit=64
+[ 2327.049578] audit: kauditd hold queue overflow
+[ 2327.051481] audit: type=1130 audit(1549708600.012:157): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 2327.051483] audit: audit_lost=96 audit_rate_limit=0 audit_backlog_limit=64
+[ 2327.051485] audit: kauditd hold queue overflow
+[ 2371.986595] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 2443.020952] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 2513.576055] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 2583.989401] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 2643.775061] audit: type=1131 audit(1549708916.746:158): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=failed'
+[ 2643.775063] audit: audit_lost=97 audit_rate_limit=0 audit_backlog_limit=64
+[ 2643.775064] audit: kauditd hold queue overflow
+[ 2654.669834] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 2658.791878] audit: type=1130 audit(1549708931.760:159): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 2658.791881] audit: audit_lost=98 audit_rate_limit=0 audit_backlog_limit=64
+[ 2658.791882] audit: kauditd hold queue overflow
+[ 2658.791886] audit: type=1131 audit(1549708931.760:160): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 2658.791887] audit: audit_lost=99 audit_rate_limit=0 audit_backlog_limit=64
+[ 2658.791888] audit: kauditd hold queue overflow
+[ 2658.793069] audit: type=1130 audit(1549708931.760:161): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 2658.793072] audit: audit_lost=100 audit_rate_limit=0 audit_backlog_limit=64
+[ 2658.793073] audit: kauditd hold queue overflow
+[ 2725.220740] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 2795.737231] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 2866.478653] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 2936.781737] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 2974.541852] audit: type=1131 audit(1549709247.517:162): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=failed'
+[ 2974.541855] audit: audit_lost=101 audit_rate_limit=0 audit_backlog_limit=64
+[ 2974.541856] audit: kauditd hold queue overflow
+[ 2989.785898] audit: type=1130 audit(1549709262.760:163): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 2989.785901] audit: audit_lost=102 audit_rate_limit=0 audit_backlog_limit=64
+[ 2989.785902] audit: kauditd hold queue overflow
+[ 2989.785905] audit: type=1131 audit(1549709262.760:164): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 2989.785906] audit: audit_lost=103 audit_rate_limit=0 audit_backlog_limit=64
+[ 2989.785907] audit: kauditd hold queue overflow
+[ 2989.785910] audit: type=1130 audit(1549709262.760:165): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 2989.785911] audit: audit_lost=104 audit_rate_limit=0 audit_backlog_limit=64
+Input driver version is 1.0.1
+[ 2989.785912] audit: kauditd hold queue overflow
+Input device ID: bus 0x11 vendor 0x2 product 0x8 version 0x310
+Input device name: "AlpsPS/2 ALPS DualPoint Stick"
+Supported events:[ 3007.258245] perf: Dynamic interrupt throttling disabled, can hang your system!
+
+  Event type 0 (EV_SYN)
+  Event type 1 (EV_KEY)
+[ 3077.826828] perf: Dynamic interrupt throttling disabled, can hang your system!
+    Event code 272 (BTN_LEFT)
+    Event code 273 (BTN_RIGHT)
+    Event code 274 (BTN_MIDDLE)
+[ 3148.214751] perf: Dynamic interrupt throttling disabled, can hang your system!
+  Event type 2 (EV_REL)
+    Event code 0 (REL_X)
+    Event code 1 (REL_Y)
+[ 3218.769875] perf: Dynamic interrupt throttling disabled, can hang your system!
+  Event type 3 (EV_ABS)
+    Event code 24 (ABS_PRESSURE)
+[ 3289.470976] perf: Dynamic interrupt throttling disabled, can hang your system!
+      Value      0
+      Min        0
+      Max      127
+Properties:
+  Property type 0 (INPUT_PROP_POINTER)
+[ 3305.557646] audit: type=1131 audit(1549709578.540:166): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=failed'
+  Property type 5 (INPUT_PROP_POINTING_STICK)
+Testing ... (interrupt to exit)
+[ 3305.557649] audit: audit_lost=105 audit_rate_limit=0 audit_backlog_limit=64
+[ 3305.557650] audit: kauditd hold queue overflow
+[ 3320.778465] audit: type=1130 audit(1549709593.761:167): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 3320.778468] audit: audit_lost=106 audit_rate_limit=0 audit_backlog_limit=64
+[ 3320.778469] audit: kauditd hold queue overflow
+[ 3320.778473] audit: type=1131 audit(1549709593.761:168): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 3320.778474] audit: audit_lost=107 audit_rate_limit=0 audit_backlog_limit=64
+[ 3320.778475] audit: kauditd hold queue overflow
+[ 3320.781100] audit: type=1130 audit(1549709593.764:169): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 3320.781103] audit: audit_lost=108 audit_rate_limit=0 audit_backlog_limit=64
+[ 3320.781104] audit: kauditd hold queue overflow
+[ 3360.738403] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 3430.064417] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 3499.717326] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 3568.335311] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 3636.697121] audit: type=1131 audit(1549709909.688:170): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=failed'
+[ 3636.697124] audit: audit_lost=109 audit_rate_limit=0 audit_backlog_limit=64
+[ 3636.697125] audit: kauditd hold queue overflow
+[ 3637.173302] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 3651.769990] audit: type=1130 audit(1549709924.761:171): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 3651.769993] audit: audit_lost=110 audit_rate_limit=0 audit_backlog_limit=64
+[ 3651.769994] audit: kauditd hold queue overflow
+[ 3651.769998] audit: type=1131 audit(1549709924.761:172): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 3651.769999] audit: audit_lost=111 audit_rate_limit=0 audit_backlog_limit=64
+[ 3651.770000] audit: kauditd hold queue overflow
+[ 3651.771980] audit: type=1130 audit(1549709924.761:173): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 3651.771982] audit: audit_lost=112 audit_rate_limit=0 audit_backlog_limit=64
+[ 3651.771983] audit: kauditd hold queue overflow
+[ 3705.654258] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 3759.805195] audit: type=1130 audit(1549710032.797:174): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-timedated comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 3759.805199] audit: audit_lost=113 audit_rate_limit=0 audit_backlog_limit=64
+[ 3759.805200] audit: kauditd hold queue overflow
+[ 3776.723983] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 3789.832707] audit: type=1131 audit(1549710062.828:175): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-timedated comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 3789.832709] audit: audit_lost=114 audit_rate_limit=0 audit_backlog_limit=64
+[ 3789.832710] audit: kauditd hold queue overflow
+[ 3848.323534] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 3918.818942] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 3969.106865] audit: type=1131 audit(1549710242.105:176): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=failed'
+[ 3969.106867] audit: audit_lost=115 audit_rate_limit=0 audit_backlog_limit=64
+[ 3969.106868] audit: kauditd hold queue overflow
+[ 3984.264161] audit: type=1130 audit(1549710257.262:177): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 3984.264166] audit: audit_lost=116 audit_rate_limit=0 audit_backlog_limit=64
+[ 3984.264168] audit: kauditd hold queue overflow
+[ 3984.264174] audit: type=1131 audit(1549710257.262:178): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 3984.264175] audit: audit_lost=117 audit_rate_limit=0 audit_backlog_limit=64
+[ 3984.264176] audit: kauditd hold queue overflow
+[ 3984.265400] audit: type=1130 audit(1549710257.265:179): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 3984.265403] audit: audit_lost=118 audit_rate_limit=0 audit_backlog_limit=64
+[ 3984.265404] audit: kauditd hold queue overflow
+[ 3987.872584] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 4060.726689] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 4130.957542] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 4200.124742] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 4269.357967] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 4300.857009] audit: type=1131 audit(1549710573.866:180): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=failed'
+[ 4300.857011] audit: audit_lost=119 audit_rate_limit=0 audit_backlog_limit=64
+[ 4300.857012] audit: kauditd hold queue overflow
+[ 4316.004555] audit: type=1130 audit(1549710589.010:181): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 4316.004557] audit: audit_lost=120 audit_rate_limit=0 audit_backlog_limit=64
+[ 4316.004558] audit: kauditd hold queue overflow
+[ 4316.004561] audit: type=1131 audit(1549710589.010:182): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 4316.004563] audit: audit_lost=121 audit_rate_limit=0 audit_backlog_limit=64
+[ 4316.004564] audit: kauditd hold queue overflow
+[ 4316.006000] audit: type=1130 audit(1549710589.010:183): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 4316.006002] audit: audit_lost=122 audit_rate_limit=0 audit_backlog_limit=64
+[ 4316.006003] audit: kauditd hold queue overflow
+[ 4338.796109] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 4407.948074] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 4477.553231] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 4551.376419] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 4629.840222] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 4634.065207] audit: type=1131 audit(1549710907.077:184): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=failed'
+[ 4634.065210] audit: audit_lost=123 audit_rate_limit=0 audit_backlog_limit=64
+[ 4634.065211] audit: kauditd hold queue overflow
+Input driver version is 1.0.1
+[ 4649.249891] audit: type=1130 audit(1549710922.261:185): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Input device ID: bus 0x11 vendor 0x2 product 0x8 version 0x310
+Input device name: "AlpsPS/2 ALPS DualPoint TouchPad"
+Supported events:[ 4649.249895] audit: audit_lost=124 audit_rate_limit=0 audit_backlog_limit=64
+
+  Event type 0 (EV_SYN)
+  Event type 1 (EV_KEY)
+[ 4649.249896] audit: kauditd hold queue overflow
+    Event code 272 (BTN_LEFT)
+    Event code 273 (BTN_RIGHT)
+    Event code 274 (BTN_MIDDLE)
+    Event code 325 (BTN_TOOL_FINGER)
+    Event code 330 (BTN_TOUCH)
+    Event code 333 (BTN_TOOL_DOUBLETAP)
+    Event code 334 (BTN_TOOL_TRIPLETAP)
+[ 4649.249899] audit: type=1131 audit(1549710922.261:186): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+    Event code 335 (BTN_TOOL_QUADTAP)
+  Event type 3 (EV_ABS)
+    Event code 0 (ABS_X)
+[ 4649.249901] audit: audit_lost=125 audit_rate_limit=0 audit_backlog_limit=64
+      Value   1267
+      Min        0
+[ 4649.249901] audit: kauditd hold queue overflow
+      Max     2000
+      Resolution      21
+    Event code 1 (ABS_Y)
+      Value   1043
+      Min        0
+      Max     1400
+      Resolution      32
+[ 4649.249905] audit: type=1130 audit(1549710922.264:187): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+    Event code 24 (ABS_PRESSURE)
+      Value      0
+      Min        0
+[ 4649.249906] audit: audit_lost=126 audit_rate_limit=0 audit_backlog_limit=64
+      Max      127
+    Event code 47 (ABS_MT_SLOT)
+[ 4649.249907] audit: kauditd hold queue overflow
+      Value      0
+      Min        0
+      Max        3
+    Event code 53 (ABS_MT_POSITION_X)
+[ 4702.560571] perf: Dynamic interrupt throttling disabled, can hang your system!
+      Value      0
+      Min        0
+      Max     2000
+[ 4775.371499] perf: Dynamic interrupt throttling disabled, can hang your system!
+      Resolution      21
+    Event code 54 (ABS_MT_POSITION_Y)
+      Value      0
+[ 4846.852626] perf: Dynamic interrupt throttling disabled, can hang your system!
+      Min        0
+      Max     1400
+      Resolution      32
+    Event code 57 (ABS_MT_TRACKING_ID)
+[ 4916.375706] perf: Dynamic interrupt throttling disabled, can hang your system!
+      Value      0
+      Min        0
+      Max    65535
+Properties:
+  Property type 0 (INPUT_PROP_POINTER)
+  Property type 3 (INPUT_PROP_SEMI_MT)
+[ 4965.560155] audit: type=1131 audit(1549711238.582:188): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=failed'
+Testing ... (interrupt to exit)
+[ 4965.560157] audit: audit_lost=127 audit_rate_limit=0 audit_backlog_limit=64
+[ 4965.560158] audit: kauditd hold queue overflow
+[ 4980.740262] audit: type=1130 audit(1549711253.762:189): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 4980.740265] audit: audit_lost=128 audit_rate_limit=0 audit_backlog_limit=64
+[ 4980.740266] audit: kauditd hold queue overflow
+[ 4980.740269] audit: type=1131 audit(1549711253.762:190): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 4980.740270] audit: audit_lost=129 audit_rate_limit=0 audit_backlog_limit=64
+[ 4980.740271] audit: kauditd hold queue overflow
+[ 4980.741899] audit: type=1130 audit(1549711253.765:191): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 4980.741901] audit: audit_lost=130 audit_rate_limit=0 audit_backlog_limit=64
+[ 4980.741902] audit: kauditd hold queue overflow
+[ 4985.449526] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 5055.309012] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 5125.663552] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 5194.604519] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 5265.439876] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 5297.422196] audit: type=1131 audit(1549711570.452:192): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=failed'
+[ 5297.422199] audit: audit_lost=131 audit_rate_limit=0 audit_backlog_limit=64
+[ 5297.422200] audit: kauditd hold queue overflow
+[ 5312.486325] audit: type=1130 audit(1549711585.513:193): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 5312.486328] audit: audit_lost=132 audit_rate_limit=0 audit_backlog_limit=64
+[ 5312.486329] audit: kauditd hold queue overflow
+[ 5312.486333] audit: type=1131 audit(1549711585.513:194): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 5312.486334] audit: audit_lost=133 audit_rate_limit=0 audit_backlog_limit=64
+[ 5312.486335] audit: kauditd hold queue overflow
+[ 5312.486338] audit: type=1130 audit(1549711585.513:195): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 5312.486339] audit: audit_lost=134 audit_rate_limit=0 audit_backlog_limit=64
+[ 5312.486340] audit: kauditd hold queue overflow
+[ 5338.754443] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 5411.944502] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 5481.572261] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 5550.926852] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 5620.753520] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 5629.067667] audit: type=1131 audit(1549711902.103:196): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=failed'
+[ 5629.067669] audit: audit_lost=135 audit_rate_limit=0 audit_backlog_limit=64
+[ 5629.067670] audit: kauditd hold queue overflow
+[ 5644.224304] audit: type=1130 audit(1549711917.260:197): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 5644.224306] audit: audit_lost=136 audit_rate_limit=0 audit_backlog_limit=64
+[ 5644.224307] audit: kauditd hold queue overflow
+[ 5644.224311] audit: type=1131 audit(1549711917.260:198): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 5644.224312] audit: audit_lost=137 audit_rate_limit=0 audit_backlog_limit=64
+[ 5644.224313] audit: kauditd hold queue overflow
+[ 5644.226775] audit: type=1130 audit(1549711917.260:199): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 5644.226778] audit: audit_lost=138 audit_rate_limit=0 audit_backlog_limit=64
+[ 5644.226779] audit: kauditd hold queue overflow
+[ 5690.655542] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 5760.505187] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 5829.908132] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 5900.243632] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 5960.255088] audit: type=1131 audit(1549712233.297:200): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=failed'
+[ 5960.255091] audit: audit_lost=139 audit_rate_limit=0 audit_backlog_limit=64
+[ 5960.255092] audit: kauditd hold queue overflow
+[ 5969.330480] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 5975.467811] audit: type=1130 audit(1549712248.511:201): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 5975.467814] audit: audit_lost=140 audit_rate_limit=0 audit_backlog_limit=64
+[ 5975.467815] audit: kauditd hold queue overflow
+[ 5975.467818] audit: type=1131 audit(1549712248.511:202): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 5975.467820] audit: audit_lost=141 audit_rate_limit=0 audit_backlog_limit=64
+[ 5975.467821] audit: kauditd hold queue overflow
+[ 5975.469311] audit: type=1130 audit(1549712248.514:203): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 5975.469313] audit: audit_lost=142 audit_rate_limit=0 audit_backlog_limit=64
+[ 5975.469314] audit: kauditd hold queue overflow
+[ 6007.821510] zram: Cannot change disksize for initialized device
+[ 6007.863974] Adding 44675944k swap on /dev/zram0.  Priority:100 extents:1 across:44675944k SSFS
+[ 6007.866878] zram: Cannot change disksize for initialized device
+[ 6007.884370] Adding 44675944k swap on /dev/zram1.  Priority:100 extents:1 across:44675944k SSFS
+[ 6007.888555] zram: Cannot change disksize for initialized device
+[ 6007.903593] Adding 44675944k swap on /dev/zram2.  Priority:100 extents:1 across:44675944k SSFS
+[ 6007.904107] zram: Cannot change disksize for initialized device
+[ 6007.919227] Adding 44675944k swap on /dev/zram3.  Priority:100 extents:1 across:44675944k SSFS
+[ 6038.780995] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 6108.729156] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 6137.735498] zram: Cannot change disksize for initialized device
+[ 6137.744529] zram: Cannot change disksize for initialized device
+[ 6137.760903] zram: Cannot change disksize for initialized device
+[ 6137.767037] zram: Cannot change disksize for initialized device
+[ 6178.857078] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 6249.083761] perf: Dynamic interrupt throttling disabled, can hang your system!
+Input driver version is 1.0.1
+Input device ID: bus 0x19 vendor 0x0 product 0x0 version 0x0
+Input device name: "Dell WMI hotkeys"
+[ 6291.227216] audit: type=1131 audit(1549712564.278:204): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=failed'
+Supported events:
+  Event type 0 (EV_SYN)
+  Event type 1 (EV_KEY)
+[ 6291.227221] audit: audit_lost=143 audit_rate_limit=0 audit_backlog_limit=64
+    Event code 113 (KEY_MUTE)
+    Event code 114 (KEY_VOLUMEDOWN)
+[ 6291.227222] audit: kauditd hold queue overflow
+    Event code 115 (KEY_VOLUMEUP)
+    Event code 148 (KEY_PROG1)
+    Event code 149 (KEY_PROG2)
+    Event code 161 (KEY_EJECTCD)
+    Event code 190 (KEY_F20)
+    Event code 202 (KEY_PROG3)
+    Event code 203 (KEY_PROG4)
+[ 6306.482987] audit: type=1130 audit(1549712579.518:205): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+    Event code 224 (KEY_BRIGHTNESSDOWN)
+    Event code 225 (KEY_BRIGHTNESSUP)
+    Event code 227 (KEY_SWITCHVIDEOMODE)
+[ 6306.482990] audit: audit_lost=144 audit_rate_limit=0 audit_backlog_limit=64
+    Event code 236 (KEY_BATTERY)
+    Event code 238 (KEY_WLAN)
+    Event code 240 (KEY_UNKNOWN)
+[ 6306.482991] audit: kauditd hold queue overflow
+    Event code 431 (KEY_DISPLAYTOGGLE)
+  Event type 4 (EV_MSC)
+    Event code 4 (MSC_SCAN)
+Properties:
+Testing ... (interrupt to exit)[ 6306.482995] audit: type=1131 audit(1549712579.518:206): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+
+[ 6306.482996] audit: audit_lost=145 audit_rate_limit=0 audit_backlog_limit=64
+[ 6306.482997] audit: kauditd hold queue overflow
+[ 6306.483000] audit: type=1130 audit(1549712579.518:207): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 6306.483001] audit: audit_lost=146 audit_rate_limit=0 audit_backlog_limit=64
+[ 6306.483002] audit: kauditd hold queue overflow
+[ 6319.986975] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 6389.341459] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 6463.217685] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 6538.471905] perf: Dynamic interrupt throttling disabled, can hang your system!
+Input driver version is 1.0.1
+Input device ID: bus 0x3 vendor 0xc45 product 0x64d2 version 0x3506
+Input device name: "Laptop_Integrated_Webcam_HD: In"
+Supported events:
+  Event type 0 (EV_SYN)
+  Event type 1 (EV_KEY)
+    Event code 212 (KEY_CAMERA)
+Properties:
+Testing ... (interrupt to exit)
+Input driver version is 1.0.1
+Input device ID: bus 0x19 vendor 0x0 product 0x3 version 0x0
+Input device name: "Sleep Button"
+Supported events:
+  Event type 0 (EV_SYN)
+  Event type 1 (EV_KEY)
+    Event code 142 (KEY_SLEEP)
+Properties:
+Testing ... (interrupt to exit)
+Input driver version is 1.0.1
+Input device ID: bus 0x19 vendor 0x0 product 0x1 version 0x0
+Input device name: "Power Button"
+Supported events:
+  Event type 0 (EV_SYN)
+  Event type 1 (EV_KEY)
+    Event code 116 (KEY_POWER)
+Properties:
+Testing ... (interrupt to exit)
+Input driver version is 1.0.1
+Input device ID: bus 0x11 vendor 0x1 product 0x1 version 0xab41
+Input device name: "AT Translated Set 2 keyboard"
+Supported events:
+  Event type 0 (EV_SYN)
+  Event type 1 (EV_KEY)
+    Event code 1 (KEY_ESC)
+    Event code 2 (KEY_1)
+    Event code 3 (KEY_2)
+    Event code 4 (KEY_3)
+    Event code 5 (KEY_4)
+    Event code 6 (KEY_5)
+    Event code 7 (KEY_6)
+    Event code 8 (KEY_7)
+    Event code 9 (KEY_8)
+    Event code 10 (KEY_9)
+    Event code 11 (KEY_0)
+    Event code 12 (KEY_MINUS)
+    Event code 13 (KEY_EQUAL)
+    Event code 14 (KEY_BACKSPACE)
+    Event code 15 (KEY_TAB)
+    Event code 16 (KEY_Q)
+    Event code 17 (KEY_W)
+    Event code 18 (KEY_E)
+    Event code 19 (KEY_R)
+    Event code 20 (KEY_T)
+    Event code 21 (KEY_Y)
+    Event code 22 (KEY_U)
+    Event code 23 (KEY_I)
+    Event code 24 (KEY_O)
+    Event code 25 (KEY_P)
+    Event code 26 (KEY_LEFTBRACE)
+    Event code 27 (KEY_RIGHTBRACE)
+    Event code 28 (KEY_ENTER)
+    Event code 29 (KEY_LEFTCTRL)
+    Event code 30 (KEY_A)
+    Event code 31 (KEY_S)
+    Event code 32 (KEY_D)
+    Event code 33 (KEY_F)
+    Event code 34 (KEY_G)
+    Event code 35 (KEY_H)
+    Event code 36 (KEY_J)
+    Event code 37 (KEY_K)
+    Event code 38 (KEY_L)
+    Event code 39 (KEY_SEMICOLON)
+    Event code 40 (KEY_APOSTROPHE)
+    Event code 41 (KEY_GRAVE)
+    Event code 42 (KEY_LEFTSHIFT)
+    Event code 43 (KEY_BACKSLASH)
+    Event code 44 (KEY_Z)
+    Event code 45 (KEY_X)
+    Event code 46 (KEY_C)
+    Event code 47 (KEY_V)
+    Event code 48 (KEY_B)
+    Event code 49 (KEY_N)
+    Event code 50 (KEY_M)
+    Event code 51 (KEY_COMMA)
+    Event code 52 (KEY_DOT)
+    Event code 53 (KEY_SLASH)
+    Event code 54 (KEY_RIGHTSHIFT)
+    Event code 55 (KEY_KPASTERISK)
+    Event code 56 (KEY_LEFTALT)
+    Event code 57 (KEY_SPACE)
+    Event code 58 (KEY_CAPSLOCK)
+    Event code 59 (KEY_F1)
+    Event code 60 (KEY_F2)
+    Event code 61 (KEY_F3)
+    Event code 62 (KEY_F4)
+    Event code 63 (KEY_F5)
+    Event code 64 (KEY_F6)
+    Event code 65 (KEY_F7)
+    Event code 66 (KEY_F8)
+    Event code 67 (KEY_F9)
+    Event code 68 (KEY_F10)
+    Event code 69 (KEY_NUMLOCK)
+    Event code 70 (KEY_SCROLLLOCK)
+    Event code 71 (KEY_KP7)
+    Event code 72 (KEY_KP8)
+    Event code 73 (KEY_KP9)
+    Event code 74 (KEY_KPMINUS)
+    Event code 75 (KEY_KP4)
+    Event code 76 (KEY_KP5)
+    Event code 77 (KEY_KP6)
+    Event code 78 (KEY_KPPLUS)
+    Event code 79 (KEY_KP1)
+    Event code 80 (KEY_KP2)
+    Event code 81 (KEY_KP3)
+    Event code 82 (KEY_KP0)
+    Event code 83 (KEY_KPDOT)
+    Event code 85 (KEY_ZENKAKUHANKAKU)
+    Event code 86 (KEY_102ND)
+    Event code 87 (KEY_F11)
+    Event code 88 (KEY_F12)
+    Event code 89 (KEY_RO)
+    Event code 90 (KEY_KATAKANA)
+    Event code 91 (KEY_HIRAGANA)
+    Event code 92 (KEY_HENKAN)
+    Event code 93 (KEY_KATAKANAHIRAGANA)
+    Event code 94 (KEY_MUHENKAN)
+    Event code 95 (KEY_KPJPCOMMA)
+    Event code 96 (KEY_KPENTER)
+    Event code 97 (KEY_RIGHTCTRL)
+    Event code 98 (KEY_KPSLASH)
+    Event code 99 (KEY_SYSRQ)
+    Event code 100 (KEY_RIGHTALT)
+    Event code 102 (KEY_HOME)
+    Event code 103 (KEY_UP)
+    Event code 104 (KEY_PAGEUP)
+    Event code 105 (KEY_LEFT)
+    Event code 106 (KEY_RIGHT)
+    Event code 107 (KEY_END)
+    Event code 108 (KEY_DOWN)
+    Event code 109 (KEY_PAGEDOWN)
+    Event code 110 (KEY_INSERT)
+    Event code 111 (KEY_DELETE)
+    Event code 112 (KEY_MACRO)
+    Event code 113 (KEY_MUTE)
+    Event code 114 (KEY_VOLUMEDOWN)
+    Event code 115 (KEY_VOLUMEUP)
+    Event code 116 (KEY_POWER)
+    Event code 117 (KEY_KPEQUAL)
+    Event code 118 (KEY_KPPLUSMINUS)
+    Event code 119 (KEY_PAUSE)
+    Event code 121 (KEY_KPCOMMA)
+    Event code 122 (KEY_HANGUEL)
+    Event code 123 (KEY_HANJA)
+    Event code 124 (KEY_YEN)
+    Event code 125 (KEY_LEFTMETA)
+    Event code 126 (KEY_RIGHTMETA)
+    Event code 127 (KEY_COMPOSE)
+    Event code 128 (KEY_STOP)
+    Event code 140 (KEY_CALC)
+    Event code 141 (KEY_SETUP)
+    Event code 142 (KEY_SLEEP)
+    Event code 143 (KEY_WAKEUP)
+    Event code 148 (KEY_PROG1)
+    Event code 152 (KEY_SCREENLOCK)
+    Event code 155 (KEY_MAIL)
+    Event code 156 (KEY_BOOKMARKS)
+    Event code 157 (KEY_COMPUTER)
+    Event code 158 (KEY_BACK)
+    Event code 159 (KEY_FORWARD)
+    Event code 162 (KEY_EJECTCLOSECD)
+    Event code 163 (KEY_NEXTSONG)
+Input driver version is 1.0.1
+    Event code 164 (KEY_PLAYPAUSE)
+    Event code 165 (KEY_PREVIOUSSONG)
+Input device ID: bus 0x10 vendor 0x1f product 0x1 version 0x100
+    Event code 166 (KEY_STOPCD)
+Input device name: "PC Speaker"
+    Event code 172 (KEY_HOMEPAGE)
+Supported events:    Event code 173 (KEY_REFRESH)
+
+    Event code 183 (KEY_F13)
+  Event type 0 (EV_SYN)
+    Event code 184 (KEY_F14)
+    Event code 185 (KEY_F15)
+  Event type 18 (EV_SND)
+    Event code 191 (KEY_F21)
+    Event code 1 (SND_BELL) state 0
+    Event code 205 (KEY_SUSPEND)
+    Event code 2 (SND_TONE) state 0
+    Event code 212 (KEY_CAMERA)
+    Event code 215 (KEY_EMAIL)
+Properties:    Event code 217 (KEY_SEARCH)
+
+    Event code 224 (KEY_BRIGHTNESSDOWN)
+Testing ... (interrupt to exit)    Event code 225 (KEY_BRIGHTNESSUP)
+
+    Event code 226 (KEY_MEDIA)
+    Event code 227 (KEY_SWITCHVIDEOMODE)
+    Event code 236 (KEY_BATTERY)
+    Event code 240 (KEY_UNKNOWN)
+  Event type 4 (EV_MSC)
+    Event code 4 (MSC_SCAN)
+  Event type 17 (EV_LED)
+    Event code 0 (LED_NUML) state 0
+    Event code 1 (LED_CAPSL) state 0
+    Event code 2 (LED_SCROLLL) state 0
+Key repeat handling:
+  Repeat type 20 (EV_REP)
+    Repeat code 0 (REP_DELAY)
+      Value    250
+    Repeat code 1 (REP_PERIOD)
+      Value     33
+Properties:
+Testing ... (interrupt to exit)
+Input driver version is 1.0.1
+Input driver version is 1.0.1
+Input device ID: bus 0x1 vendor 0x10ec product 0x292 version 0x1
+Input device ID: bus 0x0 vendor 0x0 product 0x0 version 0x0
+Input device name: "HDA Digital PCBeep"
+Input device name: "HDA Intel PCH Dock Mic"
+Supported events:Supported events:
+
+  Event type 0 (EV_SYN)
+  Event type 0 (EV_SYN)
+  Event type 18 (EV_SND)
+  Event type 5 (EV_SW)
+    Event code 1 (SND_BELL) state 0
+    Event code 4 (SW_MICROPHONE_INSERT) state 0
+    Event code 2 (SND_TONE) state 0
+Properties:Properties:
+
+Testing ... (interrupt to exit)Testing ... (interrupt to exit)
+
+Input driver version is 1.0.1
+Input device ID: bus 0x0 vendor 0x0 product 0x0 version 0x0
+Input device name: "HDA Intel PCH Dock Line Out"
+Supported events:
+  Event type 0 (EV_SYN)
+  Event type 5 (EV_SW)
+    Event code 6 (SW_LINEOUT_INSERT) state 0
+Properties:
+Testing ... (interrupt to exit)
+Input driver version is 1.0.1
+Input device ID: bus 0x0 vendor 0x0 product 0x0 version 0x0
+Input device name: "HDA Intel PCH Front Headphone"
+Supported events:
+  Event type 0 (EV_SYN)
+  Event type 5 (EV_SW)
+    Event code 2 (SW_HEADPHONE_INSERT) state 0
+Properties:
+Testing ... (interrupt to exit)
+coretemp-isa-0000
+Adapter: ISA adapter
+Package id 0:  +78.0 C  (high = +100.0 C, crit = +100.0 C)
+Core 0:        +78.0 C  (high = +100.0 C, crit = +100.0 C)
+Core 1:        +77.0 C  (high = +100.0 C, crit = +100.0 C)
+
+acpitz-acpi-0
+Adapter: ACPI interface
+temp1:        +25.0 C  (crit = +107.0 C)
+
+dell_smm-virtual-0
+Adapter: Virtual device
+Processor Fan: 6698 RPM
+CPU:            +75.0 C  
+Ambient:        +54.0 C  
+SODIMM:         +43.0 C  
+
+Bus 001 Device 004: ID 0a5c:5800 Broadcom Corp. BCM5880 Secure Applications Processor
+Bus 001 Device 003: ID 8087:07dc Intel Corp. 
+Bus 001 Device 002: ID 8087:8000 Intel Corp. 
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 003 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 002 Device 002: ID 0c45:64d2 Microdia Integrated Webcam
+Bus 002 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Event: time 1549712868.409578, type 18 (EV_SND), code 2 (SND_TONE), value 400
+Event: time 1549712868.409578, type 18 (EV_SND), code 2 (SND_TONE), value 0
+Event: time 1549712868.409578, type 18 (EV_SND), code 1 (SND_BELL), value 0
+Event: time 1549712868.409578, type 18 (EV_SND), code 2 (SND_TONE), value 400
+Event: time 1549712868.409578, type 18 (EV_SND), code 2 (SND_TONE), Event: time 1549712868.409594, value 0
+Event: time 1549712868.409578, type 18 (EV_SND), code 2 (SND_TONE), type 18 (EV_SND), code 1 (SND_BELL), value 400
+value 0
+Event: time 1549712868.409578, Event: time 1549712868.409594, type 18 (EV_SND), code 2 (SND_TONE), type 18 (EV_SND), code 2 (SND_TONE), value 400
+value 0
+Event: time 1549712868.409578, Event: time 1549712868.409594, type 18 (EV_SND), code 2 (SND_TONE), type 18 (EV_SND), code 1 (SND_BELL), value 0
+value 0
+Event: time 1549712868.409578, Event: time 1549712868.409594, -------------- SYN_REPORT ------------
+type 18 (EV_SND), code 2 (SND_TONE), value 400
+Event: time 1549712868.409594, type 18 (EV_SND), code 2 (SND_TONE), value 0
+Event: time 1549712868.409594, type 18 (EV_SND), code 1 (SND_BELL), value 0
+Event: time 1549712868.409594, type 18 (EV_SND), code 2 (SND_TONE), value 400
+Event: time 1549712868.409594, type 18 (EV_SND), code 2 (SND_TONE), value 0
+Event: time 1549712868.409594, -------------- SYN_REPORT ------------
+coretemp-isa-0000
+Adapter: ISA adapter
+Package id 0:  +76.0 C  (high = +100.0 C, crit = +100.0 C)
+Core 0:        +74.0 C  (high = +100.0 C, crit = +100.0 C)
+Core 1:        +76.0 C  (high = +100.0 C, crit = +100.0 C)
+
+acpitz-acpi-0
+Adapter: ACPI interface
+temp1:        +25.0 C  (crit = +107.0 C)
+
+dell_smm-virtual-0
+Adapter: Virtual device
+Processor Fan: 6698 RPM
+CPU:            +75.0 C  
+Ambient:        +54.0 C  
+SODIMM:         +43.0 C  
+
+Bus 001 Device 004: ID 0a5c:5800 Broadcom Corp. BCM5880 Secure Applications Processor
+Bus 001 Device 003: ID 8087:07dc Intel Corp. 
+Bus 001 Device 002: ID 8087:8000 Intel Corp. 
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 003 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 002 Device 002: ID 0c45:64d2 Microdia Integrated Webcam
+Bus 002 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+coretemp-isa-0000
+Adapter: ISA adapter
+Package id 0:  +74.0 C  (high = +100.0 C, crit = +100.0 C)
+Core 0:        +74.0 C  (high = +100.0 C, crit = +100.0 C)
+Core 1:        +72.0 C  (high = +100.0 C, crit = +100.0 C)
+
+acpitz-acpi-0
+Adapter: ACPI interface
+temp1:        +25.0 C  (crit = +107.0 C)
+
+dell_smm-virtual-0
+Adapter: Virtual device
+Processor Fan: 6710 RPM
+CPU:            +74.0 C  
+Ambient:        +54.0 C  
+SODIMM:         +43.0 C  
+
+Bus 001 Device 004: ID 0a5c:5800 Broadcom Corp. BCM5880 Secure Applications Processor
+Bus 001 Device 003: ID 8087:07dc Intel Corp. 
+Bus 001 Device 002: ID 8087:8000 Intel Corp. 
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 003 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 002 Device 002: ID 0c45:64d2 Microdia Integrated Webcam
+Bus 002 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+coretemp-isa-0000
+Adapter: ISA adapter
+Package id 0:  +79.0 C  (high = +100.0 C, crit = +100.0 C)
+Core 0:        +79.0 C  (high = +100.0 C, crit = +100.0 C)
+Core 1:        +77.0 C  (high = +100.0 C, crit = +100.0 C)
+
+acpitz-acpi-0
+Adapter: ACPI interface
+temp1:        +25.0 C  (crit = +107.0 C)
+
+dell_smm-virtual-0
+Adapter: Virtual device
+Processor Fan: 6710 RPM
+CPU:            +77.0 C  
+Ambient:        +54.0 C  
+SODIMM:         +43.0 C  
+
+Bus 001 Device 004: ID 0a5c:5800 Broadcom Corp. BCM5880 Secure Applications Processor
+Bus 001 Device 003: ID 8087:07dc Intel Corp. 
+Bus 001 Device 002: ID 8087:8000 Intel Corp. 
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 003 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 002 Device 002: ID 0c45:64d2 Microdia Integrated Webcam
+Bus 002 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Event: time 1549712875.289932, type 4 (EV_MSC), code 4 (MSC_SCAN), value 1d
+Event: time 1549712875.289932, type 1 (EV_KEY), code 29 (KEY_LEFTCTRL), value 1
+Event: time 1549712875.289932, -------------- SYN_REPORT ------------
+Event: time 1549712875.395112, type 4 (EV_MSC), code 4 (MSC_SCAN), value 2e
+Event: time 1549712875.395112, type 1 (EV_KEY), code 46 (KEY_C), value 1
+Event: time 1549712875.395112, -------------- SYN_REPORT ------------
+[ 6607.928001] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 6623.205091] audit: type=1131 audit(1549712896.263:208): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=failed'
+[ 6623.205094] audit: audit_lost=147 audit_rate_limit=0 audit_backlog_limit=64
+[ 6623.205095] audit: kauditd hold queue overflow
+[ 6638.454215] audit: type=1130 audit(1549712911.513:209): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 6638.454218] audit: audit_lost=148 audit_rate_limit=0 audit_backlog_limit=64
+[ 6638.454219] audit: kauditd hold queue overflow
+[ 6638.454223] audit: type=1131 audit(1549712911.513:210): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 6638.454224] audit: audit_lost=149 audit_rate_limit=0 audit_backlog_limit=64
+[ 6638.454225] audit: kauditd hold queue overflow
+[ 6638.456089] audit: type=1130 audit(1549712911.513:211): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 6638.456091] audit: audit_lost=150 audit_rate_limit=0 audit_backlog_limit=64
+[ 6638.456092] audit: kauditd hold queue overflow
+[ 6684.613703] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 6764.017216] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 6839.814404] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 6918.266479] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 6954.528653] audit: type=1131 audit(1549713227.597:212): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=failed'
+[ 6954.528656] audit: audit_lost=151 audit_rate_limit=0 audit_backlog_limit=64
+[ 6954.528657] audit: kauditd hold queue overflow
+[ 6969.694451] audit: type=1130 audit(1549713242.761:213): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 6969.694454] audit: audit_lost=152 audit_rate_limit=0 audit_backlog_limit=64
+[ 6969.694455] audit: kauditd hold queue overflow
+[ 6969.694459] audit: type=1131 audit(1549713242.761:214): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 6969.694460] audit: audit_lost=153 audit_rate_limit=0 audit_backlog_limit=64
+[ 6969.694461] audit: kauditd hold queue overflow
+[ 6969.695592] audit: type=1130 audit(1549713242.764:215): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 6969.695594] audit: audit_lost=154 audit_rate_limit=0 audit_backlog_limit=64
+[ 6969.695595] audit: kauditd hold queue overflow
+[ 6996.239638] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 7075.759048] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 7153.963881] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 7239.001072] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 7257.344713] Asynchronous wait on fence i915:clflush:0 timed out (hint:intel_atomic_commit_ready+0x0/0x54 [i915])
+[ 7268.437804] Asynchronous wait on fence i915:clflush:0 timed out (hint:submit_notify+0x0/0x68 [i915])
+[ 7290.208373] audit: type=1131 audit(1549713563.285:216): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=failed'
+[ 7290.208376] audit: audit_lost=155 audit_rate_limit=0 audit_backlog_limit=64
+[ 7290.208377] audit: kauditd hold queue overflow
+[ 7305.439539] audit: type=1130 audit(1549713578.512:217): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 7305.439542] audit: audit_lost=156 audit_rate_limit=0 audit_backlog_limit=64
+[ 7305.439543] audit: kauditd hold queue overflow
+[ 7305.439546] audit: type=1131 audit(1549713578.512:218): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 7305.439548] audit: audit_lost=157 audit_rate_limit=0 audit_backlog_limit=64
+[ 7305.439548] audit: kauditd hold queue overflow
+[ 7305.439552] audit: type=1130 audit(1549713578.515:219): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 7305.439553] audit: audit_lost=158 audit_rate_limit=0 audit_backlog_limit=64
+[ 7305.439553] audit: kauditd hold queue overflow
+[ 7318.124194] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 7398.321277] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 7477.062752] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 7556.410137] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 7622.126679] audit: type=1131 audit(1549713895.206:220): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=failed'
+[ 7622.126682] audit: audit_lost=159 audit_rate_limit=0 audit_backlog_limit=64
+[ 7622.126683] audit: kauditd hold queue overflow
+[ 7635.353571] perf: Dynamic interrupt throttling disabled, can hang your system!
+[ 7637.183018] audit: type=1130 audit(1549713910.263:221): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 7637.183021] audit: audit_lost=160 audit_rate_limit=0 audit_backlog_limit=64
+[ 7637.183022] audit: kauditd hold queue overflow
+[ 7637.183026] audit: type=1131 audit(1549713910.263:222): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 7637.183027] audit: audit_lost=161 audit_rate_limit=0 audit_backlog_limit=64
+[ 7637.183028] audit: kauditd hold queue overflow
+[ 7637.183031] audit: type=1130 audit(1549713910.263:223): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=prey-agent comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ 7637.183032] audit: audit_lost=162 audit_rate_limit=0 audit_backlog_limit=64
+[ 7637.183033] audit: kauditd hold queue overflow

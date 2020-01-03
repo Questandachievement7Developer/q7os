@@ -1,0 +1,9 @@
+#!/bin/sh
+#Load any function that can be use systemwide for any application program.
+#header file for loading all the systemcalls available in here
+
+. ${systemcall}/ASCIIart #revoke Bootloader command from the q7OS
+. ${systemcall}/color #revoke Bootloader command from the q7OS
+. ${systemcall}/core_utils #revoke Bootloader command from the q7OS
+. ${runtimetoolbox}/initTools #for init things
+. ${runtimetoolbox}/BootInfo #for display boot messages

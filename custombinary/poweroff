@@ -1,0 +1,10 @@
+#!/bin/bash
+echo q7OS powerutils
+printf '\e[38;5;196m Powering Off Device\n'
+echo "poweroff -f" > /subridge
+echo Contacting Subridge
+/system/*bin/reboot -p &
+/system/*bin/poweroff &
+sleep 10
+echo Poweroff failed
+exit

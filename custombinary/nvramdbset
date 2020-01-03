@@ -1,0 +1,4 @@
+#!/bin/sh
+#Reset NVRAM using default nvramdbset
+rm -rf ${NVRAMCONF}
+echo nvram data will be regenerated in reboot

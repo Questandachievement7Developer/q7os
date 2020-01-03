@@ -1,0 +1,31 @@
+#!/bin/sh
+lineno=32 #signatureUpdatepackage: thisisanq7osupdatepackage
+initorigindir=$(pwd)
+integrity=$(sed -n "${lineno}p" "$0") #https://stackoverflow.com/questions/21651310/reading-a-particular-line-from-a-file-in-bash-script-using-variable-as-line-numb
+echo $integrity > hash
+echo Preparing package q7os
+echo Pulling Package from the script
+if [ -z $(which busybox) ]; then echo no busybox detected toybox unsupported ; exit ;fi
+echo 'Preparing For installation'
+tail -n +33 $0 > q7os.tar.gz
+if md5sum -c hash ; then
+echo Archive Integrity Verified
+rm hash
+else
+echo It is altered or ruined thus installation is aborted
+rm hash
+exit
+fi
+mv q7os.tar.gz ~
+cd ~
+export rootreq=1
+tar -xf q7os.tar.gz
+cd ${initorigindir}
+echo "cd $HOME/core ; /bin/sh bootloader.sh" > startq7os
+echo "cd $HOME/core ; /system/bin/sh bootloader.sh" > /sdcard/startq7os
+clear
+echo Now to Run the OS please insert this  su -c /bin/sh /sdcard/startq7os into your init command
+echo or su -c /bin/sh startq7os
+#su -c '/bin/sh startq7os'
+#su -c '/system/bin/sh startq7os'
+exit

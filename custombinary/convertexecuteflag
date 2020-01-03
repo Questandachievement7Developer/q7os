@@ -1,0 +1,11 @@
+#!/bin/sh
+# Convert all #!/bin/sh or #!/bin/bash to chmod +x recursively
+updatepackage=$(grep -ril ${origindir} -e '#!/bin/bash')
+for i in ${updatepackage}; do
+  chmod +x $i
+done
+updatepackage=$(grep -ril ${origindir} -e '#!/bin/sh')
+for i in ${updatepackage}; do
+  chmod +x $i
+done
+echo Chmoding done

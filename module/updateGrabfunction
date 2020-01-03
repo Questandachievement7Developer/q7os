@@ -1,0 +1,19 @@
+#!/bin/bash
+#searches for Specific Strings and Pull archives from that
+echo Finding Update packages
+updatepackage=$(grep -ril /mnt -e 'thisisanq7osupdatepackage')
+echo $updatepackage
+if [ -f $updatepackage ]; then
+  echo Update file detected
+  sleep 1
+  echo Comparing Version
+  if [[ $updatepackage -nt ${origindir}/bootloader.sh ]]; then
+  echo Update Package is Newer
+  #tail -n +33 install.sh > q7os.tar.gz
+  tail -n +33 $updatepackage > ${origindir}/q7os.tar.gz
+else
+  echo Update package is older so we wont do anything
+  exit
+  fi
+fi
+exit

@@ -1,0 +1,78 @@
+#!/bin/bash
+#Daemon that live patch the system while it is running
+#This is pretty usefull if you need a fast and Seamless
+#so what this do is scans update packages for the newer one in the detectable filesystem area ( /home /mnt /run /sdcard )
+echo Starting Livepatchd
+cd /
+livepatchinitdir=$(pwd)
+sleep 4
+while true ; do
+echo Finding Update packages
+updatepackage=$(grep -ril /mnt -e 'thisisanq7osupdatepackage')
+updatepackage=$(grep -ril /run -e 'thisisanq7osupdatepackage')
+updatepackage=$(grep -ril /sdcard -e 'thisisanq7osupdatepackage')
+updatepackage=$(grep -ril /home -e 'thisisanq7osupdatepackage')
+echo $updatepackage
+if [ -f $updatepackage ]; then
+  echo Update file detected
+  sleep 1
+  echo Comparing Version
+  if [[ $updatepackage -nt ${origindir}/bootloader.sh ]]; then
+  echo Update Package is Newer
+  #tail -n +33 install.sh > q7os.tar.gz
+  tail -n +33 $updatepackage > ${origindir}/q7os.tar.gz
+  echo Proceeding to Install procedure
+  sleep 4
+  cd ${origindir}
+  echo 'patching system...'
+  echo Updating..
+  tar -xf $update
+  cp -r core/bootsystemd .
+  cp -ru core/custombinary .
+  cp -ru core/distrocustomization/ .
+  cp -ru core/module .
+  cp -ru core/Documentation .
+  cp -ru core/bootproot .
+  cp -ru core/prootexec .
+  cp -r core/basicpackages .
+  cp -r core/bootloader.sh .
+  cp -r core/init .
+  cp -r core/su_bridged .
+  cp -r core/swapforhackedandroid .
+  cp -ru pacakgearm/dist .
+  cp -r pacakgearm/dist/ver ${origindir}/system/ver
+  rm -rf core q7os.tar.gz
+  echo $sysinitprefix Executing Post Update Transaction
+  sh module/updatehelper.sh
+  sleep 5
+  echo Patching $(uname -m) system
+  #Remember This already at system ROOT (q7OS root)
+  #Transfering Vendor Custom
+  cd ${execpath}/system/${arch}
+  cp -ru ${execpath}/distrocustomization/masterconf/* .
+  cp -ru ${execpath}/distrocustomization/${arch}/* .
+  #Revision Version
+  cp -r ${execpath}/dist/ver .
+  #transferring CustomBinary
+  for i in ${execpath}/custombinary/* ;do
+    chmod +x $i
+    cp -ru $i bin/
+  done
+  #Linking Custom Services to the SystemFile
+  cp -r ${execpath}/bootsystemd .
+  cp -r ${execpath}/module .
+  cp -r ${execpath}/init .
+  cp -r ${execpath}/swapforhackedandroid .
+  cp -r ${execpath}/bootlib/libdisableselinux.so .
+  cp -r ${execpath}/bootlib/libandroid-shmem.so .
+  echo 'Nicely done ! mate '
+  cd ${livepatchinitdir}
+  sleep 360
+else
+  echo Update package is older so we wont do anything
+  exit
+  fi
+fi
+echo sleeping for 10 minutes
+sleep 600
+exit

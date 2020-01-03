@@ -1,0 +1,8 @@
+#Write the excutable path folder in here
+/module
+/module/usermanager
+/module/packagemanager
+/module/internetfilefetcher
+/module/filesearch
+/module/hikernel
+/module/inetmanager

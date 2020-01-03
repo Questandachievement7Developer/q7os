@@ -1,0 +1,19 @@
+arch=$(uname -m)
+printf '\e[38;5;149m SuperUser Bridge Daemon Has been Launched'
+commandfile=system/$arch/subridge
+rm -rf $commandfile
+while true; do
+if [ -f $commandfile ]; then
+printf '\e[38;5;196m System Recieved Superuser Command Executing \n'
+cat $commandfile
+command=$(cat $commandfile)
+if [ $command == 'deboot' ]; then
+printf '\e[38;5;149m SuperUser Bridge Daemon Has been Killed'
+exit
+fi
+rm -rf $commandfile
+su -c "${command}"
+${command}
+fi
+sleep 2
+done

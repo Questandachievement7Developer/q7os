@@ -1,0 +1,13 @@
+#!/bin/bash
+#Permission set
+echo Setting Up permission
+chmod 755 /etc
+chmod 755 /usr
+chmod 755 /var
+chmod 755 /mnt
+chmod 755 /opt
+chmod 755 /srv
+chmod 755 /run
+chmod -R 555 /bin
+chmod 4755 /bin/ping /bin/su /bin/mount /bin/ping6 /bin/umount
+chmod 4111 /usr/bin/sudo

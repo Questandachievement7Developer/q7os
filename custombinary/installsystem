@@ -1,0 +1,64 @@
+#!/bin/bash
+echo q7OS pkgUtils
+if [ $Conf_debug == '1' ]; then
+  set -x
+fi
+#Right This idea Seems to be a bit of idiotic but the fact is sometimes archlinuxarm has sloooww download speed
+echo Initializing
+cd /
+#rm -rf /bin/install Infamous for breaking system
+mkdir /pkgcache/system
+
+base=basicpackages
+finflag=finflag
+if [ -f $finflag ]; then
+  echo Your System is Installed successfully
+  echo Checking for Update
+  pacman -Syu --noconfirm &
+  exit
+else
+  vglserver_config
+  pacman -Syy --noconfirm
+  pacman -Syy --noconfirm
+  echo New System Detected
+  echo Launching Multithreaded Pacman Installation
+  rambo=$(while true ; do rm -f /var/lib/pacman/db.lck  ; done) &
+  #no wonder my phone lagging this thing is just not going to stop xd
+  packagetotal=0
+  for a in $(cat $base) ; do
+    packagetotal=$(( $packagetotal + 1 ))
+  done
+  packagecount=0
+  for a in $(cat $base) ; do
+    rm -f /var/lib/pacman/db.lck
+    packagecount=$(( $packagecount + 1 ))
+    echo Caching $a Package $packagecount out of $packagetotal
+    pacman -Swqdd --noconfirm --needed --cachedir=/pkgcache/system --overwrite '*' $a &
+    rm -f /var/lib/pacman/db.lck
+  sleep 1
+  rm -f /var/lib/pacman/db.lck
+done
+  sleep 555
+  killall -KILL pacman
+  packagecount=0
+  for a in $(cat $base) ; do
+    rm -f /var/lib/pacman/db.lck
+    packagecount=$(( $packagecount + 1 ))
+    echo Installing $a Package $packagecount out of $packagetotal
+    pacman -S --noconfirm --needed --cachedir=/pkgcache/system --overwrite '*' $a
+    rm -f /var/lib/pacman/db.lck
+  done
+  echo 00 > $finflag
+  /bin/restart
+fi
+echo Generating locales
+locale-gen en_US.UTF-8
+echo Compiling Modules
+cd /
+#compileModule
+bash /module/buildme
+
+echo Did it Succeed?
+sleep 1
+
+exit

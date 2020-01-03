@@ -1,0 +1,12 @@
+#!/bin/bash
+echo q7OS sensorutils
+ls sys/class/sensors
+echo Only for Android Devices that have getevent debugger
+sh /module/sensorutils/enableevoker &
+mkdir /input
+mount -t tmpfs -o size=64M tmpfs /input
+while true ; do
+getevent > /input/sensorsinput
+rm -f /input/sensorsinput
+sleep 3
+done

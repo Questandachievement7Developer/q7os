@@ -1,0 +1,42 @@
+#!/bin/bash
+#sources.SHELL
+if [ $DISABLE_KERNELLOADER == '1' ]; then
+  echo Kernel Loader Disabled
+  exit
+fi
+
+printf '\e[38;5;039m [Started] '; echo Kernelmod Loading Has been started
+echo Booting System using Kernelmod
+echo Created by questandachievement7
+#cd /kernelmod
+rm -rf systemd execstop execstart
+
+mkdir kernelmodules
+#cp -rv /etc/systemd/system/*.service systemd #replace this with
+ARCHkerneldir=$(find /usr/lib/modules -name "*ARCH*" -type d | sed 's#.*/##'| tail -1 )
+
+echo Probing modules
+module=$(find /usr/lib/modules -name "*.ko*" -type f | sed 's#.*/##'  | awk '{gsub(".ko.gz", "");print}' | awk '{gsub(".ko.xz", "");print}' | awk '{gsub(".ko", "");print}')  #https://stackoverflow.com/questions/9202495/have-find-print-just-the-filenames-not-full-paths
+counttotal=0
+for i in $module* ; do
+  counttotal=$(( $counttotal + 1 ))
+done
+echo Detected $counttotal Kernel Module
+count=0
+for i in $module* ; do
+  percent=$(( $count * 100 / $counttotal ))
+  count=$(( $count + 1 ))
+  modprobe --force-modversion --force-vermagic -f -v -S ${ARCHkerneldir} $i 2&>1 > /modprobelog
+  modprobe --force-modversion --force-vermagic -f -v $i 2&>1 > /modprobelog
+  if [ $(( $count % 127 )) == '0' ]; then
+  dialog --title "q7OS boot" --gauge "Loading Drivers" 7 70 $percent &
+  #echo "Initializing Modules ${percent}%"
+fi
+  #echo Loading $count kernel module out of $counttotal
+
+done
+reset
+#
+echo $module
+echo If you see function is not implemented which mean you have an Outdated Version Kernel
+echo Finished Loading see modprobelog

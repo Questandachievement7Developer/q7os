@@ -1,0 +1,8 @@
+#!/bin/bash
+echo Hey if you launch this manually
+echo Please dont because it is interferring with the process that already launched
+while true ; do
+  sysctl -p /etc/sysctl.conf
+  echo Setting Applied
+  sleep 360
+done

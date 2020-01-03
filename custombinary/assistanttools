@@ -1,0 +1,14 @@
+#!/bin/bash
+echo q7OS Assistantutils
+#but be aware of this OrionTek thingy This tech will or have a higher chance pushing your Android Device to its very limits
+# What i mean limit is Literally at its edge and pinnacle of the hardware
+echo Work in progress and currently deactivated due to incomplete Neural Architechture and heavy resource Hog
+echo Also Please Remind me to Implement OpenCL for Hardware Level Optimization
+echo For chipsets such as Exynos AMD Qualcomm NVIDIA
+echo Thank you
+echo .
+sleep 3
+cd /module/Assistant
+sh bootloader.sh menu untrust
+echo Bootloader Process has quit
+exit

@@ -1,0 +1,4 @@
+#!/bin/bash
+echo q7OS GPS Utils
+echo well i mean i need the Location so yeah
+settings put secure location_providers_allowed gps,network

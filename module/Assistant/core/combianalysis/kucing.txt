@@ -1,0 +1,5 @@
+Electrophoresis of positively charged particles (cations) is sometimes called cataphoresis, while electrophoresis of negatively charged particles (anions) is sometimes called anaphoresis.
+
+The electrokinetic phenomenon of electrophoresis was observed for the first time in 1807 by Russian professors Peter Ivanovich Strakhov and Ferdinand Frederic Reuss at Moscow State University,[8] who noticed that the application of a constant electric field caused clay particles dispersed in water to migrate. It is ultimately caused by the presence of a charged interface between the particle surface and the surrounding fluid. It is the basis for analytical techniques used in chemistry for separating molecules by size, charge, or binding affinity.
+
+Electrophoresis is used in laboratories to separate macromolecules based on size. The technique applies a negative charge so proteins move towards a positive charge. Electrophoresis is used for both DNA and RNA 

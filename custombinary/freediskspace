@@ -1,0 +1,19 @@
+#!/bin/bash
+runtimepath=${origindir}
+bootfile=${runtimepath}/system.img
+echo RuntimePath ${origindir}
+echo q7OS diskUtils
+echo Please Wait while we shrink your disk space
+#fdupes -r -1 /usr | while read line; do master=""; for file in ${line[*]}; do if [ "x${master}" == "x" ]; then master=$file; else ln -f "${master}" "${file}"; fi; done; done
+#fdupes -r -1 /etc | while read line; do master=""; for file in ${line[*]}; do if [ "x${master}" == "x" ]; then master=$file; else ln -f "${master}" "${file}"; fi; done; done
+fdupes -r -1 /root | while read line; do master=""; for file in ${line[*]}; do if [ "x${master}" == "x" ]; then master=$file; else ln -f "${master}" "${file}"; fi; done; done
+fdupes -r -1 /home | while read line; do master=""; for file in ${line[*]}; do if [ "x${master}" == "x" ]; then master=$file; else ln -f "${master}" "${file}"; fi; done; done
+echo Removing Cache
+rm -rf /pkgcache/*
+echo Saving state
+sync
+echo Scanning for impurities
+e2fsck -y $bootfile
+clear
+echo Done
+exit

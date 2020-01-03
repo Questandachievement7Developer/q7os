@@ -1,0 +1,2 @@
+model_checkpoint_path: "linkin_park.ckpt-10000"
+all_model_checkpoint_paths: "linkin_park.ckpt-10000"

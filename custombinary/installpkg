@@ -1,0 +1,32 @@
+#!/bin/bash
+echo q7OS pkgUtils
+#installd is a daemon that Manages all pacman installation From Repositories Syncronization to Auto Update\
+#installpkg is a client that requests to installd to install package that can be sourced from Pacman Aur Python Npm
+#basically a Unified Package Manager
+cd /
+updaterepository=0
+updatesystem=0
+systempackage=/basicpackages
+userpackages=/userpackages
+echo "Sending Package information to installd"
+echo $1 >> /userpackages
+count=1
+while ! [ -x "$(command -v $1)" ]; do
+  echo "Waiting Confirmation on installation by installd..."
+  count=$(( $count + 1 ))
+  sleep 10
+  if [ $count -gt 20 ]; then
+    echo Request Time out
+    echo '--------------[Reason]--------------'
+    echo The are various reason why this occoured
+    echo '1. You have typed the wrong name of the package'
+    echo '2. Your requested package might be unavailable on package'
+    echo '3. The system is currently resolving outdated libs and binaries'
+    echo '-------------------------------------'
+    echo However there might be chance if it exists it will be installed in the future
+    echo once it is available to download
+    echo "try to searchpkg $1"
+    exit
+  fi
+done
+echo $1 is installed

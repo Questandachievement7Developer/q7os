@@ -1,0 +1,4 @@
+#!/bin/bash
+echo Contacting Win32EMU
+bash /module/win32Emu/win32start.sh
+exit

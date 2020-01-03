@@ -1,0 +1,7 @@
+#!/bin/bash
+echo q7OS Diskutils
+echo Anti CorruptionD
+while true ;do
+sync
+sleep 30
+done

@@ -1,0 +1,6 @@
+echo Assuming using Pacman as package manager
+pacman -S docker git busybox --noconfirm --needed
+apt-get -y install git busybox docker
+yum install git busybox docker
+systemctl start docker
+echo Dependencies met

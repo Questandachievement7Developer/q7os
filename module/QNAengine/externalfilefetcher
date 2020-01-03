@@ -1,0 +1,325 @@
+#!/bin/bash
+#Porting for q7OS
+cd /module/QNAengine
+
+
+MemoryTotal=$(awk '/MemTotal/ {print $2}' /proc/meminfo)
+memdefine=$(( ( $MemoryTotal / 1 ) / 1024 ))
+memsize="${memdefine}M"
+Boostlimit=$(( $memdefine * 100 / 64000 ))
+echo DEBUG Learn Boost limit $Boostlimit memorydetected $memsize
+if [ -z "$1" ]; then
+  echo if you want to search data do
+  echo '$ ./datamining search'
+  exit
+fi
+
+kocheng=$1
+SEARCH=$1
+#set -x
+cd $(pwd)
+pip install sumy > /dev/null 2>&1 &
+python -c "import nltk; nltk.download('punkt')" > /dev/null 2>&1 &
+
+currdir=$(pwd)
+echo This is the directory $(pwd)
+echo loading...
+#find . -iname "*tmp*"
+echo 2nd async pass load
+#find . -iname "*tmp*" -exec rename .tmp.html .html '{}' \;
+find ${currdir} -name "*tmp*" -exec bash -c 'mv "$1" "${1%.tmp}"' - '{}' \; > /dev/null 2>&1 &
+echo Loading
+chmod 777 -R .
+
+pacman -S lynx httracker dialog python python-setuptools coreutils --noconfirm --needed
+#rm -rf web
+if [ ! -d cachefile ]; then
+  mkdir cachefile
+  mount -t tmpfs -o size=512M tmpfs cachefile
+fi
+
+
+
+exta='aif cda mid mp3 mpa ogg wav wma wpl 7z arj deb pkg rar rpm tar.gz z zip bin dmg iso toast vcd csv dat db dbf log mdb sav  sql tar xml apk bat bin cgi pl com exe gadget jar py wsf fnt fon otf ttf ai bmp gid ico jpeg jpg png ps psd svg tif asp cer cfm cgi css htm js jsp part php py rss xhtml c class cpp cs h java sh swift vb ods xlr xls bak cab cfg cpl cur dll dmp drv icns ico ini 3g avi flv h264 m4v mkv mov mp4 mpeg mpg rm swf vob wmv doc odt pdf rtf tex txt wks wps wpd'
+Documents='xls doc pdf ppt wps txt rtf sql html css htm'
+mkdir ${HOME}
+for ext in $Documents; do
+mkdir "${HOME}/Documents"
+chmod -R 777 "${HOME}/Documents"
+find "cachefile" -name "*.*$ext*"
+find "cachefile" -name "*.*$ext*" | while read file; do
+    mv -v "$file" "${HOME}/Documents"; done
+done
+Archive='rar rpm tar.gz z zip bin dmg iso 7z arj'
+mkdir ${HOME}
+for ext in $Archive; do
+mkdir "${HOME}/Archive"
+chmod -R 777 "${HOME}/Archive"
+find "cachefile" -name "*.*$ext*"
+find "cachefile" -name "*.*$ext*" | while read file; do
+    mv -v "$file" "${HOME}/Archive"; done
+done
+Audio='aif cda mid mp3 mpa ogg wav wma'
+mkdir ${HOME}
+for ext in $Audio; do
+mkdir "${HOME}/Audio"
+chmod -R 777 "${HOME}/Audio"
+find "cachefile" -name "*.*$ext*"
+find "cachefile" -name "*.*$ext*" | while read file; do
+    mv -v "$file" "${HOME}/Audio"; done
+done
+
+Video='3g avi flv h264 m4v mkv mov mp4 mpeg mpg rm swf vob wmv'
+mkdir ${HOME}
+for ext in $Video; do
+mkdir "${HOME}/Video"
+chmod -R 777 "${HOME}/Video"
+find "cachefile" -name "*.*$ext*"
+find "cachefile" -name "*.*$ext*" | while read file; do
+    mv -v "$file" "${HOME}/Video"; done
+done
+
+Picture='ai bmp gid ico jpeg jpg png ps psd svg tif'
+mkdir ${HOME}
+for ext in $Video; do
+mkdir "${HOME}/Picture"
+chmod -R 777 "${HOME}/Picture"
+find "cachefile" -name "*.*$ext*"
+find "cachefile" -name "*.*$ext*" | while read file; do
+    mv -v "$file" "${HOME}/Picture"; done
+done
+
+
+if [ $kocheng == 'search' ]; then
+search=$(dialog --title "search" --inputbox "request any type of fetched data" 8 40 2>&1 >/dev/tty)
+clear
+if [ $search == 'debug' ]; then
+  echo Debugging mode enabled
+  tail -f bgfetch
+  exit
+fi
+echo Loading...
+echo This loading may take long if you have run $0 for a long time
+#list=$(cd / ; grep -ril ${currdir}/${HOME} -e "${search}")
+list=$(cd / ; grep -ril ${HOME} -e "${search}")
+echo what
+listhtml=$( grep -ril --include \*.html ${HOME}/Documents -e "${search}" )
+#listhtml=$( grep -ril --include \*.html ${currdir}/${HOME}/Documents -e "${search}" )
+echo $list
+echo $listhtml
+sleep 4
+if [ -z "$list" ]; then
+ echo Content is not found Fetching in the background
+ echo Data EXPUNGED
+ sleep 1
+ echo Fixing Data inconsistencies
+ echo 'note: try to search something else'
+ sleep 5
+ sh datamining $search > /dev/null 2>&1 >> bgfetch  &
+else
+  clear
+echo Indexed Data Found
+echo $listhtml
+sleep 4
+grep -rnw . -e "${search}" > garbled_${search}
+mkdir ReinforcedLearning
+#Sumary all the things
+clear
+echo Learning Text
+counttotal=0
+for a in $listhtml; do
+  counttotal=$(( $counttotal + 1 ))
+done
+count=0
+learnboost="learnboost is activated"
+for a in $listhtml; do
+  count=$(( $count + 1 ))
+  percent=$(( $count * 100 / $counttotal ))
+
+  #sumy edmundson --length=4 --file=2-hari-lagi-yamaha-siap-luncurkan-skuter-hybrid.html  --format=html
+  if [ $percent -lt ${Boostlimit} ]; then
+  echo Reserving Resources for boostmode $Boostlimit of the process only
+  sumy edmundson --length=4 --file=${a} --format=html >> ${currdir}/ReinforcedLearning/CompiledInformation_${search} &
+    else
+  learnboost="learnboost is disabled"
+  dialog --title "Neural Learning Data Mining" --gauge "Learning and Creating Answer about ${search} Topic" 7 70 ${percent} &
+  echo Processor Load $CPU
+  if [ $(( $percent % 6 )) == 0 ] ;then
+  free
+  CPU=$(grep 'cpu ' /proc/stat | awk '{usage=($2+$4)*100/($2+$4+$5)} END {print usage ""}')
+fi
+  sumy edmundson --length=4 --file=${a} --format=html >> ${currdir}/ReinforcedLearning/CompiledInformation_${search}
+fi
+done
+result=$(sumy edmundson --length=2 --file="${currdir}/ReinforcedLearning/CompiledInformation_${search}")
+echo MUST FAIL
+sleep 5
+echo "${result}" > ${currdir}/ReinforcedLearning/result_${search}
+ killall -KILL wget firefox
+for i in ${list} ; do
+  echo ${i}
+ #firefox -new-tab "file://${i}" 2>&1  &
+ sleep 0
+done
+nano "ReinforcedLearning/result_${search}"
+fi
+sh datamining search
+exit
+fi
+
+
+
+dupefilelist=$(ls cachefile/cachefile)
+for a in ${dupefilelist}; do
+	rm -fv "cachefile/*$a*"
+	echo cleaning duplicates $a
+done
+#rm -rf
+#Sorting machine
+#exta='aif cda mid mp3 mpa ogg wav wma wpl 7z arj deb pkg rar rpm tar.gz z zip bin dmg iso toast vcd csv dat db dbf log mdb sav  sql tar xml apk bat bin cgi pl com exe gadget jar py wsf fnt fon otf ttf ai bmp gid ico jpeg jpg png ps psd svg tif asp cer cfm cgi css htm js jsp part php py rss xhtml c class cpp cs h java sh swift vb ods xlr xls bak cab cfg cpl cur dll dmp drv icns ico ini 3g avi flv h264 m4v mkv mov mp4 mpeg mpg rm swf vob wmv doc odt pdf rtf tex txt wks wps wpd'
+exta='aif cda mid mp3 mpa ogg wav wma wpl 7z arj deb pkg rar rpm tar.gz z zip bin dmg iso toast vcd csv dat db dbf log mdb sav  sql tar xml apk bat bin cgi pl com exe gadget jar py wsf fnt fon otf ttf ai bmp gid ico jpeg jpg png ps psd svg tif asp cer cfm cgi css htm js jsp part php py rss xhtml c class cpp cs h java sh swift vb ods xlr xls bak cab cfg cpl cur dll dmp drv icns ico ini 3g avi flv h264 m4v mkv mov mp4 mpeg mpg rm swf vob wmv doc odt pdf rtf tex txt wks wps wpd'
+
+#exta=$(dialog --title "FILE TYPE SELECTION" --inputbox "Type the filetype that you want to search for example (png jpeg) etc.." 8 40 2>&1 >/dev/tty)
+
+#sleep 4
+mkdir web
+clear
+echo ""
+echo ".=========================================================."
+echo "|                                                         |"
+echo "|  Hybrid offlinecaching                                  |"
+echo "|  ---------------------------------------------------    |"
+echo "|                                                         |"
+echo "|  Version: 1.0                                           |"
+echo "|  Developed by: Rishi Narang                             |"
+echo "|  Wrapped and modified by questandachievement7           |"
+echo "|  Blog: www.wtfuzz.com                                   |"
+echo "|                                                         |"
+echo "|  Usage: ./gocmd.sh <search strings>                     |"
+echo "|  Example: ./gocmd.sh example and test                   |"
+echo "|                                                         |"
+echo ".=========================================================."
+echo ""
+
+
+#sleep 2
+if [ -z $1 ]
+then
+ echo "ERROR: No search Topic string supplied."
+ echo "USAGE: webspider.sh <search srting>"
+ echo ""
+ SEARCH=$(dialog --title "Document digger" --inputbox "Search for what?" 8 40 2>&1 >/dev/tty)
+ #echo -n "Anyways for now, supply the search string here: "
+ #read SEARCH
+else
+ SEARCH=$@
+fi
+
+URL="http://google.com/search?hl=en&safe=off&q="
+URL="https://duckduckgo.com/?q="
+STRING=`echo $SEARCH | sed 's/ /%20/g'`
+URI="$URL%22$STRING%22"
+lynx -dump $URI > gone.tmp
+sed 's/http/\^http/g' gone.tmp | tr -s "^" "\n" | grep http| sed 's/\ .*//g' > gtwo.tmp
+#rm gone.tmp
+sed '/google.com/d' gtwo.tmp > rawurlsstage0
+sed '/duckduckgo.com/d' gtwo.tmp > rawurlsstage0
+
+#because due to the port from google Call to duckduckgo call we have to reimplement Translation
+echo Translation Debug
+#sleep 4
+sed 's/\%3A/:/g' rawurlsstage0 > rawurlsstage1
+sed 's/\%2F/\//g' rawurlsstage1 > urls
+#rm gtwo.tmp
+listurl=$(wc -l urls)
+if [ $listurl == '0 urls' ]; then
+echo something went wrong
+dialog --title "webspider" --msgbox "cannot retrieve any data at the moment" 5 50 > /dev/tty
+exit
+fi
+echo "SUCCESS: Extracted `wc -l urls` and listed them in '`pwd`/urls'
+file for reference."
+echo ""
+#cat urls
+echo ""
+search=$(cat urls)
+echo $search
+#sleep 1
+#EOF
+#recoll -q "$SEARCH" &
+mkdir "$(pwd)/cachefile/${SEARCH}"
+
+find cachefile -iname "*tmp*" -exec rename .tmp.html .html '{}' \; &
+pwd
+#cd "$(pwd)/cachefile/${SEARCH}"
+echo $pwd
+mkdir "$(pwd)/cachefile/${SEARCH}"
+sleep 2
+SEARCHONEWORD=$(echo $SEARCH | awk '{print $1;}')
+echo $SEARCHONEWORD
+pwd
+echo dir
+rm -rf ../${SEARCH}
+#sleep 10
+declare -A arr
+shopt -s globstar
+
+cd ..
+sleep 0
+#search=$(zenity --entry --text "Start Caching your website" );
+
+#convertedbar=${search// /+}
+exclude='"-*duckduckgo.com/assets/*" "-*duckduckgo.com/js/*" "-*duckduckgo.com/font/*" '
+echo $convertedbar
+sleep 0
+echo "$search"
+cd "$currdir"
+mkdir "$(pwd)/cachefile/${SEARCH}/webcache"
+if [ ! -d $(pwd)/cachefile/${SEARCH}/webcache ]; then
+  echo It seems the program refuse to work at all
+  echo Reason Directory was created and magically dissapear
+  echo Or the actual working directory is magically moved to another place
+  exit
+fi
+for link in $search ; do
+for ext in $exta ;do
+#httrack --continue "$link" -O "$(pwd)/cachefile/${SEARCH}/webcache" "+*.*.*/*.*" ${exclude} -v
+cd "$currdir"
+echo This is the directory $(pwd)
+httrack --continue "$link" -O "$(pwd)/cachefile/${SEARCH}/webcache" "+*${SEARCHONEWORD}*${ext}*" ${exclude} -v
+echo This is the directory $(pwd)
+done
+#pullfiles
+for ext in $exta; do
+mkdir "$(pwd)/cachefile/${SEARCH}/$ext"
+chmod -R 777 "$(pwd)/cachefile/${SEARCH}/$ext"
+find "$(pwd)/cachefile/${SEARCH}/webcache" -name "*.*$ext*"
+find "$(pwd)/cachefile/${SEARCH}/webcache" -name "*.*$ext*" | while read file; do
+    mv -v "$file" "$(pwd)/cachefile/${SEARCH}/$ext"; done
+done
+#rm -rf "$(pwd)/cachefile/${SEARCH}/webcache"
+mkdir "$(pwd)/cachefile/${SEARCH}/webcache"
+done
+sleep 9
+declare -A arr
+shopt -s globstar
+dialog --title "Webspider" --msgbox "Cleaning files before starting cache" 5 50 &
+count=0
+for file in **; do
+  [[ -f "$file" ]] || continue
+
+  read cksm _ < <(md5sum "$file")
+  if ((arr[$cksm]++)); then
+    echo "cleaning redundant web $count file"
+    count=$(($count + 1))
+  fi
+done
+cd ..
+sleep 0
+
+sleep 6000
+
+
+
+#note
+#https://duckduckgo.com/?q=$searchquery&t=hp&ia=web

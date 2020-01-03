@@ -1,0 +1,21 @@
+#!/bin/bash
+
+#quaverfilesystem
+#Basically Filesystem that is Fragmented became one
+# Only for rooted users
+runtimepath=${execpath}
+bootfile=${runtimepath}/system.img
+while true ; do
+echo q7OS diskUtils
+#Remember do not Merge in system critical file since it will broke the fonts for example
+#fdupes -r -1 /usr | while read line; do master=""; for file in ${line[*]}; do if [ "x${master}" == "x" ]; then master=$file; else ln -f "${master}" "${file}"; fi; done; done
+#fdupes -r -1 /etc | while read line; do master=""; for file in ${line[*]}; do if [ "x${master}" == "x" ]; then master=$file; else ln -f "${master}" "${file}"; fi; done; done
+fdupes -r -1 /root | while read line; do master=""; for file in ${line[*]}; do if [ "x${master}" == "x" ]; then master=$file; else ln -f "${master}" "${file}"; fi; done; done
+fdupes -r -1 /home | while read line; do master=""; for file in ${line[*]}; do if [ "x${master}" == "x" ]; then master=$file; else ln -f "${master}" "${file}"; fi; done; done
+sync
+e2fsck -y $bootfile
+clear
+sleep 3600
+done
+
+exit

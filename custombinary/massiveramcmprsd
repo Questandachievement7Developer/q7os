@@ -1,0 +1,76 @@
+#!/bin/sh
+#
+# Copyright (C) Sebastian Philipp btrfs-swap code
+# Modified By questandachievement7
+
+echo 'Please Wait Creating Dual Memory Swap System...'
+echo 'Alert This is a hacked Memory Module swap system Please be aware that it will create a Ram backed Device bigger than the specification'
+
+
+echo 100 > /proc/sys/vm/swappiness
+#set -e
+MemoryTotal=$(awk '/MemTotal/ {print $2}' /proc/meminfo)
+SwapDefine=$(( ( $MemoryTotal / 1 ) / 1024 ))
+swapsize="${SwapDefine}M"
+echo additional Storage Backed Memory $swapsize Megabytes
+swapname="swapfile.sys"
+
+swapnametr="/swaptransit/memtransit"
+SwapDefinetr=$(( ( $MemoryTotal * 240 ) / 1024 ))
+swapsizetr="${SwapDefinetr}M"
+echo additional Volatile storage backed Memory $swapsizetr Megabytes
+
+if [ $1 == 'off' ]; then
+swapoff -a
+umount -f /swaptransit
+fi
+if [ -z "$swapsize" -o -z "$swapname" ]
+then
+	cat <<EOF
+Usage: $0 <size>
+size:      the size of the file, like "8G"
+file:      path to the new swap file. This file should not exists.
+EOF
+	exit 1
+fi
+bootfile=/bootflag/on
+if [ -e $bootfile ]
+then
+	echo "System has been booted"
+	exit 1
+fi
+#rm -d /hackswap/epic
+#mkdir /hackswap
+#mount -t tmpfs -o size=16G tmpfs /hackswap
+echo 'Syncronizing Filesystem'
+sync
+echo 'This Might Freeze your device for one minutes'
+echo 'If your device freezes for a long time'
+echo 'well Force reboot'
+#add loopdevice
+
+mknod -m 0600 /dev/infiniteram0 b 7 8
+
+swapfiletr=/dev/infiniteram0
+
+
+#For Transit_Ram Backed Swap
+echo Phase Creating Transit_Ram
+mkdir /swaptransit
+mount -t tmpfs -o size=$swapsizetr tmpfs /swaptransit
+
+#chattr +C $swapname
+#head -c $swapsize /dev/zero >> $swapname
+dd if=/dev/zero of=$swapnametr bs=1 count=0 seek=$swapsizetr status=progress
+touch $swapnametr
+chmod 0600 $swapnametr
+#bs=1 count=0 seek=$size
+losetup $swapfiletr $swapnametr #mount file to loop
+mkswap  $swapfiletr
+swapon  $swapfiletr
+
+
+
+
+echo 'Swap Module Boot Complete'
+sleep 5

@@ -1,0 +1,64 @@
+#!/bin/sh
+if [ $Xnativestartup == '1' ]; then
+  echo ALERT THIS WILL FROZE ANDROID
+  echo Function is not implemented yet
+  sleep 2
+  exit
+fi
+if [ $VNCstartup == '1' ]; then
+  rm /tmp/.X11-unix/X7
+  rm /tmp/.X7-lock
+  vncserver -kill :7
+  vncserver :7 -geometry 1280x720 -CompareFB -ImprovedHextile -SecurityTypes None -ZlibLevel=9 -shmem +iglx +bs +xinerama
+  echo VNCSERVER LAunched
+  exit
+fi
+
+if [ $XSDLSTARTUP == '1' ]; then
+am start x.org.server/.RunFromOtherApp
+sleep 11
+fi
+if [ $BROWSERUX == '1' ]; then
+  npm -g install websockify
+  Xvfb :0 &
+  sleep 3
+  vglrun xpra start --use-display :0 --bind-tcp=0.0.0.0:23232 --html=on --start=xterm --daemon=yes
+  echo waiting for Display Startup
+  sleep 10
+  am start -a android.intent.action.VIEW -d 'localhost:23232'
+  echo To go to display please connect via the web browser localhost on port 23232
+fi
+magick display -background "#FFFF0F" -antialias -alpha off -backdrop -window root /boot/splash.png
+#startlxqt &
+useradd yuza
+chmod -R 777 /usr/share/themes
+chown -R yuza /home/yuza
+#sudo -u yuza dbus-launch startxfce4 &
+bash /bin/displayscalingd &
+sleep 6
+#metacity window scaling
+mscale=$(cat /displayratio)
+#dbus-launch startxfce4 &
+sleep 9
+mscale=$(cat /displayratio)
+#starton xserver
+#vncviewer 127.0.0.1:5907 fullscreen=1
+echo init done
+killall -KILL gifview
+#env GDK_SCALE=${mscale} metacity --replace --composite &
+#sudo -u yuza dbus-launch startxfce4
+#.
+#.
+#The reason that i divided them into two group becaouse on non root user this OS installed on nosuid Data Partition thus sudo will not work properly
+#so rather than change user it will stays root
+if [ $limited == '0' ]; then
+#env GDK_SCALE=${mscale} dbus-launch budgie-desktop --disable-acceleration-check  &
+env GDK_SCALE=${mscale} dbus-launch startxfce4 &
+
+fi
+if [ $limited == '1' ];then
+#env GDK_SCALE=${mscale} dbus-launch budgie-desktop --disable-acceleration-check  &
+env GDK_SCALE=${mscale} dbus-launch startxfce4 &
+fi
+sleep 15
+env GDK_SCALE=${mscale} metacity --replace --composite

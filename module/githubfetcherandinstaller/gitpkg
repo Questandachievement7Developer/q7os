@@ -1,0 +1,106 @@
+#!/bin/bash
+#Porting for q7OS
+cd $(pwd)
+clear
+echo ""
+echo ".=========================================================."
+echo "|                                                         |"
+echo "|  Github Search Engine                                   |"
+echo "|  ---------------------------------------------------    |"
+echo "|                                                         |"
+echo "|  Version: 1.0                                           |"
+echo "|  Developed by: Rishi Narang                             |"
+echo "|  Wrapped and modified by questandachievement7           |"
+echo "|  Blog: www.wtfuzz.com                                   |"
+echo "|                                                         |"
+echo "|  Usage: ./gocmd.sh <search strings>                     |"
+echo "|  Example: ./gocmd.sh example and test                   |"
+echo "|                                                         |"
+echo ".=========================================================."
+echo ""
+
+
+#sleep 2
+if [ -z $1 ]
+then
+ echo "ERROR: No search Topic string supplied."
+ echo "USAGE: webspider.sh <search srting>"
+ echo ""
+ SEARCH=$(dialog --title "Document digger" --inputbox "Search for what?" 8 40 2>&1 >/dev/tty)
+ #echo -n "Anyways for now, supply the search string here: "
+ #read SEARCH
+else
+ SEARCH=$@
+fi
+SEARCH="${SEARCH}"
+URL="http://google.com/search?hl=en&safe=off&q="
+URL="https://duckduckgo.com/?q="
+URL="https://github.com/search?q="
+STRING=`echo $SEARCH | sed 's/ /%20/g'`
+URI="$URL%22$STRING%22"
+lynx -dump $URI > gone.tmp
+sed 's/http/\^http/g' gone.tmp | tr -s "^" "\n" | grep http| sed 's/\ .*//g' > gtwo.tmp
+#rm gone.tmp
+sed '/google.com/d' gtwo.tmp > rawurlsstage0
+sed '/duckduckgo.com/d' gtwo.tmp > rawurlsstage0
+
+#because due to the port from google Call to duckduckgo call we have to reimplement Translation
+echo Translation Debug
+#sleep 4
+sed 's/\%3A/:/g' rawurlsstage0 > rawurlsstage1
+sed 's/\%2F/\//g' rawurlsstage1 > urls
+#rm gtwo.tmp
+listurl=$(wc -l urls)
+if [ $listurl == '0 urls' ]; then
+echo something went wrong
+dialog --title "webspider" --msgbox "cannot retrieve any data at the moment" 5 50 > /dev/tty
+exit
+fi
+echo "SUCCESS: Extracted `wc -l urls` and listed them in '`pwd`/urls'
+file for reference."
+echo ""
+#cat urls
+echo ""
+search=$(cat urls)
+echo $search
+#sleep 1
+#EOF
+#recoll -q "$SEARCH" &
+#cd "$(pwd)/cachefile/${SEARCH}"
+echo $pwd
+sleep 2
+SEARCHONEWORD=$(echo $SEARCH | awk '{print $1;}')
+echo $SEARCHONEWORD
+pwd
+echo dir
+rm -rf ../${SEARCH}
+#sleep 10
+declare -A arr
+shopt -s globstar
+
+sleep 0
+#search=$(zenity --entry --text "Start Caching your website" );
+
+#convertedbar=${search// /+}
+exclude='"-*duckduckgo.com/assets/*" "-*duckduckgo.com/js/*" "-*duckduckgo.com/font/*" '
+echo $convertedbar
+sleep 0
+echo "$search"
+cd "$currdir"
+
+for link in $search ; do
+#httrack --continue "$link" -O "$(pwd)/cachefile/${SEARCH}/webcache" "+*.*.*/*.*" ${exclude} -v
+cd "$currdir"
+echo This is the directory $(pwd)
+#httrack --continue "$link" -O "$(pwd)/cachefile/${SEARCH}/webcache" "+*${SEARCHONEWORD}*${ext}*" ${exclude} -v
+echo $link
+git clone $link &
+echo This is the directory $(pwd)
+done
+
+sleep 6000
+
+
+
+#note
+#https://duckduckgo.com/?q=$searchquery&t=hp&ia=web

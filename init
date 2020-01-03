@@ -1,0 +1,97 @@
+#!/bin/bash
+#source.shell
+
+if [ ! -d ${NVRAMCONF}]; then
+clear
+echo $sysinitprefix  uh oh
+echo $sysinitprefix  We cannot find the nvram at boot time
+echo $sysinitprefix Please Update to the latest bugfix version or check the filesystem
+exit
+fi
+
+#Compensation for Busybox binaries not used at runtime thus Distro Customization are not Transfered correctly or at all
+echo Compensating Busybox PATH BUG
+echo Launching PATH Applier
+sh /module/incontainerApply
+echo Done
+#for Various of daemons log files
+mkdir /logs
+
+#additional Parameter
+#Extended Path
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/system/xbin:/system/bin:/bin/hw:$PATH #extendthepath for /module excutables
+extendedpath=$(cat /module/extendedpath)
+for a in $extendedpath ; do
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/system/xbin:/system/bin:/bin/hw:$PATH:$a
+done
+#export "LD_PRELOAD=/libdisableselinux.so /libandroid-shmem.so"
+export sysinfodisp="[q7OS runtime]"
+#-----------------------------------------Do not use function for command above---------------------------------------
+
+. ${runtimetoolbox}/monolithicload0
+
+
+
+#--------------------------------Main Execution--------------------------------
+
+
+yellow
+echo "${sysinfodisp} Initializing packages"
+green
+osSetup
+clear
+q7OSBooting # Shows the logo after install
+
+yellow
+echo "${sysinfodisp} Starting Core services"
+green
+
+servicePhase1  > /logs/Initboot.log 2>&1
+
+yellow
+echo "${sysinfodisp} Managing filesystem"
+green
+
+filesystemInit >> /logs/Initboot.log 2>&1
+
+yellow
+echo "${sysinfodisp} Porting proprietary driver "
+green
+
+proprietaryDriverPort >> /logs/Initboot.log 2>&1
+
+yellow
+echo "${sysinfodisp} Relaying dev layout to standard GNU/Linux Format"
+green
+
+devRelayout >> /logs/Initboot.log 2>&1
+
+yellow
+echo "${sysinfodisp} Starting Misclenaous Services"
+green
+
+servicePhase2 >> /logs/Initboot.log 2>&1
+
+yellow
+echo "${sysinfodisp} Starting defined features"
+green
+
+customFeaturesOEM >> /logs/Initboot.log 2>&1
+
+
+TESTCHECK # Test check is a function to test whether this OS is in build testing mode or normal mode
+
+
+yellow
+echo "${sysinfodisp} Opening Session"
+green
+
+
+booted
+
+
+red
+echo "${sysinfodisp} Shutting down"
+green
+
+terminateInit >> /logs/Initboot.log 2>&1

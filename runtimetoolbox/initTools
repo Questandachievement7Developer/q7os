@@ -1,0 +1,290 @@
+#!/bin/sh
+
+
+
+
+osSetup(){
+#variable Initialization
+dialog --title "q7OS boot" --gauge "booting progress" 7 70 0 > /dev/tty &
+
+#export LIBGL_FB=3
+#export DISPLAY=:0
+#export PULSE_SERVER=127.0.0.1:4712
+#export HOME=/root
+#export TERM=xterm
+#export COLORTERM=truecolor
+#export LANG=en_US.utf8
+#DNS_FIX
+rm -f /etc/resolv.conf
+echo "nameserver 1.1.1.1" > /etc/resolv.conf
+echo "nameserver 8.8.8.8" >> /etc/resolv.conf
+chmod 777 /etc/resolv.conf
+if [ $FASTBOOT == 'no' ]; then
+rm -f /var/lib/pacman/db.lck
+pacman-key --init
+if [ ${arch} == 'x86_64' ]; then
+pacman-key --populate archlinux
+else
+pacman-key --populate archlinuxarm
+fi
+fi
+
+#hey if you get /usr/lib/libgiomm bla bla undefined symbol
+#Easily reboot your device and boot up q7os again
+#Solution Refrences https://bbs.archlinux.org/viewtopic.php?id=140168
+
+
+if [ $FASTBOOT == 'no' ]; then
+pacman -Sy strace xosd imagemagick gifsicle dialog virtualgl --needed --noconfirm
+fi
+
+#installing system but multithreaded And much more faster than Above
+if [ $FASTBOOT == 'no' ]; then
+bash /bin/installsystem
+fi
+
+
+
+if [ $1 == 'debug' ]; then
+echo Initiating Logging
+systemlog=/logs/q7OSLinuxHooklog.txt
+if [ $Conf_debug == '1' ]; then
+cat /proc/last_kmsg > $systemlog
+nohup logcat >> $systemlog &
+nohup dmesg -w >> $systemlog &
+nohup trace >> $systemlog &
+fi
+clear
+
+#flagging if the Systemhas booted
+mkdir bootflag
+mount -t tmpfs -o size=1M tmpfs /bootflag
+echo 1 > /bootflag/on
+echo Your system is booting and will boot asyncronously
+echo You can quit this Terminal window now and launch another window that is binded to startq7os
+
+#Logging Transfer
+timestamp=$(date)
+if [ $Conf_debug == '1' ]; then
+nohup tail -f /logs/q7OSLinuxHooklog.txt >> "/sdcard/q7os_log_${timestamp}.txt" &
+fi
+echo Your system is booting and will boot asyncronously
+echo You can quit this Terminal window now and launch another window that is binded to startq7os
+nohup strace -o $systemlog /bin/bash /init &
+sh /module/terminalsystemconnect
+exit
+fi
+
+
+if [ $FASTBOOT == 'no' ]; then
+sleep 11
+fi
+dialog --title "q7OS boot" --gauge "booting progress" 7 70 30 > /dev/tty &
+#kucing=$(echo Hello and were updating If you wish to not update just kill the network | osd_cat -c white -p bottom -A center)&
+#gifview -a /boot/loadicon.gif &
+sleep 4
+#play /boot/boot.wav gain 5 & #may Crashes on devices This caused probably by ALSA binding
+#launches android activity
+#loginmanager
+#sh /module/usermanager/loginmanager
+#export HOME=$(cat /HOMEtarget)
+#export Username=$(cat /usernametg)
+#Changeshell
+echo Changing shell to not bypass something
+chsh -s /module/terminalsystemconnect
+
+#Load Kernel Modules
+sh /module/kernelmoduleloader
+
+echo 7168,10000,10000,10000,10000,10000 > /sys/module/lowmemorykiller/parameters/minfree
+
+#Mount all on /etc/fstab
+mount -a
+}
+
+servicePhase1(){
+#virtualization Library
+libvirtd &
+
+#hikernelBridge
+sh /module/hikernel/hikernelBridge &
+
+
+#sysctl initialization
+sh /module/sysctlset &
+
+#inetFailure socket Unknown Compensation
+sh /module/inetmanager/socketbugcompensation
+
+#q7OS management Engine
+#pratically an Management Module for the hardware
+bash /module/q7managementengine/smsw.sh >> SYSTEMRUNTIMELOG.txt 2>&1 > /dev/null &
+
+#livepatchdaemon
+#Automatic Update seamless q7os specific binaries and scripts and modules
+bash /bin/livepatchd >> /logs/sysLivepatchdaemonLog.txt 2>&1 > /dev/null &
+
+#chmod Execution allowance patch scan
+bash /bin/universalexec >> /logs/ExecutionFlagger.txt 2>&1 > /dev/null &
+
+#q7OS quaverfsd
+#quaverfsdaemon Storage management Engine
+bash /bin/quaverfsd >> /logs/quaverfsManagementLog.txt 2>&1 > /dev/null &
+
+#Turn on Sensor polling
+bash /bin/sensorpolld >> /logs/sensorpolld.txt  2>&1 > /dev/null  &
+
+#pulseaudio Stuff and ALSA
+bash /module/q7audiomanager >> /logs/audioserverlog.txt  2>&1 > /dev/null &
+
+#Turn On Swap Module
+bash /swapforhackedandroid
+
+#setting up permission
+bash /bin/permission_set
+
+dialog --title "q7OS boot" --gauge "booting progress" 7 70 50 > /dev/tty &
+
+
+#Anti Corruption daemon
+bash /bin/anticorruptiond &
+
+#Errorspit
+bash /bin/errorspitd &
+
+}
+
+
+filesystemInit(){
+
+#filesystem Initialization
+#Basically to fix filesystem permission error or sudo errors
+chmod 755 /
+chmod -R 777 /root/wallpaper
+chmod 777 /home/yuza/Desktop/Win32Emulattor
+chmod +x /home/yuza/Desktop/Win32Emulattor
+chmod -R 777 /module/win32Emu
+#for Preloading Stuff
+vmtouch -f -t -v /lib -m 128K
+magick display -background "#FFFF0F" -antialias -alpha off -backdrop -window root /boot/splash.png
+#kucing=$(echo Preparing System | osd_cat -c white -p bottom -A center)&
+#prepadiring require mounts
+}
+
+
+
+
+
+
+
+
+
+
+
+proprietaryDriverPort(){
+#Vendor Closed source lib lib64 and hw_tools/bin
+#Port proprietary driver into q7OS by just copy from the host to the q7OS
+if [ -d /system ]; then
+  echo Android detected
+  echo Expected to have many undocumented undisclosed closed source libs and bin from vendor
+  echo Patching System with android libs
+  cp -ru /system/fake-libs /
+  cp -ru /system/fake-libs64 /
+  cp -ru /system/lib /
+  echo Patching system with vendor specific libs
+  cp -ru /system/lib64 /
+  cp -ru /system/vendor/* /
+  echo Operation Done
+  sleep 2
+fi
+}
+devRelayout(){
+#Emulated shmem
+  mkdir /dev/shm
+  mount -t tmpfs -o size=512M tmpfs /dev/shm
+#dev partition aliasing
+for i in /dev/block/* ; do
+ln -s $i /dev
+echo $i
+done
+
+for i in /dev/graphics/* ; do
+ln -s $i /dev
+echo $i
+done
+
+}
+
+
+servicePhase2(){
+#launching FakeSystemd
+bash /bootsystemd/boot
+
+#launching installd
+bash /module/packagemanager/installd >> /logs/installdlog.txt 2>&1 &
+}
+
+
+
+customFeaturesOEM(){
+dialog --title "q7OS boot" --gauge "booting progress" 7 70 60 > /dev/tty &
+
+echo launching featurehack
+bash /featurehack >/logs/featurehacklog.txt &
+dialog --title "q7OS boot" --gauge "booting progress" 7 70 90 > /dev/tty &
+rm -f /var/lib/pacman/db.lck
+if [ $FASTBOOT == 'no' ]; then
+pacman -S fish --noconfirm --needed
+fi
+}
+
+
+
+
+booted(){
+  if [ $FASTBOOT == 'no' ]; then
+  pacman -S fish screenfetch tmux --noconfirm --needed
+  fi
+clear
+reset
+screenfetch
+echo 'WARNING after using this program please reboot your device since android does not like gnu stuff the app on android just crashes'
+export TERM=xterm
+echo 'protip if you want to install package or program do'
+echo '$ installpkg your_package'
+echo 'remove program?'
+echo '$ removepkg your_package'
+echo If there is a command that is not available after installation please wait around 1 or 2 hour while q7os booted up
+echo It should appear then
+reset
+clear
+
+bash /bin/q7osbootmenu $startupsel
+#tmux fish
+}
+
+terminateInit(){
+
+bash /bootsystemd/boot stop
+am force-stop x.org.server
+rm -rf /bootflag
+echo deboot > /subridge
+killall -KILL libvirtd
+reset
+clear
+#statements
+}
+
+TESTCHECK(){
+  if [ $TESTMODE = 1 ]; then
+    clear
+    green
+    echo "q7OS passed testmode this build is running stable"
+    echo "Output all logs"
+    for a in /logs/*; do
+      cat ${a}
+    done
+    sleep 10
+    terminateInit
+  fi
+}

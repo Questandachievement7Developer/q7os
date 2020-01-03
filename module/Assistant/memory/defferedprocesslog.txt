@@ -1,0 +1,9 @@
+mkdir: cannot create directory ‘htmlconvertqueue’: File exists
+mkdir: cannot create directory ‘knowledge’: File exists
+learning and storing /Assistant/memory/htmlconvertqueue/*.html
+Traceback (most recent call last):
+  File "/usr/bin/html2text", line 11, in <module>
+    load_entry_point('html2text==2018.1.9', 'console_scripts', 'html2text')()
+  File "/usr/lib/python3.7/site-packages/html2text/cli.py", line 265, in main
+    data = open(file_, 'rb').read()
+FileNotFoundError: [Errno 2] No such file or directory: '/Assistant/memory/htmlconvertqueue/*.html'

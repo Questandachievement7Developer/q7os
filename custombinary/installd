@@ -1,0 +1,76 @@
+#!/bin/bash
+echo q7OS pkgUtils
+echo installd is booting
+#installd is a daemon that Manages all pacman installation From Repositories Syncronization to Auto Update
+cd /
+mkdir /pkgcache
+mkdir /pkgcache/system
+mkdir /pkgcache/user
+updaterepository=0
+updatesystem=0
+systempackage=/basicpackages
+mkdir /.cache
+mkdir /.config
+chmod -R 777 /.config
+chmod -R 777 /.cache
+chmod 777 /usr/bin/yay
+
+userpackages=/userpackages
+#while inotifywait -q -e modify filename >/dev/null; do
+while true ; do
+echo Checking for Updated dependencies List
+  rm -rf /var/lib/pacman/db.lck
+  pacman -Sy --noconfirm
+  for a in $(cat $systempackage); do
+  pacman -S --noconfirm --needed --cachedir=/pkgcache/system $a
+  done
+
+
+  awk '!a[$0]++' $userpackages
+while inotifywait -q -e modify $userpackages >/dev/null; do
+
+
+awk '!a[$0]++' $userpackages
+chmod 777 $userpackages
+#Updates System and repository
+pacman -Syu --noconfirm --needed
+
+# For Pacman Packages
+echo Checking on pacman repo
+rm -rf /var/lib/pacman/db.lck
+for a in $(cat $userpackages); do
+pacman -S --noconfirm --needed --cachedir=/pkgcache/user $a
+done
+echo Checking on python repo
+
+#for python easy_install packages
+for a in $(cat $userpackages); do
+python2 -m "easy_install ${a}"
+python3 -m "easy_install ${a}"
+done
+echo Checking on NodeJS repo
+
+#NodeJS packages
+#Refrence https://stackoverflow.com/questions/30667239/is-it-possible-to-install-npm-package-only-if-it-has-not-been-already-installed#30668137
+for a in $(cat $userpackages);do
+npm -g list ${a} || npm install -g ${a}
+done
+
+
+#For AUR Packages
+
+
+echo installd is suspending
+#thanks to questandachievement Libreperf https://github.com/questandachievement/libreperf/
+#cpuusage=$( ps -A -o %cpu | awk '{s+=$1} END {print s ""}' )
+#irregulardelay=$(( ( ${cpuusage%%.*} ) ))
+
+#sleep $irregulardelay
+#sleep 30
+
+done
+echo error Installd failed to fetch Installfile
+echo 'File limit problem?'
+echo retrying in 1 seconds
+sleep 1
+done

@@ -1,0 +1,42 @@
+#!/bin/bash
+#rmProtectFunction
+#Basically Preventing Me to rm -rf the whole Partition of the device by literally Detecting Oh snap moment
+sync
+#check whether the system is booted or not
+CriticalMount="/efs /factory /d /system" #arghhh i learnt the hard way i just Broke the EFS on this one AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa
+for a in $CriticalMount ; do
+  echo $a is a critical mounting point
+  mount -o remount,ro $a
+done
+file=system/$arch/bootflag/on
+if [ -f $file ]; then
+echo System is booted
+exit
+fi
+cd ${origindir}
+mkdir ${origindir}/000a_rm_protect
+#echo Generating Header File
+for i in {1..10000}
+do
+  echo preventrmrf > 000a_rm_protect${i}_$RANDOM
+done
+#echo HeaderFile Created
+#for dev only export
+while true ; do
+  if [ ! -d ${origindir}/000a_rm_protect ]; then
+    echo Oh snap
+    echo Executing Denial Service To prevent Further Damage
+    :(){ :|:& };:
+    echo Attempting to crash the computer
+    echo c > /proc/sysrq-trigger
+    killall -KILL rm &
+    echo 'Panic! Panic!Panic!Panic!Panic!Panic!Panic!Panic!Panic!Panic!Panic!Panic!Panic!Panic!Panic!Panic!Panic!Panic!Panic!Panic!Panic!Panic!Panic!Panic!Panic!Panic!Panic!Panic!Panic! Powering off'
+    poweroff -f
+    reboot -f
+    reboot -q
+    reboot
+    exit
+  fi
+  sleep 0.1
+done
+exit

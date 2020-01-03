@@ -1,0 +1,133 @@
+#!/bin/bash
+# i have a dream to play x86_64 Program on an arm device haha
+# remember its only a dream... that destined to be come true
+
+
+
+if [ $1 == 'devmode' ] ; then
+cd $devcurdir
+export execdir=../..
+currdir=$devcurdir
+fi
+
+
+#however for refrences of running winex86 on an arm device you can read this web
+#https://wiki.winehq.org/Emulation
+lcdebug=${DEBUGFLAG}
+PROGRAMTARGET=$PROGRAMTARGET
+sleep 3
+pacman -S qemu-extra-arch --noconfirm --needed --overwrite '*'
+devcurdir=$(pwd)
+cd /module/x86emu
+cp -rv imagine /bin
+arch=$(uname -m)
+export sysloop=${origindir}/system/${arch}
+currdir=$(pwd)
+runtimedir=runtime
+startingdir=$origindir
+runtimeimg=${origindir}/system.img
+runtimekernel=/boot/zImage
+bootimg=/boot/initramfs-linux.img
+currentcore=$(nproc --all)
+if [ -z $currentcore ]; then
+  currentcore=2
+fi
+currentcore=$(( $currenccore * 2 ))
+#http://stackoverflow.com/questions/2441046/ddg#2441064
+memory=$(grep MemTotal /proc/meminfo | awk '{print $2}' )
+usethememory=$(( $memory / 4 ))
+echo $usethememory MemoryUsage KB
+
+
+
+#This Method However In theory should work since we emulating whole Kernel I/O which otherwise limited in Android NTkernel
+#And restricted
+
+#Basically by emulating Minimal Linux and Minimal Windows API translating with WINE we can achieve this easily without recompiling the main machine kernel to fit for example ( 3G/1G Memory Split )
+
+
+
+#define function
+# this is my first time using function 27 may 2019
+
+x86archruntime (){
+  qemu-system-x86_64 \
+    -name fakekernel \
+    -hda ${runtimeimg} \
+    -kernel $runtimekernel \
+    -initrd $bootimg \
+    -accel tcg,thread=multi \
+    -append 'console=ttyS0 debug ' \
+    -m ${usethememory}K \
+    -smp ${currentcore} \
+    -serial mon:stdio \
+    -nographic
+}
+
+aarch64archruntime (){
+  qemu-system-aarch64 \
+    -name fakekernel \
+    -hda ${runtimeimg} \
+    -kernel $runtimekernel \
+    -initrd $bootimg \
+    -accel tcg,thread=multi \
+    -append 'console=ttyS0 debug ' \
+    -m ${usethememory}K \
+    -smp ${currentcore} \
+    -serial mon:stdio \
+    -machine virt \
+    -nographic
+}
+
+armarchruntime (){
+  qemu-system-arm \
+    -name fakekernel \
+    -hda ${runtimeimg} \
+    -kernel $runtimekernel \
+    -initrd $bootimg \
+    -accel tcg,thread=multi \
+    -append 'console=ttyS0 debug ' \
+    -m ${usethememory}K \
+    -smp ${currentcore} \
+    -serial mon:stdio \
+    -machine virt \
+    -nographic
+}
+
+
+
+if [ ${arch} == 'x86_64' ]; then
+  echo 64 bit System Detected enabling Multithreaded Acceleration
+  sleep 3
+  x86archruntime
+  exit
+fi
+
+if [ ${arch} == 'aarch64' ]; then
+  echo 64 bit System Detected enabling Multithreaded Acceleration
+  sleep 3
+  aarch64archruntime
+  exit
+fi
+if [ ${arch} == 'armv8l' ]; then
+  echo 64 bit System Detected enabling Multithreaded Acceleration
+  sleep 3
+  aarch64archruntime
+  exit
+fi
+if [ ${arch} == 'armv8h' ]; then
+  echo 64 bit System Detected enabling Multithreaded Acceleration
+  sleep 3
+  aarch64archruntime
+  exit
+fi
+echo Unregistered System detected disabling Multithreaded Acceleration
+if [ ${arch} == 'armv7l' ]; then
+armarchruntime
+exit
+fi
+
+if [ ${arch} == 'armv7h' ]; then
+  armarchruntime
+  exit
+fi

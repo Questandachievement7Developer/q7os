@@ -1,0 +1,68 @@
+#!/bin/bash
+#sources.shell
+#sources.shell
+if [ $DISABLE_SYSTEMD == '1' ]; then
+  echo Fakesystemd disabled
+  exit
+fi
+
+printf '\e[38;5;034m [Started] '; echo FakeSystemd Has been started
+echo Booting System using FakeSystemd
+echo Created by questandachievement7
+cd /bootsystemd
+rm -rf systemd execstop execstart
+
+mkdir systemd
+#cp -rv /etc/systemd/system/*.service systemd #replace this with
+find /etc -name "*.service" -type f -exec cp {} systemd \;
+
+
+#Incompatible Systemd Exec
+systemdfilter=$(grep -ril . -e 'systemctl')
+for i in $systemdfilter; do
+  rm -f $i
+  echo $i detected to be Incompatible
+done
+
+#Incompatible Systemd Exec
+systemdfilter=$(grep -ril . -e 'oneshot')
+for i in $systemdfilter; do
+  rm -f $i
+  echo $i detected to be Incompatible
+done
+
+echo Translating ExecStart To basic script
+
+if [ $1 == 'stop' ] ; then
+echo Stoping Services
+for i in execstop/*.service; do
+module=$( echo $i | awk '{gsub("execstop/", "");print}'  )
+printf '\e[38;5;196m [Stopped] '; echo $module
+sh $i  2>&1 >> /logs/fakesystemdlog.txt  &
+done
+exit
+fi
+
+echo Staring systemd Traslation Service
+
+for i in systemd/*.service ; do
+module=$( echo $i | awk '{gsub("systemd/", "");print}'  )
+printf '\e[38;5;190m [Translated] '; echo $module
+cat $i | grep ExecStart= | awk '{gsub("ExecStart=", "");print}' | awk '{gsub("!", "");print}'  > execstart/$module
+done
+
+echo Translating ExecStop To basic script
+
+
+for i in systemd/*.service ; do
+module=$( echo $i | awk '{gsub("systemd/", "");print}'  )
+printf '\e[38;5;190m [Translated] '; echo $module
+cat $i | grep ExecStop= | awk '{gsub("ExecStop=", "");print}' | awk '{gsub("!", "");print}' > execstop/$module
+done
+
+echo Starting Services
+for i in execstart/*.service; do
+module=$( echo $i | awk '{gsub("execstart/", "");print}'  )
+printf '\e[38;5;034m [OK] '; echo $module
+sh $i 2>&1 >> /logs/fakesystemdlog.txt &
+done

@@ -1,0 +1,16 @@
+#!/bin/sh
+bootloaderinitialinfo(){
+clear
+printf '\e[38;5;039m \n' blue
+echo "Initial Systemcall bootloader info..."
+echo "$sysinitprefix Running  $(uname -m) processor"
+sleep 0.1
+echo "$sysinitprefix Kernel Detection $(uname -r)"
+sleep 0.1
+echo "$sysinitprefix Initializing q7osBL on $(uname -o)"
+sleep 0.1
+echo "q7OS based on Archlinux build by questandachievement7 Developers"
+echo "Inspired by the simplicity of manjaro Distro and The versitality of termux-arch"
+echo "and reinsparked by postmarketOS"
+
+}

@@ -1,0 +1,32 @@
+#!/bin/bash
+echo q7OS disputils
+echo q7OS for HIDPI screen
+echo Please wait while we are doing some calculation on display scaling
+#almost all android device has this HiDpi Feature fitted in small screen thus making difficult on scaling
+dispinputdensity=$(cat /dpdensity)
+#Source Of the command ( some of it lost on archive )
+#https://wiki.archlinux.org/index.php/HiDPI
+#https://duckduckgo.com/?q=launch+metacity+with+GDK_SCALE&atb=v110-3__&ia=web
+#https://developer.gnome.org/gtk3/stable/gtk-x11.html
+#https://stackoverflow.com/questions/16618371/using-awk-to-grab-only-numbers-from-a-string#16618516
+dispdensity=$(cat /dpdensity | awk 'NR==1{print}END{print}' | grep -o '[0-9]\+')
+#for 96dpi
+#xfconf-query -c xsettings -p /Gtk/IconSizes -s "gtk-large-toolbar=22,22:gtk-small-toolbar=16,16:gtk-menu=16,16:gtk-dialog=48,48:gtk-button=22,22:gtk-dnd=32,32"
+multratiodensity=$(( ${dispdensity} / 96 ))
+toolbarscale=$(( 22 * $multratiodensity ))
+smalltoolbarscale=$(( 16 * $multratiodensity ))
+menuscale=$(( 16 * $multratiodensity ))
+dialogscale=$(( 48 * $multratiodensity ))
+buttonscale=$(( 22 * $multratiodensity ))
+dndscale=$(( 32 * $multratiodensity ))
+echo Detected Display Density $dispdensity DPI as hardware imprinted
+echo Magnification $multratiodensity UI scaling parameter $toolbarscale $smalltoolbarscale $menuscale $dialogscale $buttonscale $dndscale
+echo Applying
+#output to a file so it can be used by other app
+echo $multratiodensity > /displayratio
+while true ; do
+dbus-launch xfconf-query -c xsettings -p /Gtk/IconSizes -s "gtk-large-toolbar=${toolbarscale},${toolbarscale}:gtk-small-toolbar=${smalltoolbarscale},${smalltoolbarscale}:gtk-menu=${menuscale},${menuscale}:gtk-dialog=${dialogscale},${dialogscale}:gtk-button=${buttonscale},${buttonscale}:gtk-dnd=${dndscale},${dndscale}"
+#dbus-launch gsettings set org.gnome.desktop.interface scaling-factor $multratiodensity
+#dbus-launch gsettings set org.gnome.desktop.interface text-scaling-factor $multratiodensity
+sleep 60
+done

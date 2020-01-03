@@ -1,0 +1,40 @@
+#!/bin/bash
+clear
+win32program=$1
+echo Breaking Boundaries..
+printf '\e[38;5;196m Graphics May not Work properly since lack of GLES and GLU translator \n'
+sleep 3
+echo 'Checking if im transformed already'
+uname -a
+echo Well thats the result
+export LIBGL_FB=3
+export DISPLAY=:0
+export PULSE_SERVER=127.0.0.1:4712
+export HOME=/root
+export TERM=xterm
+export COLORTERM=truecolor
+export LANG=en_US.utf8
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/system/xbin:/system/bin:$PATH
+#Permission set
+chmod 755 /etc
+chmod 755 /usr
+chmod 755 /var
+chmod 755 /mnt
+chmod 755 /opt
+chmod 755 /srv
+chmod 755 /run
+rm -f /etc/resolv.conf
+echo "nameserver 1.1.1.1" > /etc/resolv.conf
+echo "nameserver 8.8.8.8" >> /etc/resolv.conf
+chmod 777 /etc/resolv.conf
+rm -f /var/lib/pacman/db.lck
+pacman-key --init
+pacman-key --populate archlinux
+pacman -Sy --noconfirm
+pacman -Sy wine-staging winetricks lutris --noconfirm
+echo Launching ${sysloop}/${win32program}
+winecfg
+wine ${sysloop}/${win32program}
+echo exec Finished
+echo escaping from environtment 
+exit

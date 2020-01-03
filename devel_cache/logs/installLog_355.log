@@ -1,0 +1,2978 @@
+nohup: ignoring input
+Preparing package q7os
+Pulling Package from the script
+Preparing For installation
+q7os.tar.gz: OK
+Archive Integrity Verified
+install.sh: 25: install.sh: cannot create /sdcard/startq7os: Directory nonexistent
+[H[2J[3JNow to Run the OS please insert this su -c /bin/sh /sdcard/startq7os into your init command
+or su -c /bin/sh startq7os
+mkdir: cannot create directory 'prootexec': File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+chmod: cannot access '/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/module/Assistant/extension/Assistant_Artist/unsaved': No such file or directory
+chmod: cannot access 'document': No such file or directory
+chmod: cannot access '1': No such file or directory
+Chmoding done
+bootloader.sh: 80: bootloader.sh: cannot create /mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/reqbin/executionFlagged: Directory nonexistent
+NVRAM is not initialized yet
+bootloader.sh: 104: bootloader.sh: getprop: not found
+mkdir: cannot create directory ‘/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/emulatednvram’: File exists
+NVRAM Flush Rewrite Operation success..
+bootloader.sh: 209: [: =: unexpected operator
+bootloader.sh: 217: [: Illegal number: 
+bootloader.sh: 230: [: =: unexpected operator
+bootloader.sh: 264: [: =: unexpected operator
+bootloader.sh: 280: [: =: unexpected operator
+bootloader.sh: 357: [: =: unexpected operator
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+chmod: cannot access '/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/module/Assistant/extension/Assistant_Artist/unsaved': No such file or directory
+chmod: cannot access 'document': No such file or directory
+chmod: cannot access '1': No such file or directory
+Chmoding done
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 80: /mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: cannot create /mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/reqbin/executionFlagged: Directory nonexistent
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+bootloader.sh: 505: [: =: unexpected operator
+bootloader.sh: 519: [: =: unexpected operator
+bootloader.sh: 531: [: =: unexpected operator
+x86_64 acpid
+x86_64 addgroup
+x86_64 adduser
+x86_64 adjtimex
+x86_64 ar
+x86_64 arp
+x86_64 arping
+x86_64 ash
+x86_64 awk
+x86_64 basename
+x86_64 beep
+x86_64 blkid
+x86_64 brctl
+x86_64 bunzip2
+x86_64 bzcat
+x86_64 bzip2
+x86_64 cal
+x86_64 cat
+x86_64 catv
+x86_64 chat
+x86_64 chattr
+x86_64 chgrp
+x86_64 chmod
+x86_64 chown
+x86_64 chpasswd
+x86_64 chpst
+x86_64 chroot
+x86_64 chrt
+x86_64 chvt
+x86_64 cksum
+x86_64 clear
+x86_64 cmp
+x86_64 comm
+x86_64 cp
+x86_64 cpio
+x86_64 crond
+x86_64 crontab
+x86_64 cryptpw
+x86_64 cut
+x86_64 date
+x86_64 dc
+x86_64 dd
+x86_64 deallocvt
+x86_64 delgroup
+x86_64 deluser
+x86_64 depmod
+x86_64 devmem
+x86_64 df
+x86_64 dhcprelay
+x86_64 diff
+x86_64 dirname
+x86_64 dmesg
+x86_64 dnsd
+x86_64 dnsdomainname
+x86_64 dos2unix
+x86_64 dpkg
+x86_64 du
+x86_64 dumpkmap
+x86_64 dumpleases
+x86_64 busybox
+x86_64 echo
+x86_64 ed
+x86_64 egrep
+x86_64 eject
+x86_64 env
+x86_64 envdir
+x86_64 envuidgid
+x86_64 expand
+x86_64 expr
+x86_64 fakeidentd
+x86_64 false
+x86_64 fbset
+x86_64 fbsplash
+x86_64 fdflush
+x86_64 fdformat
+x86_64 fdisk
+x86_64 fgrep
+x86_64 find
+x86_64 findfs
+x86_64 flash_lock
+x86_64 flash_unlock
+x86_64 fold
+x86_64 free
+x86_64 freeramdisk
+x86_64 fsck
+x86_64 fsck.minix
+x86_64 fsync
+x86_64 ftpd
+x86_64 ftpget
+x86_64 ftpput
+x86_64 fuser
+x86_64 getopt
+x86_64 getty
+x86_64 grep
+x86_64 gunzip
+x86_64 gzip
+x86_64 hd
+x86_64 hdparm
+x86_64 head
+x86_64 hexdump
+x86_64 hostid
+x86_64 hostname
+x86_64 httpd
+x86_64 hush
+x86_64 hwclock
+x86_64 id
+x86_64 ifconfig
+x86_64 ifdown
+x86_64 ifenslave
+x86_64 ifplugd
+x86_64 ifup
+x86_64 inetd
+x86_64 init
+x86_64 inotifyd
+x86_64 insmod
+x86_64 install
+x86_64 ionice
+x86_64 ip
+x86_64 ipaddr
+x86_64 ipcalc
+x86_64 ipcrm
+x86_64 ipcs
+x86_64 iplink
+x86_64 iproute
+x86_64 iprule
+x86_64 iptunnel
+x86_64 kbd_mode
+x86_64 kill
+x86_64 killall
+x86_64 killall5
+x86_64 klogd
+x86_64 last
+x86_64 length
+x86_64 less
+x86_64 linux32
+x86_64 linux64
+x86_64 linuxrc
+x86_64 ln
+x86_64 loadfont
+x86_64 loadkmap
+x86_64 logger
+x86_64 login
+x86_64 logname
+x86_64 logread
+x86_64 losetup
+x86_64 lpd
+x86_64 lpq
+x86_64 lpr
+x86_64 ls
+x86_64 lsattr
+x86_64 lsmod
+x86_64 lzmacat
+x86_64 lzop
+x86_64 lzopcat
+x86_64 makemime
+x86_64 man
+x86_64 md5sum
+x86_64 mdev
+x86_64 mesg
+x86_64 microcom
+x86_64 mkdir
+x86_64 mkdosfs
+x86_64 mkfifo
+x86_64 mkfs.minix
+x86_64 mkfs.vfat
+x86_64 mknod
+x86_64 mkpasswd
+x86_64 mkswap
+x86_64 mktemp
+x86_64 modprobe
+x86_64 more
+x86_64 mount
+x86_64 mountpoint
+x86_64 mt
+x86_64 mv
+x86_64 nameif
+x86_64 nc
+x86_64 netstat
+x86_64 nice
+x86_64 nmeter
+x86_64 nohup
+x86_64 nslookup
+x86_64 od
+x86_64 openvt
+x86_64 passwd
+x86_64 patch
+x86_64 pgrep
+x86_64 pidof
+x86_64 ping
+x86_64 ping6
+x86_64 pipe_progress
+x86_64 pivot_root
+x86_64 pkill
+x86_64 popmaildir
+x86_64 printenv
+x86_64 printf
+x86_64 ps
+x86_64 pscan
+x86_64 pwd
+x86_64 raidautorun
+x86_64 rdate
+x86_64 rdev
+x86_64 readlink
+x86_64 readprofile
+x86_64 realpath
+x86_64 reformime
+x86_64 renice
+x86_64 reset
+x86_64 resize
+x86_64 rm
+x86_64 rmdir
+x86_64 rmmod
+x86_64 route
+x86_64 rpm
+x86_64 rpm2cpio
+x86_64 rtcwake
+x86_64 run-parts
+x86_64 runlevel
+x86_64 runsv
+x86_64 runsvdir
+x86_64 rx
+x86_64 script
+x86_64 scriptreplay
+x86_64 sed
+x86_64 sendmail
+x86_64 seq
+x86_64 setarch
+x86_64 setconsole
+x86_64 setfont
+x86_64 setkeycodes
+x86_64 setlogcons
+x86_64 setsid
+x86_64 setuidgid
+x86_64 sh
+x86_64 sha1sum
+x86_64 sha256sum
+x86_64 sha512sum
+x86_64 showkey
+x86_64 slattach
+x86_64 sleep
+x86_64 softlimit
+x86_64 sort
+x86_64 split
+x86_64 start-stop-daemon
+x86_64 stat
+x86_64 strings
+x86_64 stty
+x86_64 su
+x86_64 sulogin
+x86_64 sum
+x86_64 sv
+x86_64 svlogd
+x86_64 swapoff
+x86_64 swapon
+x86_64 switch_root
+x86_64 sync
+x86_64 sysctl
+x86_64 syslogd
+x86_64 tac
+x86_64 tail
+x86_64 tar
+x86_64 taskset
+x86_64 tcpsvd
+x86_64 tee
+x86_64 telnet
+x86_64 telnetd
+x86_64 test
+x86_64 tftp
+x86_64 tftpd
+x86_64 time
+x86_64 timeout
+x86_64 top
+x86_64 touch
+x86_64 tr
+x86_64 traceroute
+x86_64 true
+x86_64 tty
+x86_64 ttysize
+x86_64 udhcpc
+x86_64 udhcpd
+x86_64 udpsvd
+x86_64 umount
+x86_64 uname
+x86_64 uncompress
+x86_64 unexpand
+x86_64 uniq
+x86_64 unix2dos
+x86_64 unlzma
+x86_64 unlzop
+x86_64 unzip
+x86_64 uptime
+x86_64 usleep
+x86_64 uudecode
+x86_64 uuencode
+x86_64 vconfig
+x86_64 vi
+x86_64 vlock
+x86_64 volname
+x86_64 watch
+x86_64 watchdog
+x86_64 wc
+x86_64 busybox
+x86_64 wget
+x86_64 which
+x86_64 who
+x86_64 whoami
+x86_64 xargs
+x86_64 yes
+x86_64 zcat
+x86_64 zcip
+bootloader.sh: 599: [: =: unexpected operator
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+chmod: /mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/module/Assistant/extension/Assistant_Artist/unsaved: No such file or directory
+chmod: document: No such file or directory
+chmod: 1: No such file or directory
+Chmoding done
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+/mnt/a/masam/Documents/Misc/q7OS_Master/runtimeSandbox/core/bootloader.sh: 217: [: Illegal number: 
+Busybox Exists
+[H[J[38;5;039m 
+[q7BL] Running x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7os on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+Nothing Special About this distro
+[38;5;210m Warning q7OS is NOT a light GNU alternative and may access your whole device components
+q7OS is about to boot up we DO NOT take any responsibility if anything bad happen to your device
+[38;5;210m [38;5;221m [38;5;210m [CompatibilityManager] Strange? /data seems to not exists or detected by the bootloader
+Enforcing Boot
+[38;5;210m [CompatibilityManager] Error /system mount not found!
+[CompatibilityManager] This wasnt an android at all Please be aware that it may not boot at all
+[CompatibilityManager] Enforcing Boot
+ah a bambi detected
+bootloader.sh: 683: cd: can't cd to /root/core
+/root/core
+[CompatibilityManager] no root detected accepting fate
+bootloader.sh: 700: cd: can't cd to /root/core
+mkdir: can't create directory 'prootexec': File exists
+[H[J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Limited Operation Engaged
+bootloader.sh: 217: [: Illegal number: 
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+Loading parameter
+Interrupt

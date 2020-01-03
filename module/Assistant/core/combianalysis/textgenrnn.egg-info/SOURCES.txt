@@ -1,0 +1,8 @@
+MANIFEST.in
+setup.cfg
+setup.py
+textgenrnn.egg-info/PKG-INFO
+textgenrnn.egg-info/SOURCES.txt
+textgenrnn.egg-info/dependency_links.txt
+textgenrnn.egg-info/requires.txt
+textgenrnn.egg-info/top_level.txt

@@ -1,0 +1,15 @@
+instsign=/moduleinst
+
+cd /module
+
+if [ -f $instsign ] ; then
+echo DoneBuild
+else
+for i in buildscript/*.sh; do
+echo Build for $i
+bash $i
+echo Finished Execution
+sleep 2
+done
+echo a > /moduleinst
+fi

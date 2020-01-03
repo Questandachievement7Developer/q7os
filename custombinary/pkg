@@ -1,0 +1,11 @@
+#!/bin/bash
+#https://askubuntu.com/questions/160897/how-do-i-search-for-available-packages-from-the-command-line
+#aptitude Emulation
+echo q7OS pkgUtils
+if [ $1 == 'install' ]; then
+installpkg $2
+fi
+if [ $1 == 'search' ]; then
+searchpkg $2
+fi
+echo do apt-get install

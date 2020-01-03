@@ -1,0 +1,36 @@
+#!/bin/bash
+#rmProtectFunction
+#Connecting Booted up session of q7os
+#loginmanager
+reset
+clear
+
+
+
+echo Connecting q7os Mainframe
+sleep 1
+echo Trapping Session
+sleep 1
+trap 'echo q7OSboot are not allowed to quit' SIGINT
+trap 'echo q7OSboot are not allowed to stop' SIGSTOP
+
+while true ; do
+
+sh /module/usermanager/loginmanager
+echo Session Exited
+sleep 3
+done
+
+
+
+
+
+echo Function Belows this are deprecated and insecure thus superseeded with variable Memory transfer
+exit
+
+#export HOME=$(cat /HOMEtarget)
+#export Username=$(cat /usernametg)
+#for a in $extendedpath ; do
+#export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/system/xbin:/system/bin:/bin/hw:$PATH:$a
+#done
+#while true ; do /bin/sh /module/consolesessionPrompt ; done

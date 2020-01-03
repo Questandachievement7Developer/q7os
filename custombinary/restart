@@ -1,0 +1,11 @@
+#!/bin/bash
+echo q7OS powerutils
+printf '\e[38;5;196m Powering Off Device\n'
+echo "reboot" > /subridge
+echo Contacting Subridge
+echo Attempting to use in house android utils
+/system/*bin/busybox reboot &
+/system/*bin/reboot &
+sleep 10
+echo Poweroff failed
+exit

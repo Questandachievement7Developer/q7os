@@ -1,0 +1,4 @@
+#!/bin/bash
+echo q7OS powerutils
+printf '\e[38;5;214m For rebooting Device Please Do restart command instead of reboot'
+exit

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cd /Assistant/locinst/gym
+python3.5 setup.py install
+echo Dependencies Stub

@@ -1,0 +1,714 @@
+#!/bin/bash
+
+
+if [ ! -d ${NVRAMCONF} ]; then
+  echo Please Reboot your system
+  echo NVRAM access is unavailable
+  exit
+fi
+echo q7OS NVRAMCONFIG
+HEIGHT=15
+WIDTH=80
+CHOICE_HEIGHT=18
+BACKTITLE="Q7OS System Control Panel"
+TITLE="q7os Nvram Utils"
+tgdir=${NVRAMCONF}
+
+OPTIONS=("fastboot" "Enable Fastboot on q7OS"
+"startupaction" "Automatically select menu when q7OS booted up"
+"resetnvram" "reset all configuration and rebuild database"
+"termmode" "change term mode"
+"graphicscp" "Graphic Control Panel"
+"audiocp" "Audio Control Panel"
+"resourcemanagement" "q7OS resource Management"
+"apply" "apply settings")
+
+Option=$(dialog --clear \
+                --backtitle "$BACKTITLE" \
+                --title "$TITLE" \
+                --menu "$MENU" \
+                $HEIGHT $WIDTH $CHOICE_HEIGHT \
+                "${OPTIONS[@]}" \
+                2>&1 >/dev/tty)
+
+
+                if [ $Option == 'audiocp' ]; then
+
+                  OPTIONS=(
+                  "pulseserver" "Change the pulseserver output destination")
+
+                  Option=$(dialog --clear \
+                                  --backtitle "$BACKTITLE" \
+                                  --title "AUDIO controlpanel" \
+                                  --menu "$MENU" \
+                                  $HEIGHT $WIDTH $CHOICE_HEIGHT \
+                                  "${OPTIONS[@]}" \
+                                  2>&1 >/dev/tty)
+
+
+                fi
+              if [ $Option == 'pulseserver' ];then
+                OPTIONS=(
+                "internal" "Use internal ALSA server"
+                "external" "External audio server ")
+
+                Option=$(dialog --clear \
+                                --backtitle "$BACKTITLE" \
+                                --title "AUDIO controlpanel" \
+                                --menu "$MENU" \
+                                $HEIGHT $WIDTH $CHOICE_HEIGHT \
+                                "${OPTIONS[@]}" \
+                                2>&1 >/dev/tty)
+                 echo $Option > ${NVRAMCONF}/AUDIO_SERVER
+                 echo Applied
+                 sleep 2
+                 if [ $Option == 'external' ]; then
+                   CONFIG=$(dialog --title "Pulseaudio Server" --inputbox "Please Input Ip address of the pulse audio server" 8 40 2>&1 >/dev/tty)
+                   echo $CONFIG > ${NVRAMCONF}/PULSE_SERVER
+                   echo applied
+                 fi
+               fi
+
+
+                if [ $Option == 'resourcemanagement' ]; then
+
+                  OPTIONS=(
+                  "q7OSmanagementengine" "Manage q7OS management Engine and finetune(Unavailable)"
+                  "orionAIresc" "Fine tune orionAI management(Unavailable)"
+                  "swap" "Finetune Swap settings(unavailable)"
+                  "memvm" "Manage virtualized Machine Memory execution(unavailable)"
+                  "clockspeed" "Change Device CPU or GPU clockspeed(unavailable)"
+                  "battery" "Battery related Settings(Unavailable)")
+
+                  Option=$(dialog --clear \
+                                  --backtitle "$BACKTITLE" \
+                                  --title "This tool is a STUB" \
+                                  --menu "$MENU" \
+                                  $HEIGHT $WIDTH $CHOICE_HEIGHT \
+                                  "${OPTIONS[@]}" \
+                                  2>&1 >/dev/tty)
+
+
+                fi
+
+
+                if [ $Option == 'startupaction' ]; then
+
+                  OPTIONS=("BootDesktop" "Boot to Desktop when it is powered up"
+                  "Terminal" "Drop to terminal when finished startup"
+                  "autonomous" "goes to autonomous once it is loaded"
+                  "memvm" "Manage virtualized Machine Memory execution(unavailable)")
+
+
+                  Option=$(dialog --clear \
+                                  --backtitle "$BACKTITLE" \
+                                  --title "This tool is a STUB" \
+                                  --menu "$MENU" \
+                                  $HEIGHT $WIDTH $CHOICE_HEIGHT \
+                                  "${OPTIONS[@]}" \
+                                  2>&1 >/dev/tty)
+                    echo Applying settings
+                    echo $Option > ${NVRAMCONF}
+                    sh /bin/q7osconfig
+                fi
+
+
+if [ $Option == 'graphicscp' ]; then
+
+  OPTIONS=(
+  "display" "Change the display output to some X Server"
+  "openglesconv" "Change OpenGLes Emulation Framebuffer Mode"
+  "openglesver" "Change OpenGLes Emulation Version"
+  "openglver" "Change OpenGL Emulation Version"
+  "openglfakever" "Change OpenGL Emulation Fake Version"
+  "gpurefresh" "change Display Refresh Behaviour on Xserver"
+  "gpudebug" "debug GPU traces"
+  "vaocache" "cacheVAO onto memory?"
+  "shaderprecission" "Enable Shader Precission Calculation"
+  "fastmath" "faster calculation"
+  "fpscheck" "view FPS performance on terminal as stdout"
+  "vsync" "wait for the frame fully syncs in the monitor"
+  "mipmap" "Configure the mipmap levelling"
+  "NPOT" "NPOT (Non-Power of Two) calculation"
+  "texturecpy" "Enable or disable texture copy behaviour"
+  "texturequality" "Adjusts texture quality"
+  "alphahack" "only Alpha test that contains an alpha channel"
+  "downsampling" "enable or disable downsampling"
+  "mergereq" "merge subsequents glDrawxxx Requests")
+
+  Option=$(dialog --clear \
+                  --backtitle "$BACKTITLE" \
+                  --title "Graphics Controlpanel" \
+                  --menu "$MENU" \
+                  $HEIGHT $WIDTH $CHOICE_HEIGHT \
+                  "${OPTIONS[@]}" \
+                  2>&1 >/dev/tty)
+
+
+fi
+
+if [ $Option == 'mergereq' ]; then
+  OPTIONS=("0" "disabled"
+  "1" "enabled")
+
+
+  Option=$(dialog --clear \
+                  --backtitle "$BACKTITLE" \
+                  --title "Texture Downsampling" \
+                  --menu "$MENU" \
+                  $HEIGHT $WIDTH $CHOICE_HEIGHT \
+                  "${OPTIONS[@]}" \
+                  2>&1 >/dev/tty)
+  if [ $Option == '1' ]; then
+    CONFIG=$(dialog --title "glDrawMerge" --inputbox "Please Input Requests that is merged from 10 to 100" 8 40 2>&1 >/dev/tty)
+  echo Config Applied
+  echo $CONFIG > ${NVRAMCONF}/LIBGL_BATCH
+  sleep 2
+  sh /bin/q7osconfig
+fi
+echo Disabled
+echo 0 > ${NVRAMCONF}/LIBGL_BATCH
+fi
+
+
+
+
+if [ $Option == 'downsampling' ]; then
+  OPTIONS=("0" "Enabled"
+  "1" "Disabled")
+
+
+  Option=$(dialog --clear \
+                  --backtitle "$BACKTITLE" \
+                  --title "Texture Downsampling" \
+                  --menu "$MENU" \
+                  $HEIGHT $WIDTH $CHOICE_HEIGHT \
+                  "${OPTIONS[@]}" \
+                  2>&1 >/dev/tty)
+
+  echo Config Applied
+  echo $Option > ${NVRAMCONF}/LIBGL_NODOWNSAMPLING
+  sleep 2
+  sh /bin/q7osconfig
+fi
+
+
+if [ $Option == 'shaderprecission' ]; then
+  OPTIONS=("0" "Enabled"
+  "1" "Disabled")
+
+
+  Option=$(dialog --clear \
+                  --backtitle "$BACKTITLE" \
+                  --title "Shader Precission" \
+                  --menu "$MENU" \
+                  $HEIGHT $WIDTH $CHOICE_HEIGHT \
+                  "${OPTIONS[@]}" \
+                  2>&1 >/dev/tty)
+
+  echo Config Applied
+  echo $Option > ${NVRAMCONF}/LIBGL_NOHIGHP
+  sleep 2
+  sh /bin/q7osconfig
+fi
+
+if [ $Option == 'fastmath' ]; then
+  OPTIONS=("0" "Disabled"
+  "1" "Enabled if supported")
+
+
+  Option=$(dialog --clear \
+                  --backtitle "$BACKTITLE" \
+                  --title "Fastmath" \
+                  --menu "$MENU" \
+                  $HEIGHT $WIDTH $CHOICE_HEIGHT \
+                  "${OPTIONS[@]}" \
+                  2>&1 >/dev/tty)
+
+  echo Config Applied
+  echo $Option > ${NVRAMCONF}/LIBGL_FASTMATH
+  sleep 2
+  sh /bin/q7osconfig
+fi
+
+
+
+if [ $Option == 'cacheVAO' ]; then
+  OPTIONS=("0" "Try to cacheVAO"
+  "1" "Disabled")
+
+
+  Option=$(dialog --clear \
+                  --backtitle "$BACKTITLE" \
+                  --title "Fastmath" \
+                  --menu "$MENU" \
+                  $HEIGHT $WIDTH $CHOICE_HEIGHT \
+                  "${OPTIONS[@]}" \
+                  2>&1 >/dev/tty)
+
+  echo Config Applied
+  echo $Option > ${NVRAMCONF}/LIBGL_NOVAOCACHE
+  sleep 2
+  sh /bin/q7osconfig
+fi
+
+if [ $Option == 'openglfakever' ]; then
+  OPTIONS=("1.1" "Set the openGL version to this"
+  "1.2" "Set the openGL version to this"
+  "1.3" "Set the openGL version to this"
+  "1.4" "Set the openGL version to this"
+  "1.5" "Set the openGL version to this"
+  "2.0" "Set the openGL version to this"
+  "2.1" "Set the openGL version to this"
+  "3.0" "Set the openGL version to this"
+  "3.1" "Set the openGL version to this"
+  "3.2" "Set the openGL version to this"
+  "3.3" "Set the openGL version to this"
+  "4.0" "Set the openGL version to this"
+  "4.1" "Set the openGL version to this"
+  "4.2" "Set the openGL version to this"
+  "4.3" "Set the openGL version to this"
+  "4.5" "Set the openGL version to this"
+  "4.6" "Set the openGL version to this")
+
+
+  Option=$(dialog --clear \
+                  --backtitle "$BACKTITLE" \
+                  --title "Fake OpenGL Version" \
+                  --menu "$MENU" \
+                  $HEIGHT $WIDTH $CHOICE_HEIGHT \
+                  "${OPTIONS[@]}" \
+                  2>&1 >/dev/tty)
+
+  echo Config Applied
+  echo $Option > ${NVRAMCONF}/LIBGL_VERSION
+  sleep 2
+  sh /bin/q7osconfig
+fi
+
+
+
+if [ $Option == 'texturequality' ]; then
+  OPTIONS=("0" "Program controlled"
+  "1" "All texture Halved"
+  "2" "only texture >512p are halved"
+  "3" "only texture >256p are halved"
+  "4" "only texture >256p are halved and >1024p rendered quarter of the quality"
+  "5" "texture that is >256p resized 256p with empty texture compression ignored"
+  "6" "Texture >128p are halved and >512p resized to 256p"
+  "7" "only texture >512p are halved ignoring empty texture"
+  "8" "only texture that >2048p resized to 2048p "
+  "9" "only texture that >4096p are rendered at quarter quality"
+  "10" "Texture that >2048p are rendered quarter and >512p halved"
+  "11" "Resize everything that goes beyond the maximum supported Texture for the GPU")
+
+
+  Option=$(dialog --clear \
+                  --backtitle "$BACKTITLE" \
+                  --title "Texturequality May improve performance" \
+                  --menu "$MENU" \
+                  $HEIGHT $WIDTH $CHOICE_HEIGHT \
+                  "${OPTIONS[@]}" \
+                  2>&1 >/dev/tty)
+
+  echo Config Applied
+  echo $Option > ${NVRAMCONF}/LIBGL_SHRINK
+  sleep 2
+  sh /bin/q7osconfig
+fi
+
+
+if [ $Option == 'alphahack' ]; then
+  OPTIONS=("0" "Disabled"
+  "1" "Enabled")
+
+
+  Option=$(dialog --clear \
+                  --backtitle "$BACKTITLE" \
+                  --title "alphahack texture" \
+                  --menu "$MENU" \
+                  $HEIGHT $WIDTH $CHOICE_HEIGHT \
+                  "${OPTIONS[@]}" \
+                  2>&1 >/dev/tty)
+
+  echo Config Applied
+  echo $Option > ${NVRAMCONF}/LIBGL_ALPHAHACK
+  sleep 2
+  sh /bin/q7osconfig
+fi
+
+
+
+if [ $Option == 'texturecpy' ]; then
+  OPTIONS=("0" "Disabled"
+  "1" "TextureCopy Enabled")
+
+
+  Option=$(dialog --clear \
+                  --backtitle "$BACKTITLE" \
+                  --title "TextureCopy" \
+                  --menu "$MENU" \
+                  $HEIGHT $WIDTH $CHOICE_HEIGHT \
+                  "${OPTIONS[@]}" \
+                  2>&1 >/dev/tty)
+
+  echo Config Applied
+  echo $Option > ${NVRAMCONF}/LIBGL_TEXCOPY
+  sleep 2
+  sh /bin/q7osconfig
+fi
+
+
+if [ $Option == 'gpurefresh' ]; then
+  OPTIONS=("0" "Default"
+  "1" "Display Will be Refreshed")
+
+
+  Option=$(dialog --clear \
+                  --backtitle "$BACKTITLE" \
+                  --title "Refresh Behaviour" \
+                  --menu "$MENU" \
+                  $HEIGHT $WIDTH $CHOICE_HEIGHT \
+                  "${OPTIONS[@]}" \
+                  2>&1 >/dev/tty)
+
+  echo Config Applied
+  echo $Option > ${NVRAMCONF}/LIBGL_XREFRESH
+  sleep 2
+  sh /bin/q7osconfig
+fi
+
+if [ $Option == 'NPOT' ]; then
+  OPTIONS=("0" "Disable i guess?"
+  "1" "Expose Limited NPOT extension"
+  "2" "Expose Full NPOT extension")
+
+  Option=$(dialog --clear \
+                  --backtitle "$BACKTITLE" \
+                  --title "NPOT Config" \
+                  --menu "$MENU" \
+                  $HEIGHT $WIDTH $CHOICE_HEIGHT \
+                  "${OPTIONS[@]}" \
+                  2>&1 >/dev/tty)
+
+  echo Config Applied
+  echo 1 > ${NVRAMCONF}/LIBGL_FORCENPOT
+  echo ${Option} > ${NVRAMCONF}/LIBGL_FORCENPOT
+  sleep 2
+  sh /bin/q7osconfig
+fi
+
+
+if [ $Option == 'mipmap' ]; then
+  OPTIONS=("0" "Default, nothing special"
+  "1" "AutoMipMap forced"
+  "2" "guess AutoMipMap (based on manual mipmaping on textures)"
+  "3" "ignore MipMap (mipmap creation / use entirely disabled)"
+  "4" "ignore AutoMipMap on non-squared textures"
+  "5" "calculate all sub-mipmap one time when uploading level 1")
+
+
+  Option=$(dialog --clear \
+                  --backtitle "$BACKTITLE" \
+                  --title "Graphics MipMap Config" \
+                  --menu "$MENU" \
+                  $HEIGHT $WIDTH $CHOICE_HEIGHT \
+                  "${OPTIONS[@]}" \
+                  2>&1 >/dev/tty)
+
+  echo Config Applied
+  echo $Option > ${NVRAMCONF}/LIBGL_MIPMAP
+  sleep 2
+  sh /bin/q7osconfig
+fi
+
+
+if [ $Option == 'fpscheck' ]; then
+  OPTIONS=("0" "Does not print any FPS information"
+  "1" "Print FPS Information on Terminal")
+
+
+  Option=$(dialog --clear \
+                  --backtitle "$BACKTITLE" \
+                  --title "OPENGLES Benchmark" \
+                  --menu "$MENU" \
+                  $HEIGHT $WIDTH $CHOICE_HEIGHT \
+                  "${OPTIONS[@]}" \
+                  2>&1 >/dev/tty)
+
+  echo Config Applied
+  echo $Option > ${NVRAMCONF}/LIBGL_FPS
+  sleep 2
+  sh /bin/q7osconfig
+fi
+
+if [ $Option == 'vsync' ]; then
+  OPTIONS=("0" "Does not Vsync cap"
+  "1" "Does VSYNC" )
+
+  Option=$(dialog --clear \
+                  --backtitle "$BACKTITLE" \
+                  --title "OPENGL Vsync" \
+                  --menu "$MENU" \
+                  $HEIGHT $WIDTH $CHOICE_HEIGHT \
+                  "${OPTIONS[@]}" \
+                  2>&1 >/dev/tty)
+
+  echo Config Applied
+  echo $Option > ${NVRAMCONF}/LIBGL_VSYNC
+  sleep 2
+  sh /bin/q7osconfig
+fi
+
+
+
+if [ $Option == 'gpudebug' ]; then
+  OPTIONS=("0" "Default"
+  "1" "Will be Printed on terminal if crashed")
+
+
+  Option=$(dialog --clear \
+                  --backtitle "$BACKTITLE" \
+                  --title "GPUDebug" \
+                  --menu "$MENU" \
+                  $HEIGHT $WIDTH $CHOICE_HEIGHT \
+                  "${OPTIONS[@]}" \
+                  2>&1 >/dev/tty)
+
+  echo Config Applied
+  echo $Option > ${NVRAMCONF}/LIBGL_STACKTRACE
+  sleep 2
+  sh /bin/q7osconfig
+fi
+
+
+if [ $Option == 'openglesconv' ]; then
+  OPTIONS=("0" "Default, using standard x11 rendering"
+  "1" "Use Framebuffer output (x11 bypassed, only fullscreen)"
+  "2" "Use Framebuffer, but also an intermediary FBO"
+  "3" "Use PBuffer, allowing x11 (and windowed) rendering even if driver doesn't support it")
+
+  Option=$(dialog --clear \
+                  --backtitle "$BACKTITLE" \
+                  --title "OPENGLES FRAMBUFFER CONFIG" \
+                  --menu "$MENU" \
+                  $HEIGHT $WIDTH $CHOICE_HEIGHT \
+                  "${OPTIONS[@]}" \
+                  2>&1 >/dev/tty)
+
+  echo Config Applied
+  echo $Option > ${NVRAMCONF}/LIBGL_FB
+  sleep 2
+  sh /bin/q7osconfig
+fi
+
+
+if [ $Option == 'openglesver' ]; then
+  OPTIONS=("0" "Default, using GLES 2.0 backend"
+  "1" "Use GLES 1.1 backend"
+  "2" "Use GLES 2.0 backend" )
+
+  Option=$(dialog --clear \
+                  --backtitle "$BACKTITLE" \
+                  --title "OPENGL VERSION SELECTION" \
+                  --menu "$MENU" \
+                  $HEIGHT $WIDTH $CHOICE_HEIGHT \
+                  "${OPTIONS[@]}" \
+                  2>&1 >/dev/tty)
+
+  echo Config Applied
+  echo $Option > ${NVRAMCONF}/LIBGL_ES
+  sleep 2
+  sh /bin/q7osconfig
+fi
+
+if [ $Option == 'openglver' ]; then
+  OPTIONS=("0" "Default, expose OpenGL 1.5 when using GLES1.1 or OpenGL 2.0 when using GLES2.0"
+  "15" "Expose OpenGL 1.5"
+  "20" "Expose OpenGL 2.0"
+  "21" "Expose OpenGL 2.1")
+
+  Option=$(dialog --clear \
+                  --backtitle "$BACKTITLE" \
+                  --title "OPENGLES FRAMBUFFER CONFIG" \
+                  --menu "$MENU" \
+                  $HEIGHT $WIDTH $CHOICE_HEIGHT \
+                  "${OPTIONS[@]}" \
+                  2>&1 >/dev/tty)
+
+  echo Config Applied
+  echo $Option > ${NVRAMCONF}/LIBGL_GL
+  sleep 2
+  sh /bin/q7osconfig
+fi
+
+
+if [ $Option == 'home' ]; then
+  HOMEPATH=$(dialog --title "DEFAULT HOMEPATH" --inputbox "Enter Desired Default HOME path" 8 40 2>&1 >/dev/tty)
+  echo $HOMEPATH > ${NVRAMCONF}/HOME
+  sleep 2
+  sh /bin/q7osconfig
+fi
+
+
+
+if [ $Option == 'resetnvram' ]; then
+  OPTIONS=("yes" "delete all user config"
+  "no" "keep config")
+
+
+  Option=$(dialog --clear \
+                  --backtitle "$BACKTITLE" \
+                  --title "Are you sure you want to reset the NVRAM?" \
+                  --menu "$MENU" \
+                  $HEIGHT $WIDTH $CHOICE_HEIGHT \
+                  "${OPTIONS[@]}" \
+                  2>&1 >/dev/tty)
+
+  if [ $Option == 'yes' ]; then
+    rm -rfv ${NVRAMCONF}
+    sh /bin/nvramdbset
+    echo After you reset your nvram you cant configure any setting before rebooting your device
+    exit
+  else
+    echo Right well just let it for now
+  fi
+  sh /bin/q7osconfig
+fi
+
+
+
+if [ $Option == 'termmode' ]; then
+  OPTIONS=("rxvt" "rxvt Terminal Mode"
+  "xterm" "recognized as xterm"
+  "konsole" "Use konsole mode ")
+
+
+  Option=$(dialog --clear \
+                  --backtitle "$BACKTITLE" \
+                  --title "Terminal viewmode" \
+                  --menu "$MENU" \
+                  $HEIGHT $WIDTH $CHOICE_HEIGHT \
+                  "${OPTIONS[@]}" \
+                  2>&1 >/dev/tty)
+
+  echo Config Applied
+  echo if you have any issues viewing anything on the terminal just delete ${NVRAMCONF}/TERM
+  echo $Option > ${NVRAMCONF}/TERM
+  sleep 2
+  sh /bin/q7osconfig
+fi
+
+
+if [ $Option == 'display' ] ;then
+OPTIONS=("local" "Using Local XserverXSDL"
+"localwebbrowser" "using a webbrowser? what?"
+"remote" "Display the content remotely"
+"framebuffer" "using device framebuffer"
+"xephyr" "use Xephyr as a display")
+
+
+Option=$(dialog --clear \
+                --backtitle "$BACKTITLE" \
+                --title "DISPLAY" \
+                --menu "$MENU" \
+                $HEIGHT $WIDTH $CHOICE_HEIGHT \
+                "${OPTIONS[@]}" \
+                2>&1 >/dev/tty)
+if [ $Option == 'localwebbrowser' ]; then
+  echo 0 > ${NVRAMCONF}/VNCstartup
+  echo 0 > ${NVRAMCONF}/Xnativestartup
+  echo 0 > ${NVRAMCONF}/XSDLSTARTUP
+  echo 1 > ${NVRAMCONF}/BROWSERUX
+  echo ":0" > ${NVRAMCONF}/DISPLAY
+fi
+if [ $Option == 'local' ]; then
+CONFIG=$(dialog --title "DISPLAY" --inputbox "Please Input the Display Number" 8 40 2>&1 >/dev/tty)
+echo ":${CONFIG}" > ${NVRAMCONF}/DISPLAY
+echo 0 > ${NVRAMCONF}/VNCstartup
+echo 0 > ${NVRAMCONF}/Xnativestartup
+echo 1 > ${NVRAMCONF}/XSDLSTARTUP
+echo 0 > ${NVRAMCONF}/BROWSERUX
+sleep 2
+sh /bin/q7osconfig
+fi
+if [ $Option == 'framebuffer' ]; then
+  for i in /dev/fb* ; do echo $i ;sleep ;done
+  optionprocessing=$(for i in /dev/fb* ; do echo $i ;done )
+  echo ${optionprocessing[@]} ; sleep 3
+  OPTIONS=$("${optionprocessing[@]}" "Framebuffer Device")
+
+
+  Option=$(dialog --clear \
+                  --backtitle "$BACKTITLE" \
+                  --title "Select Framebuffer" \
+                  --menu "$MENU" \
+                  $HEIGHT $WIDTH $CHOICE_HEIGHT \
+                  "${OPTIONS[@]}" \
+                  2>&1 >/dev/tty)
+  echo ":0" > ${NVRAMCONF}/DISPLAY
+  echo 1 > ${NVRAMCONF}/Xnativestartup
+  echo 0 > ${NVRAMCONF}/XSDLSTARTUP
+  echo /dev/${OPTIONS} > ${NVRAMCONF}/FRAMEBUFFER
+  echo 0 > ${NVRAMCONF}/VNCstartup
+  echo Alert if you enable Framebuffer mode and if you are using android
+  echo The android will froze
+fi
+if [ $Option == 'remote' ]; then
+  CONFIG=$(dialog --title "DISPLAY" --inputbox "Please Input the complete IP number and address" 8 40 2>&1 >/dev/tty)
+  echo $CONFIG > ${NVRAMCONF}/DISPLAY
+  echo 0 > ${NVRAMCONF}/Xnativestartup
+  echo 0 > ${NVRAMCONF}/XSDLSTARTUP
+  echo 0 > ${NVRAMCONF}/VNCstartup
+  echo 0 > ${NVRAMCONF}/BROWSERUX
+  sleep 2
+  sh /bin/q7osconfig
+fi
+fi
+
+
+
+if [ $Option == 'fastboot' ]; then
+  OPTIONS=("yes" "Enable Fastboot"
+  "no" "Standard Booting Procedure")
+
+
+  CONFIG=$(dialog --clear \
+                  --backtitle "$BACKTITLE" \
+                  --title "Do you want to enable Fastboot" \
+                  --menu "$MENU" \
+                  $HEIGHT $WIDTH $CHOICE_HEIGHT \
+                  "${OPTIONS[@]}" \
+                  2>&1 >/dev/tty)
+  echo $CONFIG > ${NVRAMCONF}/FASTBOOT
+  sleep 2
+  sh /bin/q7osconfig
+fi
+
+if [ $Option == 'apply' ];then
+
+OPTIONS=("yes" "Reboot and apply"
+"no" "Reboot later and apply later")
+
+
+reboot=$(dialog --clear \
+                --backtitle "$BACKTITLE" \
+                --title "To apply the settings you have to reboot" \
+                --menu "$MENU" \
+                $HEIGHT $WIDTH $CHOICE_HEIGHT \
+                "${OPTIONS[@]}" \
+                2>&1 >/dev/tty)
+if [ $reboot == 'yes']; then
+exit
+/bin/restart
+/bin/poweroff
+exit
+fi
+if [ $reboot == 'no']; then
+exit
+
+fi
+exit
+fi
+
+sh /bin/q7osconfig

@@ -1,0 +1,124 @@
+#!/bin/bash
+lgbadge=[q7oslogin]
+trap 'echo Not allowing unknown user to escape' SIGINT
+trap 'echo Not allowing unknown user to escape' SIGSTOP
+#please enable this after development
+cd /module/usermanager
+echo Initalization of Port to newer version
+if [ ! -d /home/Userinitfile ]; then
+  echo Porting Old version to newer version
+  cp -r /module/usermanager/* /home
+fi
+#redirect to /home
+cd /home
+if [ $1 == 'logout' ]; then
+  for a in exposed_* ; do
+  username=$( echo $a | awk '{gsub("exposed_", "");print}'  )
+Password=$(dialog --title "Password" --inputbox "Please enter the password for $username" 8 40 2>&1 >/dev/tty)
+if echo $Password | md5sum -c hashps_${username} ; then
+echo Access Granted
+sleep 0
+echo Saving Files...
+tar czf ${username}_dec $a
+rm -rf $a
+gzip -c ${username}_dec | openssl enc -aes-256-ctr -salt -pass pass:${Password} -out ${username}
+rm ${username}_dec
+rm -rf ${username}_dec
+echo ${username} File saved
+else
+  echo Invalid Password Skipping File Saving
+fi
+done
+clear
+sync
+exit
+fi
+
+if [ $1 == 'createuser' ]; then
+Username=$(dialog --title "Username" --inputbox "Please The new username" 8 40 2>&1 >/dev/tty)
+Password=$(dialog --title "Password" --inputbox "Please enter the password" 8 40 2>&1 >/dev/tty)
+sleep 0
+echo Creating....
+sleep 2
+echo Initializing User Profile
+mkdir exposed_${Username}
+ls -a exposed_${Username}
+sleep 0
+echo Creating Working Flag
+echo 'its working !' > exposed_${Username}/hello_${Username}
+mkdir exposed_${Username}/Desktop exposed_${Username}/Documents exposed_${Username}/Downloads exposed_${Username}/Music exposed_${Username}/Pictures exposed_${Username}/Public exposed_${Username}/Templates exposed_${Username}/.config exposed_${Username}/Videos
+cp -rv Userinitfile/.* exposed_${Username}/
+cp -rav Userinitfile/* exposed_${Username}/
+ls -a exposed_${Username}
+tar czf ${Username}_dec exposed_${Username}
+rm -rf exposed_${Username}
+echo Registering Username to standard Linux compliant
+useradd ${Username} -p ${Password} -b /home/exposed_${Username}
+sleep 6
+#mv exposed_${Username}.zip exposed_${Username}
+echo ${Password} | md5sum > hashps_${Username}
+gzip -c ${Username}_dec | openssl enc -aes-256-ctr -salt -pass pass:${Password} -out ${Username}
+rm ${Username}_dec
+clear
+echo Operation Done
+exit
+fi
+#cd /module/usermanager
+Username=$(dialog --title "Username" --inputbox "Please Input your username" 8 40 2>&1 >/dev/tty)
+Password=$(dialog --title "Password for ${Username}" --inputbox "Please enter the password" 8 40 2>&1 >/dev/tty)
+reset
+if [ ! -f hashps_${Username} ]; then
+echo $lgbadge error Username does not exist
+echo $lgbadge if you believe this is an mistake please contact to the system administrator
+sleep 5
+sh loginmanager
+exit
+fi
+echo Please wait
+sleep 0
+#if md5sum -c hash ; then
+if echo $Password | md5sum -c hashps_${Username} ; then
+echo Password match
+mkdir ${Username}
+#Sample code Decrypting openssl enc -aes-256-ctr -d -in "meongenc" -pass pass:1234 | zcat > "meongk"
+# sample code Encrypting gzip -c meong | openssl enc -aes-256-ctr -salt -out meongenc
+
+
+openssl enc -aes-256-ctr -d -in "${Username}" -pass pass:${Password} | zcat > "${Username}_dec"
+#rm -rf exposed_${Username}
+if [ ! -d exposed_${Username} ]; then
+tar -xf ${Username}_dec
+fi
+rm ${Username}_dec
+#unzip ${Username}_dec
+clear
+export HOMEtarget=/home/exposed_${Username}
+export usernametg=${Username}
+echo Your file is now accessible
+echo /home/exposed_${Username} > /HOMEtarget
+echo ${Username} > /usernametg
+chmod 777 /HOMEtarget
+chmod 777 /usernametg
+/bin/sh /bin/universalexec &
+if [ ${Username} == 'root' ]; then
+clear
+echo Some phone may hate running GNU program on root that may cause the phone to literally crash or froze dependings on the sysctl flags
+echo This may occoured because there is softirq Lockups which make the phone think that it is unstable or there is a rogue software
+echo Please Create new user other than root so the program that you want can run properly
+sleep 5
+/bin/sh /module/consolesessionPrompt
+else
+  #su -c '/bin/sh /module/consolesessionPrompt' ${Username} THere is a wierd terminal Bug in the android like Inappropriate ioctl device
+  sudo -u ${Username} /bin/sh /module/consolesessionPrompt
+  echo Is there something wrong?
+  echo if you cant login using your account try using root
+  echo Please wait for 5 seconds
+  sleep 5
+fi
+exit
+else
+echo Failed Invalid Password
+sh loginmanager
+fi
+
+#to create a password hash do ( echo $Password | md5sum > hashps ${Username} )

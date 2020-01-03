@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#This is a function to enable sensors when it is turned off or to keep sensors from sleeping
+
+while true ; do
+for a in /sys/class/input/input* ; do
+  echo 1 > ${a}/enable
+  sleep 1
+done
+sleep 60
+done

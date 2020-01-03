@@ -1,0 +1,17 @@
+red(){
+printf '\e[38;5;210m'
+}
+
+green(){
+printf '\e[38;5;042m'
+}
+
+blue(){
+
+printf '\e[38;5;039m'
+}
+
+yellow(){
+printf '\e[38;5;221m'
+
+}

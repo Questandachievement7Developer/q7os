@@ -1,0 +1,4 @@
+#!/bin/bash
+echo q7OS sysutils
+exit
+tail -f /logs/q7OSLinuxHooklog.txt | grep error

@@ -1,0 +1,9 @@
+nohup: ignoring input
+Preparing package q7os
+Pulling Package from the script
+Preparing For installation
+q7os.tar.gz: OK
+Archive Integrity Verified
+install.sh: 25: install.sh: cannot create /sdcard/startq7os: Directory nonexistent
+[H[2J[3JNow to Run the OS please insert this su -c /bin/sh /sdcard/startq7os into your init command
+or su -c /bin/sh startq7os

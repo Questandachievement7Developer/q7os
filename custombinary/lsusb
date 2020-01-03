@@ -1,0 +1,8 @@
+#!/bin/bash
+echo q7OS usbutils
+printf '\e[38;5;196m Lsusb \n'
+echo "busybox lsusb" > /subridge
+echo Contacting Subridge
+sleep 5
+echo Did it succeed?
+exit

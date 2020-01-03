@@ -1,0 +1,21 @@
+#!/bin/bash
+echo q7OS Win32EMU
+echo Powered By qemu obviously
+export PROGRAMTARGET=$1
+export DEBUGFLAGWIN32=$2
+arch=$(uname -m)
+if [ "$EUID" -ne 0 ]
+  then
+  echo ${B} Hardware is not accessible
+  echo root is not being used or available
+  echo Emulation Only Happens On root mode
+  exit
+fi
+
+echo for launching into Terminal Mode please Run
+echo '$ execwin terminal 1'
+echo Contacting Win32EMU
+echo Machine Detected Running $arch architechture
+sleep 2
+bash /module/win32Emu/win32start.sh
+exit

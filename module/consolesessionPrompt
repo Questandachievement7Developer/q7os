@@ -1,0 +1,99 @@
+#!/bin/sh
+
+echo handing over execution menu
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/system/xbin:/system/bin:/bin/hw:$PATH #extendthepath for /module excutables
+extendedpath=$(cat /module/extendedpath)
+for a in $extendedpath ; do
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/system/xbin:/system/bin:/bin/hw:$PATH:$a
+done
+
+#NVRAM parameter for specific user loaded on consolesessionPrompt
+echo Loading parameter
+cd ${NVRAMCONF}
+for a in * ; do
+val=$(cat $a)
+export ${a}=${val}
+#echo ${a}=${val}
+ done
+cd /
+
+
+
+
+
+
+
+
+
+export HOME=$(cat /HOMEtarget)
+export Username=$(cat /usernametg)
+rm -f /HOMEtarget /usernametg
+
+
+
+
+HEIGHT=15
+WIDTH=80
+CHOICE_HEIGHT=18
+BACKTITLE="q7os Terminal Session Manager"
+TITLE="Do you want to connect your previous session"
+tgdir=${NVRAMCONF}
+
+OPTIONS=("yes" "Continuing previous User TERMINAL session"
+"new" "Creates New Resumable Session"
+"std" "creates non Additional Resumable Session"
+"bootwizard" "Enter bootwizard to enter desktop or other features"
+"compat" "no Terminal Multiplexer Only commandprompt"
+"basic" "a really basic Terminal prompt")
+Option=$(dialog --clear \
+                --backtitle "$BACKTITLE" \
+                --title "DISPLAY" \
+                --menu "$MENU" \
+                $HEIGHT $WIDTH $CHOICE_HEIGHT \
+                "${OPTIONS[@]}" \
+                2>&1 >/dev/tty)
+
+
+
+
+#tmux attach -t console_${Username}
+#tmux new -s console_${Username} fish
+
+if [ ${Option} == 'bootwizard' ]; then
+  echo Handing over to
+sh /bin/q7osbootmenu menu
+sleep 1
+fi
+
+
+if [ ${Option} == 'yes' ]; then
+  echo Connecting to console_${Username}
+tmux attach -t console_${Username}
+sleep 1
+fi
+
+if [ ${Option} == 'new' ]; then
+  echo Attaching Console to console_${Username}
+tmux new -s console_${Username} fish
+sleep 1
+fi
+
+if [ ${Option} == 'std' ]; then
+  echo Attaching Console to console_${Username}
+tmux /usr/bin/fish
+sleep 1
+fi
+
+if [ ${Option} == 'compat' ]; then
+  echo Attaching Console to console_${Username}
+fish
+sleep 1
+fi
+if [ ${Option} == 'basic' ]; then
+  echo Attaching Console to console_${Username}
+/bin/sh
+sleep 1
+fi
+echo error fail
+sleep 4
+sh /module/consolesessionPrompt

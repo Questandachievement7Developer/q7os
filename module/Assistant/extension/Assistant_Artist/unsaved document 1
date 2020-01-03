@@ -1,0 +1,3 @@
+#!/bin/bash
+echo Bootloader for Artistic Style
+python generate.py --content input.jpg --styles style.jpg --output result.jpg --overwrite

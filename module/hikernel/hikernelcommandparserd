@@ -1,0 +1,7 @@
+#!/bin/bash
+while true ;do
+while inotifywait -q -e modify /hikernelBridge >/dev/null; do
+  exec=$(cat /hikernelBridge)
+  su -c "$exec"
+done
+done

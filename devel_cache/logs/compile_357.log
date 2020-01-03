@@ -1,0 +1,60 @@
+nohup: ignoring input
+mkdir: cannot create directory ‘prootexec’: File exists
+[H[2J[3J[38;5;039m 
+Initial Systemcall bootloader info...
+[q7BL] Running  x86_64 processor
+[q7BL] Kernel Detection 4.4.0-18362-Microsoft
+[q7BL] Initializing q7osBL on GNU/Linux
+q7OS based on Archlinux build by questandachievement7 Developers
+Inspired by the simplicity of manjaro Distro and The versitality of termux-arch
+and reinsparked by postmarketOS
+[38;5;221m[BinaryManager] Reinstalling binary execution
+chmod: cannot access '/mnt/a/masam/Documents/Misc/q7OS_Master/core/module/Assistant/extension/Assistant_Artist/unsaved': No such file or directory
+chmod: cannot access 'document': No such file or directory
+chmod: cannot access '1': No such file or directory
+Chmoding done
+bootloader.sh: 80: bootloader.sh: cannot create /mnt/a/masam/Documents/Misc/q7OS_Master/core/reqbin/executionFlagged: Directory nonexistent
+Loading parameter
+bootloader.sh: 217: [: Illegal number: 
+Attempting to run adb root if there is Android
+bootloader.sh: 366: bootloader.sh: adb: not found
+Checking Backup Schedule
+seems 2 not yet okaaay
+[H[2J[3J[38;5;221m [InstallMaker] Removing rm_protect File
+[InstallMaker] This also will update the repository
+fatal: not a git repository (or any parent up to mount point /mnt)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /mnt)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[38;5;042m [InstallMaker] running Prepackaging operation
+[InstallMaker] running module/prepackagingscripts/builddependencies
+Assuming using Pacman as package manager
+module/prepackagingscripts/builddependencies: 2: module/prepackagingscripts/builddependencies: pacman: not found
+Reading package lists...
+Building dependency tree...
+Reading state information...
+busybox is already the newest version (1:1.30.1-4).
+docker is already the newest version (1.5-2).
+git is already the newest version (1:2.20.1-2).
+0 upgraded, 0 newly installed, 0 to remove and 18 not upgraded.
+module/prepackagingscripts/builddependencies: 4: module/prepackagingscripts/builddependencies: yum: not found
+System has not been booted with systemd as init system (PID 1). Can't operate.
+Failed to connect to bus: Host is down
+Dependencies met
+[InstallMaker] running module/prepackagingscripts/tensorflowforarm
+No longer need to cross compile thanks to lhelontra for providing Tensorflow
+[InstallMaker] package Compiler started
+[InstallMaker] Resetting nvram
+[InstallMaker] Resetting Archlinux base tarballs
+[InstallMaker] Resetting reqbin
+[InstallMaker] Creating Archive
+bootloader.sh: 419: [: =: unexpected operator
+q7OS build 357
+bootloader.sh: 426: [: =: unexpected operator
+[InstallMaker] compiled successfully became install.sh
+bootloader.sh: 447: bootloader.sh: adb: not found
+bootloader.sh: 448: bootloader.sh: adb: not found
+bootloader.sh: 449: bootloader.sh: adb: not found
+bootloader.sh: 450: bootloader.sh: adb: not found
+bootloader.sh: 451: bootloader.sh: adb: not found
+Sat 04 Jan 2020 01:12:47 AM UTC

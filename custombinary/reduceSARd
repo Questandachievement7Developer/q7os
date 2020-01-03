@@ -1,0 +1,6 @@
+#!/bin/bash
+echo q7OS Transmission Utils
+echo Function is not yet implemented for Reduce SAR rating
+echo Please tell the developer if you really need this daemon
+#Inspired from samsung firmware
+exit

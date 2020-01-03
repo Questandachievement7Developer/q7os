@@ -1,0 +1,8 @@
+#!/bin/bash
+echo q7OS powerutils
+printf '\e[38;5;196m Hibernate Device \n'
+echo "input keyevent 26;dumpsys deviceidle enable;dumpsys deviceidle step deep" > /subridge
+echo Contacting Subridge
+sleep 5
+echo Did it succeed?
+exit

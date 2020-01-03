@@ -1,0 +1,12 @@
+echo if you are done just press ctrl + c once	
+sleep 
+ffmpeg -f v4l2 -framerate 30 -video_size 1920x1080 -input_format mjpeg -i /dev/video0 -c copy buffer.mkv
+rm final*
+ffmpeg -i buffer.mkv -c:v libx264 -crf 23 -preset medium -pix_fmt yuv420p raw.mkv
+ffmpeg -i raw.mkv -y -vf vidstabdetect=stepsize=2:shakiness=7:accuracy=9:result=transform_vectors.trf -f null -
+ffmpeg -i raw.mkv -y -vf vidstabtransform=input=transform_vectors.trf:zoom=0:smoothing=17,unsharp=5:5:0.8:3:3:0.4 -vcodec libx264 -preset ultrafast -tune film -crf 18 -acodec copy Processed_0.mkv
+
+ffmpeg -i  Processed_0.mkv -y -vf  minterpolate=48,tblend=all_mode=average,framestep=2 Processed_1.mkv
+ffmpeg -i Processed_1.mkv -filter "minterpolate='fps=60'" Processed_2.mkv
+ffmpeg -i  Processed_2.mkv -y -vf  scale=1920:1080,unsharp=5:5:2 Final.mkv
+rm -rf buffer.mkv Processed* raw.mkv
