@@ -587,8 +587,11 @@ currver=$(cat dist/ver)
 currver=$(( $currver + 1 ))
 echo $currver > dist/ver
 echo q7os build $currver
+# dont forget to add remote origin server
+# Default git remote add origin https://github.com/Questandachievement7Developer/q7os.git
 git commit -m "Commit of q7os update build $currver "
-git push origin master
+#git push origin master
+git push -u origin master
 exit
 fi
 
