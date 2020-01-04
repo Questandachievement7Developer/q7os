@@ -578,6 +578,7 @@ echo q7os build $currver
 # Default git remote add origin https://github.com/Questandachievement7Developer/q7os.git
 git commit -m "Commit of q7os update build $currver "
 #git push origin master
+git fetch
 git push -u origin master
 exit
 fi
