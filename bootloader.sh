@@ -389,20 +389,7 @@ echo "${testmodeprefix} Finished"
 
 sleep 9
 clear
-yellow
-echo "${testmodeprefix} Gathering Results"
-errorlogcount=$(grep -o "error" ${diagnosticlog}/* | wc -l )
-unexpectedcount=$(grep -o "unexpected" ${diagnosticlog}/* | wc -l)
-unknowncount=$(grep -o "unknown" ${diagnosticlog}/* | wc -l)
-terminatecount=$(grep -o "termin" ${diagnosticlog}/* | wc -l)
-green
-clear
-echo "${testmodeprefix} Here are the misbehaviour of the q7OS runtime"
-echo "Errors ${errorlogcount}"
-echo "Unexpected Behaviour ${unexpectedcount}"
-echo "not found instructions ${unknowncount}"
-echo "Unexpected Termination ${terminatecount}"
-echo "For more comprehensive Logs go to ${diagnosticlog} "
+sh $0 analysislastbuild
 exit
 fi
 
