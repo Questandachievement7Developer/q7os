@@ -6,7 +6,8 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    
+
     steps:
+    - uses: actions/checkout@v1
     - name: configure
       run: sudo sh bootloader.sh testbuild
