@@ -1,5 +1,8 @@
 # q7os
 An operating system or nested built based on archlinux that designed to unlock devices potential and pushing the device to the limit
+
+[![Build Status](https://travis-ci.org/Questandachievement7Developer/q7os.svg?branch=master)](https://travis-ci.org/Questandachievement7Developer/q7os)
+
 ## What can i use this OS for?
 > Anything you want really
 
