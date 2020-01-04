@@ -74,7 +74,7 @@ bootloaderinitialinfo
 
 #for chmoding to excutables
 yellow
-echo "[BinaryManager] Reinstalling binary execution"
+echo "[BinaryManager] Reflagging binary execution"
 if [ ! -f ${origindir}/reqbin/executionFlagged ] && [ -f ${origindir}/reqbin ] ; then
 sh ${origindir}/custombinary/convertexecuteflag
 echo a > ${origindir}/reqbin/executionFlagged # This is for flagging that the bootloader and system have been fixed or the permission has been fixed to 777 or chmod +x
