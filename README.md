@@ -3,8 +3,12 @@ An operating system or nested built based on archlinux that designed to unlock d
 
 [![Build Status](https://travis-ci.org/Questandachievement7Developer/q7os.svg?branch=master)](https://travis-ci.org/Questandachievement7Developer/q7os)
 
+
+# QnA
 ## What can i use this OS for?
 > Anything you want really
+## So are you competing with postmarketOS or what?
+> Nah were not competing were just inspired to by postmarketOS to bring Linux to any device without the hassle of host bootloader ( if using locked down bootloader device like usual android device)
 
 ## Here what you need to know about q7OS in current state
 1. q7OS will be available in the github this week and the filesize is around (1.5GB in total yes thats the source)
