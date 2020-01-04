@@ -1,4 +1,4 @@
-# q7os
+# q7os ( Questandachievement7OperatingSystem )
 An operating system or nested built based on archlinux that designed to unlock devices potential and pushing the device to the limit
 
 [![Build Status](https://travis-ci.org/Questandachievement7Developer/q7os.svg?branch=master)](https://travis-ci.org/Questandachievement7Developer/q7os)
