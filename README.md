@@ -18,16 +18,20 @@ An operating system or nested built based on archlinux that designed to unlock d
 12. Currently q7OS only run at chroot container not yet host mode ( Not even proot mode )
 Of course you are free to ask me about its specifical details of q7OS
 
-## OS Usages
-### Bootloader
+# OS Usages
+## Bootloader
 You can install the system by using the precompiled shell package on release tab! or you can git clone this repository and do
 > sudo sh bootloader.sh compile <br /> 
 > sudo sh ../install.sh <br /> 
 **Note: To change install directory, you have to change HOME Variable**
 ### Launch the OS
 > sudo sh startq7os
-# Other commands
+### Other commands
 For other commands that available for the bootloader, you can do 
 > sudo sh bootloader.sh help
+
+## System commands
+For other commands such as for graphics settings, audio settings, Ai settings can be accessed through q7ossetting
+and other commands can be found at the wiki
 
 
