@@ -18,6 +18,19 @@ An operating system or nested built based on archlinux that designed to unlock d
 12. Currently q7OS only run at chroot container not yet host mode ( Not even proot mode )
 Of course you are free to ask me about its specifical details of q7OS
 
+# Tested Devices and its status
+
+| Device                                 | Status                                                         | 
+| -------------------------------------- |:--------------------------------------------------------------:|
+| Samsung Galaxy Note 10.1 2014          | Running quite stable(Unless user enter a user other than root)  |
+| Samsung Galaxy Tab S2                  | Running and rebooting randomly for no appearant reason       |
+| Samsung Note FE                        | Running Great and stable but the Heartrate sensor is turning on randomly |
+| Dell Latitude E7440 (x86_64 Manjaro Linux)| Running great with no issues                                          |
+| Macbook 2011 Late (X86_64 manjaro linux)  | Running great with no issues                                          |
+| Raspberry pi 3B                        | Running great but an old MaruchiTarento architechture that this OS was based on     |
+| Windows 10 WSL1 (Debian)             | Bootloader running but crashes ( whole computer ) at setup           |
+
+
 # OS Usages
 ## Bootloader
 You can install the system by using the precompiled shell package on release tab! or you can git clone this repository and do
