@@ -36,7 +36,8 @@ Of course you are free to ask me about its specifical details of q7OS
 | Dell Latitude E7440 (x86_64 Manjaro Linux)| Running great with no issues                                          |
 | Macbook 2011 Late (X86_64 manjaro linux)  | Running great with no issues                                          |
 | Raspberry pi 3B                        | Running great but an old MaruchiTarento architechture that this OS was based on     |
-| Windows 10 WSL1 (Debian)             | Bootloader running but crashes ( whole computer ) at setup           |
+| Windows 10 WSL1 (Debian)(AMD A10-9700) Asrock HD320A   | Bootloader running but crashes ( whole computer ) at setup           |
+| Asus Vivobook X505Z (Custom Ryzen 5 2500U)    | Running and Overheating                                          |
 
 >This led me to believe that the problem sourced from the custom kernel itself </ br>
 >What if we include a function auto build on the q7OS that will make specialized kernel fuse it with the source specific kernel hardware and apply it automagically, that would increase the stability and compatibility to a unprecedented level!
