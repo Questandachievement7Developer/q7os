@@ -3,7 +3,7 @@ An operating system or nested built based on archlinux that designed to unlock d
 
 [![Build Status](https://travis-ci.org/Questandachievement7Developer/q7os.svg?branch=master)](https://travis-ci.org/Questandachievement7Developer/q7os)
 
-[![Logo](https://drive.google.com/file/d/1fgMscxyqh960FRHcTtnEDnGPx30HJsPq/view?usp=sharing)](https://drive.google.com/file/d/1fgMscxyqh960FRHcTtnEDnGPx30HJsPq/view?usp=sharing)
+![Logo](https://github.com/Questandachievement7Developer/q7os/logo.png)
 
 # QnA
 ## What can i use this OS for?
