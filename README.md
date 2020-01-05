@@ -5,6 +5,10 @@ An operating system or nested built based on archlinux that designed to unlock d
 
 ![Logo](https://github.com/Questandachievement7Developer/q7os/blob/master/logo.png)
 
+# Do you want to try modifying and test at the same time on a sandbox?
+## Try this q7OS on google colab
+> https://colab.research.google.com/drive/11Uy4YL3J6MOWGu-b_8W9zUa3AP8XcElk
+
 # QnA
 ## What can i use this OS for?
 > Anything you want really
