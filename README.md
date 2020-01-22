@@ -18,7 +18,8 @@ An operating system or nested built based on archlinux that designed to unlock d
 ## Here what you need to know about q7OS in current state
 1. q7OS will be available in the github this week and the filesize is around (1.5GB in total yes thats the source)
 2. q7OS will able to run on almost any of these architechture ( armv7 armv8 x86_64 )
-3. q7OS have an built in experimental windows x86_64 win32 app runner although it is still a stub code
+3. q7OS have an built in experimental windows x86_64 win32 app runner although it is still a stub code 
+> Experimental windows x86_64 app runner is written in diffrent repo called empireEngine project 
 4. q7OS will adapt based on the hardware of what you choose (Literally import drivers for example from your android device)
 5. q7OS include an MaruchiTorento AI which is an modular AI (yes develop anything in it)
 6.  q7OS having a problem accessing framebuffer device so it uses xserverxsdl 
